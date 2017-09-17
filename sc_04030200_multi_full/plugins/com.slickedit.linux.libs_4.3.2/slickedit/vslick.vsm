@@ -1,0 +1,5176 @@
+/*
+   Each message starts with message number followed by a
+   message name.  A newline character is automatically
+   inserted between each double quoted string which
+   follows.
+
+   Use get_message from Slick-C(R) or vsGetMessage from a DLL to
+   retrieve a message.  We recommend you edit this file
+   using SlickEdit so that the vslick\messages\<local>\vs
+   is automatically rebuilt.
+
+Special encoding
+   %s1..%s6    Parse in string
+
+   %%          Literal percent
+
+   \n,\t,\r,\123 etc.   All escape sequences supported just like C.
+
+
+MESSAGE GROUP NAMES
+
+   FIO SOCK VSPROXY CFORMAT KBIO SLICKT SLICKEDITOR BTREE BSC
+   JAVA OBJECT
+   REGEX VSCR SLICKI SPELL CLEX GREP NTPINIT
+   SLKSHELL SLKWAIT WDOSRC VSRTE
+   MACRO
+*/
+
+
+0 MESSAGE_NOT_AVAILABLE_RC
+"Message not available"
+
+FIO
+-2 FILE_NOT_FOUND_RC
+"File not found"
+-3 PATH_NOT_FOUND_RC
+"Path not found"
+-4 TOO_MANY_OPEN_FILES_RC
+"Too many open files"
+-5 ACCESS_DENIED_RC
+"Access denied"
+-7 MEMORY_CONTROL_BLOCKS_RC
+"Memory control blocks destroyed.  Save files and reboot."
+-8 INSUFFICIENT_MEMORY_RC
+"Insufficient memory"
+-9 FILE_TOO_LARGE_RC
+"File exceeds size limit"
+-15 INVALID_DRIVE_RC
+"Invalid drive"
+-18 NO_MORE_FILES_RC
+"No more files"
+-19 DISK_IS_WRITE_PROTECTED_RC
+"Disk is write-protected"
+-20 UNKNOWN_UNIT_RC
+"Unknown unit"
+-21 DRIVE_NOT_READY_RC
+"Drive not ready"
+-22 BAD_DEVICE_COMMAND_RC
+"Bad device command"
+-23 DATA_ERROR_RC
+"Data error (CRC)"
+-24 BAD_REQUEST_STRUCTURE_LENGTH_RC
+"Bad request structure length"
+-25 SEEK_ERROR_RC
+"Seek error"
+-26 UNKNOWN_MEDIA_TYPE_RC
+"Unknown media type"
+-27 SECTOR_NOT_FOUND_RC
+"Sector not found"
+-28 PRINTER_OUT_OF_PAPER_RC
+"Printer out of paper"
+-29 WRITE_FAULT_RC
+"Write fault"
+-30 READ_FAULT_RC
+"Read fault"
+-31 GENERAL_FAILURE_RC
+"General failure"
+-32 ERROR_OPENING_FILE_RC
+"Error opening file"
+-33 ERROR_READING_FILE_RC
+"Error reading file"
+-34 ERROR_WRITING_FILE_RC
+"Error writing file"
+-35 ERROR_CLOSING_FILE_RC
+"Error closing file"
+-36 INSUFFICIENT_DISK_SPACE_RC
+"Insufficient disk space"
+-37 PROGRAM_CAN_NOT_BE_RUN_IN_OS2_RC
+"Program can not be run in OS/2 mode"
+-38 ERROR_CREATING_DIRECTORY_RC
+"Error creating directory entry"
+-39 SESSION_PARENT_EXISTS_RC
+"Session parent already exists"
+-40 PIF_FILE_NOT_FOUND_RC
+"PIF file vsshell.pif or vsproces.pif not found"
+-41 BAD_PIF_FILE_RC
+"Bad PIF file size or format"
+-42 UNABLE_TO_CREATE_PIF_FILE_RC
+"Error creating PIF file."
+-43 UNABLE_TO_OPEN_ERROR_CODE_TEMP_FILE_RC
+"Unable to open error code temp file."
+-44 UNABLE_TO_OPEN_PIF_TEMP_FILE_RC
+"Unable to open PIF temp file."
+-45 BAD_ERROR_CODE_TEMP_FILE_RC
+"Bad error code temp file"
+-46 INVALID_EXECUTABLE_FORMAT_RC
+"Invalid executable format"
+-47 SYSTEM_FAILED_TO_EXECUTE_PROGRAM_RC
+"System failed to execute program"
+-48 WDOSRC_FILE_NOT_FOUND_RC
+"Program WDOSRC.EXE not found."
+-49 FIOERROR_CREATING_TIMER_RC
+"Unable to create timer"
+-50 FIOBREAK_KEY_PRESSED_RC
+"Unable to create timer"
+-51 SLKSHELL_FILE_NOT_FOUND_RC
+"Program SLKSHELL.EXE not found."
+-52 FIOINVALID_ARGUMENT_RC
+"Invalid argument"
+-53 EOF_RC
+"End of file reached"
+-54 ARGFILE_NOT_FOUND_RC
+"File '%s1' not found"
+-55 ARGACCESS_DENIED_RC
+"Access denied to file %s1"
+-56 ARGPATH_NOT_FOUND_RC
+"Path not found for file %s1"
+-57 ARGUNABLE_TO_OPEN_FILE_RC
+"Unable to open file %s1"
+-58 MEMBER_IN_USE_RC
+"Member in use"
+-59 DATASET_IN_USE_RC
+"Data set in use"
+-60 DATASET_OR_MEMBER_IN_USE_RC
+"Data set or member in use"
+-61 VOLUME_OUT_OF_SPACE_RC
+"Volume out of space"
+-62 DATASET_OUT_OF_EXTENT_RC
+"Data set out of extent"
+-63 PDS_DIR_OUT_OF_SPACE_RC
+"PDS directory out of space"
+-64 DATASET_IO_RC
+"Data set I/O error"
+-65 UNSUPPORTED_DATASET_TYPE_RC
+"Unsupported data set type"
+-66 DATASET_NOT_PDS_RC
+"Data set not PDS"
+-67 PDS_MEMBER_NOT_FOUND_RC
+"PDS member not found"
+-68 NO_MORE_DDNAME_RC
+"No more available DD name"
+-69 UNABLE_TO_ALLOCATE_DDNAME_TO_DATASET_RC
+"Unable to allocate DD name to data set"
+-70 DATASET_NOT_SEQUENTIAL_RC
+"Data set not sequential"
+-71 UNSUPPORTED_DATASET_OPERATION_RC
+"Unsupported data set operation"
+-72 INVALID_DATASET_NAME_RC
+"Invalid data set name"
+-73 INVALID_PDS_MEMBER_NAME_RC
+"Invalid PDS member name"
+-74 INSUFFICIENT_ACCESS_TO_DATASET_RC
+"Insufficient access to data set"
+-75 UNABLE_TO_UPDATE_PDS_MEMBER_DIRECTORY_RC
+"Unable to update PDS member directory"
+-76 INVALID_DATASET_PASSWORD_RC
+"Invalid data set password"
+-77 DATASET_NOT_FOUND_RC
+"Data set not found"
+-78 CANT_ACCESS_INTERNAL_READER_RC
+"Cannot access internal reader"
+-79 CANT_WRITE_TO_SYSLOG_RC
+"Cannot write to syslog"
+-80 CANT_LOAD_ASSEMBLER_MODULES_RC
+"Cannot load assembler modules"
+-81 CANT_QUERY_SYSTEM_DATASET_LISTING_RC
+"Cannot query system data set listing"
+-82 INSUFFICIENT_SPILL_DISK_SPACE_RC
+"Insufficient spill disk space. Please inform the system programmers and check your SlickEdit log /tmp/vslog.YourUSERID for more information."
+-83 INSUFFICIENT_LOG_DISK_SPACE_RC
+"Insufficient user log disk space. Please inform the system programmers and check your SlickEdit log /tmp/vslog.YourUSERID for more information."
+-84 USER_LOG_TOO_LARGE_RC
+"User log /tmp/vslog.YourUSERID too large. All further logging suppressed."
+-85 URL_BAD_RC
+"Bad URL"
+-86 URL_PROTO_NOT_SUPPORTED_RC
+"URL protocol not supported"
+-87 URL_ERROR_READING_RESPONSE_RC
+"Error reading response or response invalid"
+-88 URL_STATUS_RC
+"URL status condition - %s1"
+-89 URL_MOVED_RC
+"URL moved"
+-90 URL_RESPONSE_NOT_SUPPORTED_RC
+"URL response not supported - %s1"
+-91 VSRC_INVALID_ARGUMENT
+"Invalid argument"
+-92 BUFFER_OVERFLOW_RC
+"Buffer overflow"
+-93 ERROR_CREATING_REGISTRY_VALUE_RC
+"Error creating or setting registry value %s1"
+-94 ERROR_CREATING_REGISTRY_KEY_RC
+"Error creating registry key %s1"
+-95 VSRC_OPERATION_CANCELLED
+"Operation cancelled"
+-96 VSRC_OPERATION_NOT_FINISHED
+"Operation not yet finished"
+-97 VSRC_POTENTIAL_DEADLOCK_DETECTED
+"Attempt to obtain write lock would result in deadlock."
+
+SOCK
+-100 SOCK_GENERAL_ERROR_RC
+"General socket error"
+-101 SOCK_INIT_FAILED_RC
+"Socks system failed to initialize"
+-102 SOCK_NOT_INIT_RC
+"Socks system not initialized"
+-103 SOCK_BAD_HOST_RC
+"Bad host address or host not found"
+-104 SOCK_NO_MORE_SOCKETS_RC
+"No more sockets available"
+-105 SOCK_TIMED_OUT_RC
+"Socket timed out"
+-106 SOCK_BAD_PORT_RC
+"Bad port"
+-107 SOCK_BAD_SOCKET_RC
+"Bad socket"
+-108 SOCK_SOCKET_NOT_CONNECTED_RC
+"Socket not connected"
+-109 SOCK_WOULD_BLOCK_RC
+"Socket would have blocked"
+-110 SOCK_NET_DOWN_RC
+"Network down"
+-111 SOCK_NOT_ENOUGH_MEMORY_RC
+"Not enough memory"
+-112 SOCK_SIZE_ERROR_RC
+"Argument not large enough"
+-113 SOCK_NO_MORE_DATA_RC
+"No more data"
+-114 SOCK_ADDR_NOT_AVAILABLE_RC
+"Address not available"
+-115 SOCK_NOT_LISTENING_RC
+"Socket not listening"
+-116 SOCK_NO_CONN_PENDING_RC
+"No pending connections"
+-117 SOCK_CONN_ABORTED_RC
+"Connection aborted"
+-118 SOCK_CONN_RESET_RC
+"Connection reset"
+-119 SOCK_SHUTDOWN_RC
+"Socket shut down"
+-120 SOCK_CONNECTION_CLOSED_RC
+"Connection closed"
+-121 SOCK_NO_PROTOCOL_RC
+"No protocol available"
+-122 SOCK_CONN_REFUSED_RC
+"Connection refused"
+-123 SOCK_TRY_AGAIN_RC
+"Nonauthoritative host not found"
+-124 SOCK_NO_RECOVERY_RC
+"Host not found"
+-125 SOCK_IN_USE_RC
+"Socket or address in use"
+
+ VSPROXY
+-150 VSPROXY_CMDLINE_TOO_LONG_RC
+"Command line too long"
+-151 VSPROXY_BROKEN_PIPE_RC
+"Broken pipe"
+-152 VSPROXY_BAD_PIPE_RC
+"Bad pipe"
+-153 VSPROXY_INVALID_HANDLE_RC
+"Invalid handle"
+-154 VSPROXY_INVALID_COMMAND_RC
+"Invalid command"
+-155 VSPROXY_NOT_ENOUGH_ARGUMENTS_RC
+"Not enough arguments"
+-156 VSPROXY_ALREADY_TRANSFERRING_DATA_RC
+"Already transferring data"
+-157 VSPROXY_BAD_FILE_HANDLE_RC
+"Bad file handle"
+-158 VSPROXY_NO_TRANSFER_SOURCEDEST_RC
+"No transfer source/destination specified"
+-159 VSPROXY_NOT_TRANSFERRING_DATA_RC
+"Not transferring data"
+-160 VSPROXY_STILL_TRANSFERRING_DATA_RC
+"Still transferring data"
+
+CFORMAT
+-200 CFERROR_GENERAL_ERROR_RC
+"General error"
+-201 CFERROR_EOF_UNEXPECTED_RC
+"Unexpected end-of-file"
+-202  CFERROR_SYMBOL_UNEXPECTED_RC
+"Unexpected symbol"
+-203 CFERROR_RIGHTPAREN_EXPECTED_RC
+"Right paren expected"
+-204 CFERROR_RIGHTBRACE_EXPECTED_RC
+"Right brace expected"
+-205 CFERROR_RIGHTBRACKET_EXPECTED_RC
+"Right bracket expected"
+-206 CFERROR_LEFTPAREN_EXPECTED_RC
+"Left paren expected"
+-207 CFERROR_LEFTBRACE_EXPECTED_RC
+"Left brace expected"
+-208 CFERROR_LEFTBRACKET_EXPECTED_RC
+"Left bracket expected"
+-209 CFERROR_RIGHTPAREN_UNEXPECTED_RC
+"Unexpected right paren"
+-210 CFERROR_RIGHTBRACE_UNEXPECTED_RC
+"Unexpected right brace, possible missing ;"
+-211 CFERROR_RIGHTBRACKET_UNEXPECTED_RC
+"Unexpected right bracket"
+-212 CFERROR_LEFTPAREN_UNEXPECTED_RC
+"Unexpected left paren"
+-213 CFERROR_LEFTBRACE_UNEXPECTED_RC
+"Unexpected left brace"
+-214 CFERROR_LEFTBRACKET_UNEXPECTED_RC
+"Unexpected left bracket"
+-215 CFERROR_CASE_UNEXPECTED_RC
+"Unexpected case"
+-216 CFERROR_COLON_EXPECTED_RC
+"Expected colon"
+-217 CFERROR_SEMI_EXPECTED_RC
+"Expected semicolon"
+-218 CFERROR_PP_UNEXPECTED_RC
+"Unexpected preprocessor"
+-219 CFERROR_WHILE_EXPECTED_RC
+"Expected while"
+-220 CFERROR_ELSE_UNEXPECTED_RC
+"Unexpected else"
+-221 CFERROR_ERROR_IN_TEMPLATE_RC
+"Error in template"
+-222 CFERROR_ENDSUBMENU_UNEXPECTED_RC
+"Unexpected endsubmenu"
+-223 CFERROR_SUBMENU_UNEXPECTED_RC
+"Unexpected submenu"
+-224 CFERROR_MENU_UNEXPECTED_RC
+"Unexpected _menu"
+-225 CFERROR_CATCH_UNEXPECTED_RC
+"Unexpected catch"
+-226 CFERROR_FINALLY_UNEXPECTED_RC
+"Unexpected finally"
+-227 CFERROR_UNHANDLED_SYNTAX_RC
+"Unhandled syntax"
+
+VSSETLN
+-300 VSSETLN_UNABLE_TO_OPEN_FILE_RC
+"Unable to open file '%s1'.  Make sure this executable is not already running."
+-301 VSSETLN_EXECUTABLE_FILE_NOT_FOUND_RC
+"Executable file '%s1' not found"
+-302 VSSETLN_ERROR_READING_FILE_RC
+"Error reading file '%s1'"
+-303 VSSETLN_COULD_NOT_FIND_MARKER_RC
+"Could not find version marker in file '%s1'"
+-304 VSSETLN_BAD_VERSION_NUMBER_RC
+"Bad version number in file '%s1'"
+-305 VSSETLN_SERIAL_MARKER_NOT_FOUND_RC
+"Could not find serial marker in file '%s1'"
+-306 VSSETLN_ERROR_WRITING_TO_FILE_RC
+"Error writing to file '%s1'.  Check disk space."
+-307 VSSETLN_LICENSE_STORED2_RC
+"License '%s1' successfully stored"
+-308 VSSETLN_LICENSE_STORED_RC
+"License successfully stored."
+-309 VSSETLN_COPY_FAILED_RC
+"Warning - Unable to copy vs.exe to temp file.  Could be out of disk space."
+-310 VSSETLN_DELETE_FAILED_RC
+"Warning - Unable to delete vs.exe"
+-311 VSSETLN_MOVE_FAILED_RC
+"Warning - Unable to move temp file to vs.exe."
+-312 VSSETLN_INVALID_KEY_RC
+"Invalid key"
+-313 VSSETLN_ENTER_FULL_PATH_RC
+"Please enter full path and executable."
+-314 VSSETLN_MUST_GIVE_PATH_AND_NAME_RC
+"Must give the full path and executable name"
+-315 VSSETLN_PREFIX_MISMATCH_RC
+"Invalid key - prefix mismatch"
+-316 VSSETLN_VERSION_MISMATCH_RC
+"Invalid key - version mismatch"
+-317 VSSETLN_LOCATION_OF_EXE_RC
+"Location of Executable"
+-318 VSSETLN_HELP_UNIX_RC
+""
+"vssetln Version 12.0"
+""
+"This program is used to patch the SlickEdit executable with"
+"a license code."
+""
+"Usage:"
+"\tvssetln [-r] executable license-key"
+""
+"\t-r\tReplace license."
+"\texecutable\tName of program executable."
+"\tlicense-key\tLicense-key code to patch into executable."
+""
+"Example:"
+""
+"\tvssetln vs 0123456789-0000-AAA012345-BBB"
+""
+""
+-319 VSSETLN_UNABLE_TO_EXECUTE_RC
+"Unable to execute %s1.  Could be out of memory."
+-320 VSSETLN_LICENSE_MARKER_NOT_FOUND_RC
+"Could not find license marker in file '%s1'."
+-321 VSSETLN_PACKS_MARKER_NOT_FOUND_RC
+"Could not find package marker in file '%s1'."
+-322 VSSETLN_MESSAGEBOX_TITLE_RC
+"SlickEdit Set License"
+-323 VSSETLN_INVALID_KEY2_RC
+// The value in %s1 is completely arbitrary.  The value is used for
+// debugging purposes.
+"Invalid key (%s1)"
+-324 VSSETLNW_REPLACE_NOT_VALID_RC
+"Cannot replace license with this key.  Invoke 'vssetlnw.exe' without the -r switch if you are trying to add a package to your license."
+-325 VSSETLN_REPLACE_NOT_VALID_RC
+"Cannot replace license with this key.  Invoke 'vssetln' without the -r switch if you are trying to add a package to your license."
+-326 VSSETLN_UNABLE_TO_UPDATE_LICENSE_FILE_RC
+"Unable to update the license file '%s1'.  This can happen when the license file is read only.  The system administrator must add the following package sections manually.  Read the \"License Manager\" section of the manual for more information on adding packages to the license file."
+-327 VSSETLN_UNABLE_TO_OPEN_LICENSE_FILE_RC
+"Unable to open the license file '%s1'."
+-328 VSSETLN_SERIAL_AND_LICENSE_MISMATCH_RC
+// The value in %s3 is completely arbitrary.  The value is used for
+// debugging purposes.
+"The serial #%s1 does not match the license for package <%s2>."
+""
+"This can happen when you attempt to install a licensed package for a serial number that is different from the one currently licensed."
+""
+"or"
+""
+"You are attempting to install a non-STD package key for an unlicensed executable.  You must first install your original key before applying the new key."
+-329 VSSETLN_CANNOT_UPDATE_TRIAL_RC
+"Cannot set license on a trial."
+-330 VSSETLN_NUMBER_OF_TIMES_PATCHED
+"Executable patched %s0 times"
+
+VSUPDATE
+-350 VSUPDATE_LICENSE_TRANSFERRED_RC
+"Serial number and license information successfully transferred"
+
+-351 VSUPDATE_HELP_RC
+""
+"vsupdate Version 12.0"
+""
+"This program is used to copy the serial number and license information from one SlickEdit executable to another."
+""
+"Usage:"
+"\tvsupdate old-exe-name new-exe-name"
+""
+"\told-exe-name\tName of original executable to take license info from."
+"\tnew-exe-name\tName of new executable to transfer license info to."
+
+-352 VSUPDATE_INVALID_SERIAL_NUMBER_RC
+"Invalid serial number"
+
+-353 VSUPDATE_HELP_WIN_RC
+"Version 12.0"
+""
+"This program is used to copy the serial number and license information from one SlickEdit executable to another."
+""
+"Usage:"
+"\tvsupdatw old-exe-name new-exe-name"
+""
+"\told-exe-name\tName of original executable to take license info from."
+"\tnew-exe-name\tName of new executable to transfer license info to."
+
+-354 VSUPDATE_INVALID_LICENSE_RC
+"Invalid or missing license"
+
+-355 VSUPDATE_INVALID_PACKS_RC
+"Invalid or missing packages"
+
+-356 VSUPDATE_INCORRECT_ARCHITECTURE_RC
+"Hot fix file is not for this machine architecture"
+
+-357 VSUPDATE_DLL_ONLY_FOR_WINDOWS_RC
+"Hot fix contains DLLs that are for Windows platforms only"
+
+
+CDINST
+-400 CDINST_UNABLE_TO_EXECUTE_RC
+"Installation failed\n\nUnable to execute %s1.  Could be out of memory."
+-401 CDINST_FAILED_TO_CREATE_DIR_RC
+"Installation failed\n\nUnable to create directory %s1"
+-402 CDINST_FAILED_DECOMPRESSING_RC
+"Installation failed while decompressing %s1.\n\n%s2"
+-403 CDINST_COPYING_FROM_TO_RC
+"Copying %s1 to %s2"
+-404 CDINST_ERROR_SETTING_DATE_TIME_RC
+"Installation failed.\n\nError setting date/time of file '%s1'"
+-405 CDINST_FILE_NOT_FOUND_RC
+"Installation failed.\n\nFile '%s1' not found"
+-406 CDINST_ACCESS_DENIED_RC
+"Installation failed.\n\nAccess denied writing to '%s1'. Make sure '%s1' is not currently running."
+-407 CDINST_PATH_NOT_FOUND_RC
+"Installation failed.\n\nPath not found %s1"
+-408 CDINST_INSUFFICIENT_DISK_SPACE_RC
+"Installation failed.\n\nInsufficient disk space"
+-409 CDINST_NOT_ENOUGH_MEMORY_RC
+"Installation failed.\n\nNot enough memory"
+-410 CDINST_ERROR_CODE_RC
+"Installation failed while processing %s1\n\nerror code %s2"
+-411 CDINST_PLEASE_SPECIFY_DIRECTORY_RC
+"Please specify directory"
+-412 CDINST_BACKUP_DIRECTORY_EXISTS_RC
+"Backup directory %s1 already exists.\n\nReplace files?"
+-413 CDINST_CANT_BACKUP_TO_INSTALL_DIR_RC
+"Cannot backup to installation directory."
+-414 CDINST_PLEASE_SPECIFY_DEST_DIR_RC
+"Please specify destination directory"
+-415 CDINST_MAYBE_CREATE_DIR_RC
+"Directory %s1 does not exist\n\nCreate it?"
+-416 CDINST_FAILED_TO_CREATE_DIR2_RC
+"Failed to create directory\n\n%s1"
+-417 CDINST_UNABLE_TO_WRITE_SERIAL_RC
+"Installation failed\n\nUnable to write serial#/license."
+-418 CDINST_UNABLE_TO_READ_SERIAL_RC
+"Installation failed\n\nUnable to read serial#."
+-419 CDINST_UNABLE_TO_PATCH_SERIAL_RC
+"Installation failed\n\nUnable to open executable in order to patch in serial number."
+-420 CDINST_UNABLE_TO_FIND_SERIAL_RC
+"Installation failed\n\nUnable to find serial#."
+-421 CDINST_UNABLE_TO_COPY_VSE_RC
+"Installation failed\n\nUnable to copy vs.exe to temp file.  Could be out of disk space."
+-422 CDINST_UNABLE_TO_DELETE_VSE_RC
+"Installation failed\n\nUnable to delete vs.exe."
+-423 CDINST_UNABLE_TO_MOVE_VSE_RC
+"Installation failed\n\nUnable to move temp file to vs.exe."
+-424 CDINST_SELECT_A_DIRECTORY_RC
+"Select a directory"
+-425 CDINST_INSUFFICIENT_DISK_SPACE2_RC
+"This installation requires %s1 megabytes of disk space.  An additional %s2 megabytes of disk space is required on this drive due to fragmentation."
+-426 CDINST_INSUFFICIENT_DISK_SPACE3_RC
+"You have enough disk space for this installation,  but you do not have enough disk space to fully support Microsoft Visual C++ and Java.  An additional %s1 megabytes of disk space are needed for Visual C++ and %s2 megabytes for Java.  An installation with support for Microsoft Visual C++ and Java requires %s3 megabytes of disk space (%s4 megabytes was added to account for disk fragmentation).\n\nContinue?"
+-427 CDINST_INSUFFICIENT_DISK_SPACE4_RC
+"This installation requires %s1 megabytes of disk space.  An additional %s2 megabytes of disk space is required on this drive due to fragmentation.  If you are installing over an existing installation, you may have enough disk space.\n\nContinue?"
+-428 CDINST_CHOSEN_DIRECTORY_RC
+"%s1 already exists.\n\nContinue?"
+-429 CDINST_ABORT_RC
+"Abort installation?"
+-430 CDINST_MESSAGEBOX_TITLE_RC
+"SlickEdit Install"
+-431 CDINST_ERROR_OPENING_LICENSE_FILE_RC
+"Error opening license file"
+-432 CDINST_UPGRADEABLE_VSE_NOT_FOUND_RC
+"%s1 does not contain an upgradeable version of SlickEdit"
+-433 CDINST_BAD_UPGRADE_VERSION_RC
+"The v%s1 upgrade installation is only valid for upgrading the following versions: %s2. Please contact sales at SlickEdit Inc. to obtain a v%s1 installation key and directions for full installation."
+-434 CDINST_MULTIUSER_RC
+"Cannot upgrade a multi-user license with the upgrade installer.  Please contact sales at SlickEdit Inc. to obtain an installation key and directions for full installation."
+-435 CDINST_INVALID_SERIAL_RC
+"Invalid serial number"
+-436 CDINST_KEY_REQUIRED_RC
+"A valid installation key code is required"
+-437 CDINST_INVALID_DISTRIB_RC
+"%s1 does not contain a valid distribution of SlickEdit"
+-438 CDINST_INSERT_INSTALLATION_MEDIA_RC
+"Please reinsert installation media for SlickEdit %s1"
+-439 CDINST_INVALID_PREV_INSTALL_RC
+"Previous version of SlickEdit is invalid or corrupt"
+-440 CDINST_DISTRIB_KEY_MISMATCH_RC
+"Invalid version of distribution and/or installation key code. The upgrade installation is only valid for the following versions: %s1. Please contact sales at SlickEdit Inc. to obtain an installation key and directions for full installation."
+-441 CDINST_ERROR_COPYING_FILE_RC
+"Error copying file from %s1 to %s2"
+-442 CDINST_INSTALLATION_SUCCESSFUL_RC
+"Installation of %s1 was successful!"
+-443 CDINST_ECLIPSE_INSTALLATION_SUCCESSFUL_RC
+"Installation of %s1 was successful!\n\nPlease start/restart WebSphere Studio or Eclipse to see the plug-in"
+-444 CDINST_CHOOSE_INSTALL_TYPE_RC
+"Please choose the installation type.\n\nChoose Full Installation if you purchased the full v%s1 product. Use the installation key found either on the back of your v%s1 CD case if you purchased media, or in the email acknowledgement if you purchased online.\n\nChoose Upgrade Installation if you purchased the v%s1 upgrade product and are upgrading over a previous version. Valid versions to upgrade from are: %s2."
+-445 CDINST_WRONG_VERSION_RC
+"A version %s1 installation key is required."
+-446 CDINST_MUST_ACCEPT_EULA_RC
+"You must Accept the End User License Agreement to continue."
+-447 CDINST_INSTALL_DESTINATION_CAPTION_RC
+"Please specify the %s1 installation directory.  The directory will be created if it does not exist."
+-448 CDINST_INSTALLATION_SUCCESSFUL2_RC
+"Installation of %s1 was successful!"
+-449 CDINST_INSUFFICIENT_DISK_SPACE5_RC
+"You have enough disk space for this installation,  but you may not have enough disk space to fully support C++ and Java.  An additional %s1 megabytes of disk space are needed for C++ and %s2 megabytes for Java.  An typical installation with support for C++ and Java runtimes requires %s3 megabytes of disk space (%s4 megabytes was added to account for disk fragmentation).\n\nContinue?"
+-450 CDINST_INVALID_ECLIPSE_PRODUCT_FILE_RC
+"Invalid Eclipse product file '%s1'"
+-451 CDINST_ECLIPSE_PRODUCT_VERSION_NOT_SUPPORTED_RC
+"Eclipse product version %s1 not supported. Supported versions are: %s2"
+-452 CDINST_ECLIPSE_PRODUCT_VERSION_WARNING_RC
+"Warning: Eclipse product version is %s1. Supported versions are: %s2. Continue?"
+-453 CDINST_ECLIPSE_LOCATION_EXAMPLE_RC
+"Example: c:\\eclipse%s1\\eclipse"
+-454 CDINST_KEY_PLATFORM_MISMATCH_RC
+"Platform mismatch.\n\nYour installation key is intended for the following platform(s):\n\t%s1\nThe platform you are currently on is:\n\t%s2\n\nPlease contact SlickEdit Sales to obtain the correct installation key."
+-455 CDINST_KEY_PRODUCT_MISMATCH_RC
+"Product mismatch.\n\nYour installation key is intended for the following product(s):\n\t%s1\nThe product you are currently installing is:\n\t%s2\n\nPlease contact SlickEdit Sales to obtain the correct installation key."
+-456 CDINST_ECLIPSE_PRODUCT_ID_MISMATCH_RC
+"Warning: The Eclipse Product Id is not recognized. Continue?"
+-457 CDINST_ECLIPSE_PRODUCT_NAME_MISMATCH_RC
+"Warning: The Eclipse Product Name is not recognized. Continue?"
+
+SUNPAK
+-480 SUNPAK_INCORRECT_VERSION_RC
+"Incorrect version"
+-481 SUNPAK_INVALID_COMPRESS_FILE_RC
+"Invalid compressed file"
+-482 SUNPAK_ERROR_WRITING_FILE_RC
+"Error writing to file.  Could be out of disk space."
+-483 SUNPAK_DECOMPRESSING_RC
+"Decompressing %s1"
+-484 SUNPAK_DATE_NOT_SET_RC
+"Warning: time and date not set"
+-485 SUNPAK_ERROR_DATE_NOT_SET_RC
+"Error setting date of file %s1"
+-486 SUNPAK_DATE_NOT_SET_UNIX_RC
+"Warning: time, date, permissions, owner, and group not preserved"
+-487 SUNPAK_ERROR_SETTING_PERMISSION_RC
+"Error setting permissions of file %s1"
+-488 SUNPAK_INVALID_OPTION_RC
+"Invalid option"
+-489 SUNPAK_OPEN_ACCESS_DENIED_RC
+"Error opening file \"%s1\".  Access denied."
+
+
+KBIO
+-500 UNABLE_TO_INIT_CONSOLE_RC
+"Unable to initialize console"
+
+VSUNINST
+-550 VSUNINST_TITLE_INSTALL_FAILED_RC
+"%s1 Uninstall Failed"
+-551 VSUNINST_WIN31_NOT_SUPPORTED_RC
+"This uninstall program is not supported under Windows 3.1.\n\nUse the File Manager to delete the SlickEdit files and directories."
+-552 VSUNINST_FOLDER_TOO_SHORT_RC
+"Folder too short.  Not safe to run uninstall.\n\nFolder %s1"
+-553 VSUNINST_ARE_YOU_SURE_RC
+"Are you sure you want to uninstall %s1?\n\nFolder %s2"
+-554 VSUNINST_UNINSTALL_COMPLETED_RC
+"Uninstall completed"
+-555 VSUNINST_UNINSTALL_COMPLETED2_RC
+"Uninstall completed.\n\nFolder %s1 contains files that are not part of the SlickEdit distribution package and which therefore were not deleted."
+-556 VSUNINST_BAD_ARGUMENT_RC
+"Bad or missing argument \"%s1\"."
+-557 VSUNINST_TEMP_DIRECTORY_NOT_FOUND_RC
+"Unable to determine alternate temp directory"
+-558 VSUNINST_UNABLE_TO_CREATE_TEMP_FILE_RC
+"Unable to create temp file %s1"
+-559 VSUNINST_ERROR_WRITING_TO_FILE_RC
+"Error writing to file '%s1'.  Check disk space."
+-560 VSUNINST_FAILED_TO_EXECUTE_RC
+"Failed to execute %s1 program"
+
+LISTVTG
+-600 LISTVTG_VERSION_RC
+"Version 12.0"
+""
+"This program is used to list tags in a SlickEdit"
+"tags database file (.vtg)."
+""
+"    Usage:"
+"      listvtg <file name>"
+""
+-601 LISTVTG_INVALID_FILENAME_RC
+"Invalid file name: %s1\n"
+-602 LISTVTG_DBOPEN_ERROR_RC
+"listvtg: dbopen error status = %s1\n"
+-603 LISTVTG_LISTING_DBFILE_RC
+"listvtg: listing tag database file: %s1\n"
+-604 LISTVTG_SEEK_LOC_CAPTION_RC
+"[SEEK LOC]"
+-605 LISTVTG_FILE_CAPTION_RC
+"File"
+-606 LISTVTG_DATE_CAPTION_RC
+"Modification Date"
+-607 LISTVTG_PACKAGE_CLASS_CAPTION_RC
+"Package-Class"
+-608 LISTVTG_PARENTS_CAPTION_RC
+"Parents"
+-609 LISTVTG_TAG_RC
+"Tag"
+-610 LISTVTG_CLASS_CAPTION_RC
+"Class"
+-611 LISTVTG_FLAGSTYPE_CAPTION_RC
+"Flags/Type"
+-612 LISTVTG_FILELINE_CAPTION_RC
+"File:Line"
+-613 LISTVTG_ERROR_CLOSING_DATABASE_RC
+"listvtg: error closing database, %s1\n"
+-614 LISTVTG_FINISHED_RC
+"listvtg: finished, %s1 files, %s2 classes, %s3 tags in %s4\n"
+-615 LISTVTG_EXTN_CAPTION_RC
+"Extension"
+-616 LISTVTG_OCCURRENCE_RC
+"Occurrence"
+-617 LISTVTG_FILESEEKPOS_CAPTION_RC
+"File:Seekpos"
+
+
+HFORMAT
+-700 HFERROR_GENERAL_ERROR_RC
+"General error"
+-701 HFERROR_EOF_UNEXPECTED_RC
+"Unexpected end-of-file"
+
+SLICKT
+-1000 FILEPOS_RC
+"%s1 %s2 %s3:"
+-1001 ST_VERSION_RC
+// The macro compiler version message is stored in st/stmain.c
+""
+-1002 STHELP_RC
+"   vst [-e errfile] [-f offset] inputfile[.e] [outputfile[.ex]]"
+""
+"translates a .e macro file into a form executable by SlickEdit"
+""
+"   OPTIONS"
+"      -dname=value   Declare constant"
+"      -e errfile     Compile error is written to file errfile"
+"      -f offset      Finds line and column of runtime error at offset"
+"      -p PragmaOption [on|off]     Turn pragma option on or off"
+"                     PragmaOption may be autodeclvars, autodeclctls, autodecl,"
+"                     redeclvars, strictreturn, or strictellipse"
+"      -q             Do not display standard messages"
+"      -w             Wait for a key if an error occurs"
+"      -t             Translate old macro.  Generates convert.tmp file"
+-1016 ID_TOO_LONG_RC
+"Identifier too long"
+-1017 LINE_TOO_LONG_RC
+"Line too long"
+-1018 RUNTIME_ERROR_POS_FOUND_RC
+"Runtime error position found"
+-1019 ILLEGAL_OPERATOR_RC
+"Illegal operator"
+-1020 ILLEGAL_CHARACTER_RC
+"Illegal character"
+-1021 DEFMAIN_ALREADY_DEFINED_RC
+"DEFMAIN already defined"
+-1022 PROCEDURE_ALREADY_DEFINED_RC
+"Procedure already defined"
+-1023 NUMBER_TOO_LARGE_RC
+"Number too large"
+-1024 STRING_TOO_LONG_RC
+"String too long"
+-1025 OUT_OF_CODE_SPACE_RC
+"Code size too large"
+-1026 EXP_TOO_COMPLEX_RC
+"Expression too complex"
+-1027 INTERNAL_ERROR_POPS_RC
+"Internal error in POPS"
+-1028 UO_ERRFILE_RC
+"Unable to open error file"
+-1029 EXPECTING_LEFT_PAREN_RC
+"Expecting '('"
+-1030 EXPECTING_RIGHT_PAREN_RC
+"Expecting ')'"
+-1031 INVALID_NOFPARMS_RC
+"Invalid number of parameters"
+-1032 INVALID_EXPRESSION_RC
+"Invalid expression"
+-1033 EXPECTING_DEF_RC
+"Expecting declaration"
+-1034 EXPECTING_CONSTANT_EXPRESSION_RC
+"Expecting constant expression"
+-1035 EXPECTING_DO_RC
+"Expecting DO"
+-1036 EXPECTING_ENDWHILE_RC
+"Expecting ENDWHILE to terminate WHILE"
+-1037 EXPECTING_ENDLOOP_RC
+"Expecting ENDLOOP to terminate LOOP"
+-1038 EXPECTING_DO_WHILE_RC
+"Expecting DO WHILE or DO FOREVER"
+-1039 EXPECTING_END_RC
+"Expecting END to DO loop"
+-1040 EXPECTING_THEN_RC
+"Expecting THEN"
+-1041 EXPECTING_ENDIF_RC
+"Expecting ENDIF to terminate IF statement"
+-1042 EXPECTING_VALUE_RC
+"Expecting VALUE"
+-1043 EXPECTING_WITH_RC
+"Expecting WITH"
+-1044 COLUMN_SPEC_OUT_OF_RANGE_RC
+"Column specification out of range"
+-1045 NUMBER_OUT_OF_RANGE_RC
+"Number out of range or expecting number"
+-1046 EXPECTING_SEMICOLON_RC
+"Expecting ';'"
+-1047 EXPECTING_VARIABLE_NAME_RC
+"Expecting variable name"
+-1048 INTERATE_USED_OUTSIDE_LOOP_RC
+"continue may only be executed inside a loop"
+-1049 EXPECTING_QUOTED_STRING_RC
+"Expecting quoted string"
+-1050 INCLUDES_NESTED_TOO_DEEP_RC
+"INCLUDES nested too deep"
+-1051 INVALID_EVENT_NAME_RC
+"Invalid event name"
+-1052 EXPECTING_EQUAL_RC
+"Expecting '='"
+-1053 THIS_PARAMETER_MUST_HAVE_A_DEFAULT_VALUE_RC
+"This parameter must have a default value"
+-1054 LEAVE_USED_OUTSIDE_LOOP_RC
+"break may only be executed inside a loop or switch"
+-1055 EXPECTING_ENDFOR_RC
+"Expecting ENDFOR"
+-1056 EXPECTING_TO_RC
+"Expecting TO"
+-1057 OUT_OF_SYMBOL_TABLE_SPACE_RC
+"Out of symbol table space"
+-1058 ID_ALREADY_DEFINED_RC
+"Identifier already defined as same or different type"
+-1059 EXPECTING_PROCEDURE_NAME_RC
+"Expecting procedure name - identifier not found - import may be required"
+-1060 EXPECTING_AN_IDENTIFIER_RC
+"Expecting an identifier"
+-1061 INVALID_FIELD_NAME_RC
+"Invalid field name"
+-1062 INVALID_ASSIGNMENT_RC
+"Expression not assignment compatible"
+-1063 EXPECTING_COMMA_RC
+"Expecting ','"
+-1064 STINVALID_ARGUMENT_RC
+"Invalid argument"
+-1065 STRING_NOT_TERMINATED_RC
+"String not terminated"
+-1066 UR_INFILE_RC
+"Unable to read input file: %s1"
+-1067 UO_INFILE_RC
+"Unable to open input file: %s1"
+-1068 UC_OUTFILE_RC
+"Unable to create output file: %s1"
+-1069 UW_OUTFILE_RC
+"Unable to write output file: %s1"
+-1070 UO_INCLUDE_RC
+"Unable to open include file: %s1"
+-1071 NO_SOURCE_FILE_SPEC_RC
+"No source file specified"
+-1072 STINVALID_OPTION_RC
+"Invalid option"
+-1073 STTOO_MANY_ARGUMENTS_RC
+"Too many arguments"
+-1074 COMMENT_NOT_TERMINATED_RC
+"Comment not terminated"
+-1075 STNOT_ENOUGH_MEMORY_RC
+"Not enough memory"
+-1076 SCOPE_BLOCKS_NESTED_TOO_DEEP_RC
+"Scope blocks nested too deep"
+-1077 TOO_MANY_LOCALS_RC
+"More than %s1 local variables"
+-1078 TOO_MANY_ARGUMENTS_RC
+"Too many arguments"
+-1079 INVALID_NUMERIC_EXPRESSION_RC
+"Invalid numeric expression"
+-1080 VARIABLE_NOT_INITIALIZED_RC
+"Variable %s1 not initialized"
+-1081 CONTROL_NOT_DEFINED_RC
+"Control not defined or variable not initialized.  Use _control to define control."
+-1082 INVALID_EXTENSION_RC
+"Expecting ex extension for output filename"
+-1083 COMMANDS_MAY_NOT_TAKE_PARAM_RC
+"Commands may not take parameters. Use arg function."
+-1084 STNUMERIC_OVERFLOW_RC
+"Numeric overflow or underflow"
+-1085 STINVALID_NUMBER_ARGUMENT_RC
+"Invalid number argument"
+-1086 STDIVIDE_BY_ZERO_RC
+"Divide by zero"
+-1087 EXPECTING_STRING_OF_LENGTH_ONE_RC
+"Expecting string of length one"
+-1088 CANT_REDEFINE_FUNCTION_RC
+"Cannot redefine built-in function"
+-1089 STRECURSION_TOO_DEEP_RC
+"Recursion too deep"
+-1090 IF_NOT_TERMINATED_RC
+"#if not terminated with #endif"
+-1091 INVALID_PREPROCESSOR_KEYWORD_RC
+"Invalid preprocessor keyword"
+-1092 MUST_USE_IF_PREPROCESSOR_KEYWORD_RC
+"Must use #if preprocessor keyword before #else/#elseif/#endif"
+-1093 ERROR_DIRECTIVE_RC
+"#error: %s1"
+-1094 PREPROCESSING_NESTED_TD_RC
+"Preprocessing nested too deep"
+-1095 INVALID_TYPE_CONVERSION_RC
+"Invalid type conversion"
+-1096 CONTROL_NAME_MUST_HAVE_PARENT_FORM_RC
+"Control name must have parent form"
+-1097 CANT_BE_WHEN_DECLARED_RC
+"This property can not be set when declared"
+-1098 PROPERTY_IS_READ_ONLY_RC
+"This property is read only"
+-1099 EXPECTING_PROPERTY_NAME_RC
+"Expecting property name"
+-1100 EXPECTING_ENDSUBMENU_RC
+"Expecting ENDSUBMENU to terminate SUBMENU statement"
+-1101 PROPERTY_MISSPELLED_RC
+"Property misspelled or invalid identifier"
+-1102 ST_CMDLINE_TOO_LONG_RC
+"Command line too long."
+-1103 UO_CONVERSION_FILE_RC
+"Unable to open conversion file convert.tmp."
+-1104 ST_EXPECTING_COLON_RC
+"Expecting ':'"
+-1105 LEFT_OPERAND_MUST_BE_LVALUE_RC
+"Left operand must be lvalue"
+-1106 ASSIGNMENT_OPERATOR_NOT_ALLOWED_RC
+"For your protection, the assignment operator is not allowed here"
+-1107 EXPECTING_RIGHT_BRACE_RC
+"Expecting '}'"
+-1108 EXPECTING_STATEMENT_RC
+"Expecting statement"
+-1109 EXPECTING_WHILE_RC
+"Expecting while expression after do statement"
+-1110 EXPECTING_LEFT_BRACE_RC
+"Expecting '{'"
+-1111 EXPECTING_TYPE_NAME_RC
+"Expecting type name"
+-1112 EXPECTING_DEFPROC_RC
+"Expecting defproc to follow static"
+-1113 OLD_KEYWORD_NOT_SUPPORTED_RC
+"Old keyword no longer supported"
+-1114 USE_PROPERTY_NAME_RC
+"Use property name instead of dot variable"
+-1115 OBJECT_DOES_NOT_ALLOW_NESTED_CONTROLS_RC
+"Object does not allow nested controls"
+-1116 USE_DEFEVENTTAB_TO_DEFINE_AN_EVENT_TABLE_FIRST_RC
+"Use defeventtab to define an event table first"
+-1117 USE_DEFEVENTTAB_TO_DEFINE_THE_DEFAULT_FORM_RC
+"Use defeventtab to define the form this control belongs to"
+-1118 CONTROL_NOT_DECLARED_RC
+"Control not declared.  Use _control to declare a control"
+-1119 VOID_FUNCTION_CAN_NOT_RETURN_VALUE_RC
+"Void function can not return value"
+-1120 EXPECTING_SUBMENU_RC
+"Expecting submenu"
+-1121 EXPECTING_MENU_ITEM_RC
+"Expecting menu item"
+-1122 EXPECTING_COMMAND_RC
+"Expecting command"
+-1123 EXPECTING_HELP_COMMAND_RC
+"Expecting help command"
+-1124 EXPECTING_HELP_STRING_RC
+"Expecting help string"
+-1125 AMBIGUOUS_EXPRESSION_TOO_COMPLEX_RC
+"Ambiguous expression too complex"
+-1126 EXPECTING_RIGHT_BRACKET_RC
+"Expecting ']'"
+-1127 STCALL_WITH_UNINITIALIZED_VARIABLE_RC
+"There is a call to '%s1' with an uninitialized variable"
+-1128 STCALL_WITH_NOT_ENOUGH_ARGUMENTS_RC
+"There is a call to '%s1' with not enough arguments"
+-1129 STATIC_FUNCTIONS_WITH_BLOCK_SCOPE_RC
+"Static functions with block scope are illegal"
+-1130 LOCAL_FUNCTION_PROTO_TYPES_NOT_SUPPORTED_RC
+"Local function prototypes are not supported yet"
+-1131 LOCAL_INITIALIZER_NOT_SUPPORTED_RC
+"Local initializers for statics are not supported yet"
+-1132 INTERNAL_COMPILER_ERROR_RC
+"Internal compiler error"
+-1133 MEMBER_FUNCTIONS_NOT_SUPPORTED_RC
+"Member functions not allowed"
+-1134 ONLY_ARGUMENT_REFERENCE_TYPES_ARE_SUPPORTED_RC
+"Only argument reference types are supported"
+-1135 CANT_INITIALIZE_VARIABLES_OF_THIS_TYPE_RC
+"Cannot initialize variables of this type"
+-1136 INVALID_REFERENCE_TYPE_RC
+"Invalid reference type"
+-1137 SYNTAX_ERROR_RC
+"Syntax error"
+-1138 EXPECTING_STRUCT_TYPE_NAME_RC
+"Expecting struct type name"
+-1139 INVALID_USE_OF_VOID_RC
+"Invalid use of void"
+-1140 INVALID_USE_OF_FUNCTION_TYPE_RC
+"Invalid use of function type"
+-1141 FUNCTION_REQUIRES_MORE_PARAMETERS_RC
+"Function requires more parameters"
+-1142 INCOMPATIBLE_PARAMETER_RC
+"Parameter %s1 type mismatch"
+-1143 INCOMPATIBLE_PARAMETER2_RC
+"Parameter %s1 type mismatch. Explicit cast needed to convert %s2 to %s3"
+-1144 INCOMPATIBLE_PARAMETER3_RC
+"Parameter %s1 type mismatch. Use (expression!=0) to convert expression to boolean"
+-1145 INCOMPATIBLE_PARAMETER4_RC
+"Parameter %s1 type mismatch. Cannot convert %s2 to %s3"
+-1146 RETURN_TYPE_MISMATCH_RC
+"Return type incompatible with function declaration"
+-1147 RETURN_TYPE_MISMATCH2_RC
+"return() type mismatch. Explicit cast needed to convert %s2 to %s3"
+-1148 RETURN_TYPE_MISMATCH3_RC
+"return() type mismatch. Use (expression!=0)"
+-1149 RETURN_TYPE_MISMATCH4_RC
+"return() type mismatch. Cannot convert %s2 to %s3"
+-1150 TYPE_MISMATCH_RC
+"Type mismatch"
+-1151 TYPE_MISMATCH2_RC
+"Type mismatch. Explicit cast needed to convert %s2 to %s3"
+-1152 TYPE_MISMATCH3_RC
+"Type mismatch. Use (expression!=0)"
+-1153 TYPE_MISMATCH4_RC
+"Type mismatch. Cannot convert %s2 to %s3"
+-1154 INCOMPATIBLE_TYPE_USED_WITH_OPERATOR_RC
+"Incompatible type used with operator %s1"
+-1155 INSTANCE_EXPRESSION_MUST_BE_INTEGER_COMPATIBLE_RC
+"Instance expression must be integer compatible"
+-1156 TYPE_OF_EXPRESSION_MUST_BE_SIMPLE_OR_PTR_RC
+"Type of expression must be simple or pointer"
+-1157 EXPRESSION_INCOMPATIBLE_WITH_STRING_TYPE_RC
+"Expression incompatible with string type"
+-1158 UNKNOWN_SIZE_RC
+"Unknown size"
+-1159 ID_NOT_MEMBER_RC
+"%s1 is not a member of this struct/class/union"
+-1160 EXPECTING_UNION_TYPE_NAME_RC
+"Expecting union type name"
+-1161 INITIALIZATION_NEEDS_CURLY_BRACES_RC
+"Initialization needs curly braces"
+-1162 POINTER_INITIALIZATION_SUPPORT_ZERO_ONLY_RC
+"Pointer initializations support zero only"
+-1163 STRUCT_INITIALIZATION_REQUIRES_LEFT_BRACE_RC
+"struct/union/array/hash table initialization requires '{'"
+-1164 EXPECTING_EQGT_RC
+"Expecting '=>' for hash table or array initialization"
+-1165 EXPECTING_LEFT_BRACKET_RC
+"Expecting '[' for array type"
+-1166 EXPECTING_COLON_LEFT_BRACKET_RC
+"Expecting ':[' for hash table type"
+-1167 STATIC_FUNCTION_NOT_DEFINED_RC
+"static function '%s1' used but not defined"
+-1168 EXPRESSION_DOES_NOT_EVALUATE_TO_A_FUNCTION_RC
+"Expression does not evaluate to a function"
+-1169 CONTROL_NOT_DEFINED_OR_MEMBERS_NOT_SUPPORTED_RC
+"Control '%s1' must be declared or cannot be a member of non-struct/union/class type"
+-1170 UNKNOWN_PRAGMA_RC
+"Unknown pragma"
+-1171 BAD_PRAGMA_PARAMETER_RC
+"Bad pragma parameter"
+-1172 ID_NOT_DECLARED_RC
+"Identifier '%s1' not declared"
+-1173 THIS_USE_OF_FUNCTION_POINTERS_NOT_ALLOWED_RC
+"This use of function pointers not allowed for your protection"
+-1174 NOT_ALL_CONTROL_PATHS_RETURN_A_VALUE_RC
+"Not all control paths return a value"
+-1175 LABEL_ALREADY_DEFINED_RC
+"Label %s2 already defined"
+-1176 ONLY_LOOPS_MAY_BE_LABELED_RC
+"Only loops may be labeled"
+-1177 LOOP_LABEL_NOT_FOUND_RC
+"Loop label not found"
+-1178 INCOMPATIBLE_PARSE_VARIABLE_TYPE_RC
+"Incompatible parse variable type. Declare variable as _str or typeless."
+-1179 INCOMPATIBLE_TYPE_FOR_X_EXPLICIT_CAST_NEEDED_FROM_X_TO_X_RC
+"Incompatible type for %s1. Explicit cast needed to convert %s2 to %s3"
+-1180 INCOMPATIBLE_TYPE_FOR_X_CANT_CONVERT_X_TO_X_RC
+"Incompatible type for %s1. Cannot convert %s2 to %s3"
+-1181 TYPE_MISMATCH_FOR_OPERATOR_RC
+"Type mismatch for operator %s1"
+-1182 INCOMPATIBLE_TYPE_FOR_X_USE_NOT_EQ_ZERO_RC
+"Incompatible type for %s1. Use (expression!=0)"
+-1183 CAST_OF_X_TO_X_NOT_VALID_RC
+"Cast of %s1 to %s2 is not valid"
+-1184 INVALID_CAST_RC
+"Invalid cast"
+-1185 PARAMETER_X_IS_CALL_BY_REFERENCE_RC
+"Parameter %s1 is call by reference.  Use variable or constant."
+-1186 METHOD_NOT_AVAILABLE_RC
+"Method not available for variables of this type"
+-1187 TOO_MANY_ARGUMENTS_VARARG_FUNCTIONS_REQUIRE_ELLIPSE_RC
+"Too many arguments. Add ellipse ('...') argument if this function accepts a variable number of arguments"
+-1188 SPACEFILEPOS_RC
+"\"%s1\" %s2 %s3:"
+-1189 ST_UNEXPECTED_TOKENS_RC
+"unexpected tokens following preprocessing directive - expected a newline"
+-1190 ST_EXPECTED_MACRO_FORMAL_PARAMETER_RC
+"expected macro formal parameter"
+-1191 ST_MACRO_REDEFINITION_RC
+"macro redefinition"
+-1192 ST_REUSE_OF_FORMAL_PARAMETER_RC
+"reuse of macro formal parameter %s2"
+-1193 ST_NOT_ENOUGH_ACTUAL_PARAMETERS_FOR_MACRO_RC
+"not enough actual parameters for macro '%s2'"
+-1194 ST_TOO_MANY_ACTUAL_PARAMETERS_FOR_MACRO_RC
+"too many actual parameters for macro '%s2'"
+-1195 ST_UNEXPECTED_END_OF_FILE_IN_MACRO_EXPANSION_RC
+"unexpected end of file in macro expansion"
+-1196 INTERNAL_ERROR_LEXISNEXTSYM_RC
+"Internal error in LexIsNextSym"
+-1197 ERROR_IN_DEFAULT_ARGUMENT_VALUE_RC
+"Error in default argument value %s1"
+-1198 NULL_CAN_NOT_BE_ASSIGNED_RC
+"null can not be assigned to variables of this type"
+-1199 INVALID_UNICODE_ESCAPE_SEQUENCE_RC
+"Invalid unicode escape sequence"
+-1200 NON_PORTABLE_STRING_RC
+"Characters above 127 are code page dependant.  Specify unicode with \\uXXXX or binary bytes with \\ddd"
+-1201 EXPECTING_CLASS_TYPE_NAME_RC
+"Expecting class type name"
+-1202 CALL_STATEMENT_DEPRECATED_RC
+"The 'call' statement is deprecated"
+-1203 CONST_DECLARATION_DEPRECATED_RC
+"'const' declarations are deprecated"
+-1204 EXPECTING_ENUM_TYPE_NAME_RC
+"Expecting enumerated type name"
+-1205 ENUM_FLAGS_OUT_OF_BITS_RC
+"Enumerated flags out of bits (max 32)"
+-1206 EXPECTING_NAMESPACE_NAME_RC
+"Expecting namespace name"
+-1207 EXPECTING_INTERFACE_TYPE_NAME_RC
+"Expecting interface type name"
+-1208 EXPECTING_FUNCTION_PROTOTYPE_RC
+"Expecting function prototype"
+-1209 EXPECTING_MEMBER_FUNCTION_RC
+"Expecting member function, not prototype"
+-1210 IDENTIFIER_ALREADY_DEFINED_CONFLICT_RC
+"Identifier '%s1.%s2' conflicts with one already defined"
+-1211 LOCAL_CLASSES_NOT_SUPPORTED_RC
+"Local classes are not supported"
+-1212 INTERFACES_CANNOT_HAVE_STATIC_METHODS_RC
+"Interfaces, classes, and unions can not have static methods"
+-1213 INTERFACES_CANNOT_HAVE_EXTERN_METHODS_RC
+"Interfaces, classes, and unions can not have extern methods"
+-1214 ACCESS_MODIFIERS_NOT_ALLOWED_HERE_RC
+"Access modifier is not allowed here"
+-1215 COMMAND_NOT_ALLOWED_HERE_RC
+"Command definition is not allowed here"
+-1216 ONLY_ONE_ACCESS_MODIFIER_ALLOWED_RC
+"Only one of public, protected, or private modifier allowed"
+-1217 INTERFACE_FUNCTION_NOT_IMPLEMENTED_RC
+"Interface function '%s1.%s2' not implemented"
+-1218 MEMBER_FUNCTION_SIGNATURE_DOES_NOT_MATCH_PARENT_RC
+"Member function signature does not match parent class or interface"
+-1219 MULTIPLE_CLASS_INHERITANCE_NOT_ALLOWED_RC
+"Multiple class inheritance is not allowed"
+-1220 EXTERN_IS_ONLY_FOR_PROTOTYPES_RC
+"Extern is only allowed for functions prototypes"
+-1221 THIS_NOT_ALLOWED_HERE_RC
+"'this' is only allowed in non-static class methods"
+-1222 CONSTRUCTORS_AND_DESTRUCTORS_CAN_NOT_BE_STATIC_RC
+"Constructors and destructors can not be static"
+-1223 INTERFACES_CAN_NOT_HAVE_CONSTRUCTORS_OR_DESTRUCTORS_RC
+"Interfaces can not constructors or destructors"
+-1224 CONSTRUCTORS_AND_DESTRUCTORS_CAN_NOT_OVERLOAD_RC
+"A class can have only one constructor and one destructor"
+-1225 CONSTRUCTOR_ARGUMENTS_MUST_HAVE_DEFAULTS_RC
+"Arguments for constructors must have default values"
+-1226 DESTRUCTORS_CAN_NOT_HAVE_ARGUMENTS_RC
+"Destructors can not have arguments"
+-1227 AUTO_DECLARATOR_REQUIRES_PROTOTYPE_RC
+"Local variable '%s1' can not be auto declared, function must first be declared"
+-1228 PRIVATE_SYMBOL_NOT_VISIBLE_IN_THIS_SCOPE_RC
+"Private symbol '%s1' is not visible in this scope"
+-1229 PROTECTED_SYMBOL_NOT_VISIBLE_IN_THIS_SCOPE_RC
+"Protected symbol '%s1' is not visible in this scope"
+-1230 EXPECTING_STATIC_CLASS_MEMBER_RC
+"Expecting static class member"
+-1231 INITIALIZER_LISTS_NOT_SUPPORTED_FOR_CLASSES_RC
+"Initializer lists are not supported for class types"
+-1232 NESTED_CLASSES_NOT_ALLOWED_RC
+"Nested class definitions are not allowed"
+-1233 DECLARATION_NOT_ALLOWED_IN_LOCAL_SCOPE_RC
+"'%s1' declaration is not allowed in local scope"
+-1234 BASE_CLASS_CONSTRUCTOR_MUST_BE_FIRST_RC
+"Call to base class constructor must be before any other statements"
+-1235 KEYWORD_NOT_SUPPORTED_YET_RC
+"Keyword '%s1' is not yet supported"
+-1236 AUTO_DECLARATOR_REQUIRES_REFERENCE_TYPE_RC
+"Local variable requires initializer unless function parameter is pass by reference"
+-1237 AUTO_DECLARATOR_ONLY_FOR_VARIABLES_RC
+"Auto type inference is only for simple variable types"
+-1238 INSTANCEOF_REQUIRES_CLASS_INSTANCE_ON_LHS_RC
+"Expecting class instance on left hand side of 'instanceof'"
+-1239 INSTANCEOF_REQUIRES_CLASS_NAME_ON_RHS_RC
+"Expecting class name on right hand side of 'instanceof'"
+-1240 CLASS_MEMBERS_MUST_COME_BEFORE_CONSTRUCTOR_RC
+"All class members must come before constructor"
+-1241 CLASS_HAS_NO_CONSTRUCTOR_RC
+"Class '%s1' does not have a constructor"
+-1242 INFINITE_LOOP_RC
+"Loop statement must have a break or return"
+-1243 PARENTHESIZED_INITIALIZERS_NOT_ALLOWED_RC
+"Parenthesized initializers are not allowed for non-static class members"
+-1244 MACROS_WITH_DEFMAIN_MAY_NOT_BE_IMPORTED_RC
+"Macros with defmain may not be #import'ed"
+-1245 EXPECTING_LEFT_BRACE_OR_SEMICOLON_RC
+"Expecting '{' or ';'"
+-1246 USING_NOT_ALLOWED_IN_SCOPED_NAMESPACE_RC
+"Using directive is not allowed in a scoped namespace"
+-1247 INCLUDE_IS_NOT_ALLOWED_INSIDE_NAMESPACE_RC
+"#include and #import are not allowed inside namespace"
+-1248 NAMESPACE_NOT_FOUND_RC
+"Namespace '%s1' not found"
+-1249 EXPECTING_IN_RC
+"Expecting 'in'"
+-1250 UNEXPECTED_IN_KEYWORD_RC
+"The 'in' keyword is only allowed in foreach statements"
+-1251 INCOMPATIBLE_TYPE_USED_WITH_FOREACH_RC
+"Incompatible type used with foreach"
+-1252 IRREGULAR_NAMESPACE_NAME_RC
+"Namespace names must be all lower case (ex. sc.lang)"
+-1253 IRREGULAR_INTERFACE_NAME_RC
+"Interface names must be mixed case and start with I (ex. IIterable)"
+-1254 IRREGULAR_CLASS_NAME_RC
+"Class names must be mixed case and start with uppercase (ex. StringUtil)"
+-1255 IRREGULAR_ENUMERATED_TYPE_NAME_RC
+"Enumerated types must be mixed case and start with uppercase (ex. JavaTokens)"
+-1256 IRREGULAR_ENUMERATOR_NAME_RC
+"Enumerators must be all upper case (ex. JS_WHILE_TOKEN)"
+-1257 IRREGULAR_MEMBER_VARIABLE_NAME_RC
+"Member variables must be mixed case and start with 'm_' (ex. m_syntaxIndent)"
+-1258 IRREGULAR_STATIC_VARIABLE_NAME_RC
+"Static member variables must be mixed case and start with 's_' (ex. s_lastProjectName)"
+-1259 IRREGULAR_METHOD_NAME_RC
+"Member functions must be mixed case and start with lowercase (ex. getSyntaxHandler)"
+-1260 IRREGULAR_NAMESPACE_VARIABLE_NAME_RC
+"Variables in namespaces must be mixed case and start with 'g_' (ex. g_currentProjectName)"
+-1262 IRREGULAR_NAMESPACE_FUNCTION_NAME_RC
+"Functions and commands in namespace names must be all lowercase (ex. truncate_string)"
+-1263 CLASS_COMPARISON_REQUIRES_COMPARABLE_RC
+"Classes can only use operator %s1 if they implement the sc.lang.IComparable interface"
+-1264 CLASS_INDEXING_REQUIRES_INDEXABLE_RC
+"Classes can only use operator [] if they implement the sc.lang.IIndexable interface"
+-1265 CLASS_INDEXING_REQUIRES_HASHINDEXABLE_RC
+"Classes can only use operator :[] if they implement the sc.lang.IHashIndexable interface"
+-1266 CLASS_HASHING_REQUIRES_HASHABLE_RC
+"Classes can be hashed only if they implement the sc.lang.IHashable interface"
+-1267 STRING_CONVERSION_REQUIRES_TOSTRING_RC
+"Classes can be converted to strings only if they implement the sc.lang.IToString interface"
+-1268 INCLUDES_MUST_BE_FIRST_RC
+"#include and #import statements must preceed code"
+-1269 IRREGULAR_CONSTANT_NAME_RC
+"Constants must be all upper case (ex. MAX_CACHE_SIZE)"
+-1270 CAST_OF_CLASS_X_TO_X_NOT_VALID_RC
+"Cast of class '%s1' to unrelated class '%s2' is not valid"
+-1271 MEMBER_ID_ALREADY_DEFINED_RC
+"Member '%s1' already defined as same or different type"
+-1272 MEMBER_ID_ALREADY_DEFINED_IN_SUPERCLASS_RC
+"Member '%s1' already defined as same or different type in superclass"
+-1273 FUNCTION_IS_DEPRECATED_RC
+"Attempt to call deprecated function '%s1'"
+-1274 TYPENAME_IS_DEPRECATED_RC
+"Attempt to use deprecated type name '%s1'"
+-1275 PROPERTY_IS_DEPRECATED_RC
+"Attempt to use deprecated property '%s1'"
+-1276 VARIABLE_IS_DEPRECATED_RC
+"Attempt to use deprecated variable '%s1'"
+-1277 OUT_OF_STRING_CODE_SPACE_RC
+"Code size too large. String space exceeded."
+-1278 OUT_OF_LINKTAB_CODE_SPACE_RC
+"Code size too large. Link table space exceeded."
+
+SLICKEDITOR
+-2000 SLICK_EDITOR_VERSION_RC
+// Version message is in mdi.c and gui.c
+""
+-2001 SPILL_FILE_TOO_LARGE_RC
+"Spill file too large. Save files and exit"
+-2002 ON_RC
+"ON"
+-2003 OFF_RC
+"OFF"
+-2004 EXPECTING_IGNORE_OR_EXACT_RC
+"Expecting ignore or exact"
+-2005 ERROR_IN_MARGIN_SETTINGS_RC
+"Error in margin settings"
+-2006 ERROR_IN_TAB_SETTINGS_RC
+"Error in tab settings"
+-2007 UNKNOWN_COMMAND_RC
+"Unknown command"
+-2008 MISSING_FILENAME_RC
+"Missing filename"
+-2009 TOO_MANY_FILES_RC
+"Too many files"
+-2010 TOO_MANY_SELECTIONS_RC
+"Too many selections"
+-2011 LINES_TRUNCATED_RC
+"Lines truncated"
+-2012 TEXT_ALREADY_SELECTED_RC
+"Text already selected"
+-2013 TEXT_NOT_SELECTED_RC
+"Text not selected"
+-2014 INVALID_SELECTION_TYPE_RC
+"Invalid selection type"
+-2015 SOURCE_DEST_CONFLICT_RC
+"Source destination conflict"
+-2016 NEW_FILE_RC
+"New file"
+-2017 LINE_SELECTION_REQUIRED_RC
+"Line selection required"
+-2018 BLOCK_SELECTION_REQUIRED_RC
+"Block selection required"
+-2019 TOO_MANY_GROUPS_RC
+"Too many window groups"
+-2020 MACRO_FILE_NOT_FOUND_RC
+"Macro file %s1 not found"
+-2021 TREE_CANNOT_DELETE_ROOT_NODE_RC
+"Cannot delete root node"
+-2023 HIT_ANY_KEY_RC
+"Hit any key to continue"
+-2024 BOTTOM_OF_FILE_RC
+"Bottom of file"
+-2025 TOP_OF_FILE_RC
+"Top of file"
+-2026 INVALID_POINT_RC
+"Invalid point"
+-2027 TYPE_ANY_KEY_RC
+".  Type any key."
+-2028 TOO_MANY_WINDOWS_RC
+"Too many windows"
+-2029 NOT_ENOUGH_MEMORY_RC
+"Not enough memory"
+-2030 PRESS_ANY_KEY_TO_CONTINUE_RC
+"Press any key to continue"
+-2031 SPILL_FILE_IO_ERROR_RC
+"Spill file I/O error"
+-2032 TYPE_NEW_DRIVE_LETTER_RC
+".  Type new drive letter"
+-2033 NOTHING_TO_UNDO_RC
+"Nothing to undo"
+-2034 NOTHING_TO_REDO_RC
+"Nothing to redo"
+-2035 LINE_OR_BLOCK_SELECTION_REQUIRED_RC
+"Line or block selection required"
+-2036 INVALID_SELECTION_HANDLE_RC
+"Invalid selection handle"
+-2037 SEARCHING_AND_REPLACING_RC
+"Searching and Replacing..."
+-2038 COMMAND_CANCELLED_RC
+"Command cancelled"
+-2039 ERROR_CREATING_SEMAPHORE_RC
+"Error creating semaphore"
+-2040 ERROR_CREATING_THREAD_RC
+"Error creating thread"
+-2041 ERROR_CREATING_QUEUE_RC
+"Error creating queue"
+-2042 PROCESS_ALREADY_RUNNING_RC
+"Process already running"
+-2043 CANT_FIND_INIT_PROGRAM_RC
+"Cannot find process init program 'ntpinit'"
+-2044 CMDLINE_TOO_LONG_RC
+"Command line too long.  Place wild card filespecs in double quotes."
+-2045 SERIAL_NUMBER_RC
+""
+-2046 UNRECOGNIZED_STATE_FILE_FORMAT_RC
+"'%s1' is not recognized as a compatible state file or pcode file"
+-2047 PACKAGE_LICENSES_RC
+""
+-2049 UNABLE_TO_CREATE_SPILL_FILE_RC
+"Unable to create spill file '%s1'"
+-2052 UNABLE_TO_DISPLAY_POPUP_RC
+"Unable to display popup"
+-2053 MENU_HANDLE_MUST_BE_POPUP_RC
+"Menu handle must be popup"
+-2054 MENU_HANDLE_CAN_NOT_BE_POPUP_RC
+"Menu handle can not be popup"
+-2055 INVALID_MENU_HANDLE_RC
+"Invalid menu handle"
+-2056 MENU_HANDLE_ALREADY_ATTACHED_TO_WINDOW_RC
+"Menu handle already attached to window"
+-2057 THIS_BORDER_STYLE_DOES_NOT_SUPPORT_MENUS_RC
+"This border style does not support menus"
+-2058 NOT_USED7_RC
+-2059 COMMAND_NOT_ALLOWED_WHEN_AW_IS_ICON_RC
+"Command not allowed when activate window is iconized"
+-2060 COMMAND_NOT_ALLOWED_WHEN_NCW_RC
+"Command not allowed when no edit windows present"
+-2061 SLKWAIT_PROGRAM_NOT_FOUND_RC
+"slkwait program not found"
+-2062 SIZE_RC
+"Changes the window size"
+-2063 MOVE_RC
+"Changes the window position"
+-2064 CLOSE_RC
+"Closes the window"
+-2065 MINIMIZE_RC
+"Reduces the window to an icon"
+-2066 MAXIMIZE_RC
+"Enlarges the window to full size"
+-2067 NEXTWINDOW_RC
+"Switches to the next window"
+-2068 RESTORE_RC
+"Restores the window to normal size"
+-2069 TASKLIST_RC
+"Displays the task list menu"
+-2070 CLOSE_APPLICATION_RC
+"Quits the program"
+-2071 WINDOW_MENU_RC
+"Move, size, or close the document window"
+-2072 APPLICATION_MENU_RC
+"Move, size, or close the application window"
+-2073 PROPERTY_OR_METHOD_NOT_ALLOWED_RC
+"This property or method is not allowed on this object"
+-2074 UNABLE_TO_CREATE_TIMER_RC
+"Unable to create timer"
+-2075 TIMEOUT_WATING_FOR_PROCESS_INIT_RC
+"Time out waiting for process to initialized"
+-2076 CANT_CREATE_MDI_FORM_OBJECT_RC
+"Cannot create mdi form object"
+-2077 FORM_OBJECT_CAN_NOT_BE_CLIPPED_CHILD_RC
+"Form object can not be clipped child"
+-2078 CONTROL_OBJECTS_MUST_HAVE_PARENT_RC
+"Control objects must have parent"
+-2079 INVALID_PARENT_WINDOW_RC
+"Invalid parent window"
+-2080 INVALID_SORT_DATA_RC
+"Invalid sort data"
+-2081 XTERM_PROGRAM_NOT_FOUND_RC
+"xterm program not found"
+-2082 OBJECT_MUST_BE_DISPLAYED_RC
+"This property or method requires a displayed object"
+-2083 FORM_OR_CONTROL_DOES_NOT_HAVE_NAME_RC
+"Form or control does not have name"
+-2084 CLIPBOARD_OPERATION_NOT_SUPPORTED_RC
+"This operation is not supported with this clipboard format"
+-2085 UNABLE_TO_GET_CLIPBOARD_DATA_RC
+"Unable to get clipboard data"
+-2086 NOTHING_SELECTED_RC
+"Nothing selected"
+-2087 SYSTEM_CALL_FAILED_RC
+"System call failed"
+-2088 INVALID_OBJECT_HANDLE_RC
+"Invalid object handle"
+-2089 FAILED_TO_LOAD_PRINTER_DRIVER_RC
+"Failed to load printer driver"
+-2090 EXT_DEVICE_MODE_FUNCTION_NOT_FOUND_RC
+"ExtDevMode function not found"
+-2091 PRINTER_NOT_SET_UP_CORRECTLY_RC
+"Printer not set up correctly"
+-2092 UNABLE_TO_START_PRINTER_RC
+"Unable to start printer"
+-2093 PRINTER_FAILURE_RC
+"Printing failed"
+-2094 LONG_STRING_MATCH_RC
+"The regular expression stack is getting very large due to a complex search string.  You may not have enough memory to complete the search.\n\nContinue?"
+-2095 DDE_NOT_PROCESSED_RC
+"DDE command not processed"
+-2096 DDE_BUSY_RC
+"DDE server busy"
+-2097 DDE_UNABLE_TO_CONNECT_RC
+"Unable to connect to DDE server"
+-2098 DDE_ERROR_RC
+"DDE error"
+-2099 COMMAND_NOT_ALLOWED_IN_READ_ONLY_MODE_RC
+"Command not allowed in Read only mode"
+-2100 WEMU387_NOT_FOUND_OR_INVALID_RC
+"wemu387.386 not installed or invalid"
+-2101 FAILED_TO_BACKUP_FILE_RC
+"Failed to copy/move %s1 to %s2"
+-2105 FAILED_TO_BACKUP_FILE_ACCESS_DENIED_RC
+"Failed to copy/move %s1 to %s2.  Access denied."
+-2106 LINE_RC
+"Line"
+-2107 COL_RC
+"Col"
+-2108 INS_RC
+"Ins"
+-2109 REP_RC
+"Rep"
+-2110 DEMO_CANT_SAVE_FILES_RC
+"Demo version cannot save files of this extension.  Please contact sales at SlickEdit Inc. at 800 934-3348 or 919 473-0100."
+-2111 FAILED_TO_BACKUP_FILE_INSUFFICIENT_DISK_SPACE_RC
+"Failed to copy/move %s1 to %s2.  Insufficient disk space."
+-2112 SLICK_C_CANT_CALL_DLL_FUNCTION_WITH_PVOID_RC
+"Slick-C(R) cannot call DLL function with pointer to void parameter"
+-2113 FUNCTION_NOT_AVAILABLE_RC
+"Function not available"
+-2114 MACROS_WITH_DEFMAIN_MAY_NOT_BE_LOADED_RC
+"Macros with defmain may not be loaded"
+-2115 APPNAME_RC
+""
+
+-2121 VSRC_INSTANCE_ALREADY_RUNNING_RC
+""
+"SlickEdit: An instance of SlickEdit is already being displayed on this X server. The existing instance is being activated."
+""
+"If you want to bring up a new copy of SlickEdit, use +new option."
+""
+"You can turn off this message by setting VSLICKXNOPLUSNEWMSG=1"
+""
+-2122 VSRC_LINE_TOOLTIP_RC
+"Click here to jump to a specific line"
+-2123 VSRC_COL_TOOLTIP_RC
+"Click here to jump to a specific column"
+-2124 VSRC_MODE_TOOLTIP_RC
+"Click here to select a language editing mode"
+-2125 VSRC_READWRITE_TOOLTIP_RC
+"Click here to toggle read only mode"
+-2126 VSRC_INSREP_TOOLTIP_RC
+"Click here to toggle insert/replace mode"
+-2127 VSRC_SELECTION_TOOLTIP_RC
+"Indicates number of lines or columns selected, click to toggle selection"
+-2128 NO_SELECTION_RC
+"No Selection"
+-2129 SELECTION_1LINE_RC
+"Line"
+-2130 SELECTION_LINES_RC
+"Lines"
+-2131 SELECTION_1COLUMN_RC
+"Col"
+-2132 SELECTION_COLUMNS_RC
+"Cols"
+-2133 SELECTION_BLOCK_RC
+"Block"
+-2134 VSRC_RECORD_MACRO_TOOLTIP_RC
+"Click here to toggle macro recording"
+-2135 VSRC_ALERT_TOOLTIP_RC
+"Click here to activate alerts!"
+
+-2148 VSRC_LINES_LONGER_THAN_ALLOWED_LIMIT
+"The following line(s) are longer than the allowed limit: %s1"
+
+-2149 VSRC_LINE_TRUNCATED_TO_FIT_WITHIN_TRUNCATE_LENGTH_RC
+"Line truncated to fit within truncate length setting"
+
+-2150 VSRC_THIS_OPERATION_IS_NOT_ALLOWED_AFTER_TRUNCATION_LENGTH
+"This operation is not allowed after truncation length setting"
+
+-2151 VSRC_THIS_OPERATION_WOULD_CREATE_LINE_TOO_LONG
+"This operation would create a line longer than the truncation length setting"
+
+-2152 VSRC_CURSOR_POSITION_PAST_TRUNCATION_LENGTH
+"The cursor position is past the truncation length setting"
+
+-2153 VSRC_OPERATION_ONLY_ALLOWED_WHEN_TRUNCATION_LENGTH_IS_ZERO
+"This operation is only allowed when the truncation length is zero"
+
+-2154 VSRC_SELECTION_NOT_VALID_FOR_OPERATION
+"The selection is not valid for this operation"
+
+-2155 VSRC_RECORD_WIDTH_OPTION_NOT_SUPPORTED_FOR_UTF8
+"Record width option is not supported for UNICODE files"
+
+-2156 VSRC_CODE_PAGE_NOT_INSTALLED_OR_NOT_VALID_RC
+"Code page not installed or not valid"
+
+-2157 VSRC_CODE_PAGE_TO_CODE_PAGE_TRANSLATIONS_NOT_SUPPORTED
+"Code page to code page translations not supported"
+-2158 VSRC_THIS_EBCDIC_TRANSLATION_IS_NOT_SUPPORTED
+"This EBCDIC translation is not supported"
+
+-2159 VSRC_COMMAND_IS_DISABLED_FOR_THIS_OBJECT_OR_STATE
+"Command is disabled for this object"
+-2160 VSRC_COMMAND_NOT_IMPLEMENTED
+"This command is not implemented in this version."
+
+-2161 VSRC_MENU_NOT_FOUND
+"Menu %s1 not found"
+-2162 VSRC_TOOL_WINDOW_NOT_FOUND
+"Missing tool window"
+-2163 VSRC_FORM_NOT_FOUND
+"Form not found: %s1"
+
+-2164 VSRC_LICENSE_EXPIRED
+"License expired"
+-2165 VSRC_MUST_BE_USING_QT
+"Must be using QT. VSAPIFLAG_USING_QT not specified"
+-2166 VSRC_FUNCTION_NOT_SUPPORTED_WHEN_USING_QT
+"Function not supported when using QT. Check for Qt specific function or remove VSAPIFLAG_USING_QT flag"
+
+
+REGEX
+-2500 INVALID_REGULAR_EXPRESSION_RC
+"Invalid regular expression"
+-2501 EOL1_RC
+-2502 EOL2_RC
+-2503 RE_EOF_RC
+-2504 REBREAK_KEY_PRESSED_RC
+
+VSCR
+-2550 VUNSUPPORTED_GRAPHICS_FORMAT_RC
+"Unsupported graphics format"
+-2551 VINVALID_BITMAP_FILE_RC
+"Invalid bitmap file"
+
+SLICKI
+-3000 INCORRECT_VERSION_RC
+"Incorrect version"
+-3001 NO_MAIN_ENTRY_POINT_RC
+"No main entry point"
+-3002 INTERPRETER_OUT_OF_MEMORY_RC
+"Interpreter out of memory"
+-3003 PROCEDURE_NOT_FOUND_RC
+"Procedure %s1 not found"
+-3006 MODULE_ALREADY_LOADED_RC
+"Module already loaded"
+-3007 CANT_REMOVE_MODULE_RC
+"Cannot remove module"
+-3008 NUMERIC_OVERFLOW_RC
+"Numeric overflow"
+-3009 INVALID_NUMBER_ARGUMENT_RC
+"Invalid number argument"
+-3010 RECURSION_TOO_DEEP_RC
+"Recursion too deep"
+-3011 INVALID_NUMBER_OF_PARAMETERS_RC
+"Invalid number of parameters"
+-3012 OUT_OF_STRING_SPACE_RC
+"Out of string space"
+-3013 EXPRESSION_STACK_OVERFLOW_RC
+"Expression stack overflow"
+-3014 ILLEGAL_OPCODE_RC
+"Illegal opcode"
+-3015 INVALID_ARGUMENT_RC
+"Invalid argument"
+-3016 LOOP_STACK_OVERFLOW_RC
+"Loop stack overflow"
+-3017 DIVIDE_BY_ZERO_RC
+"Divide by zero"
+-3018 INVALID_CALL_BY_REFERENCE_RC
+"Invalid call by reference"
+-3019 PROCEDURE_NEEDS_MORE_ARGS_RC
+"Procedure needs more arguments"
+-3020 BREAK_KEY_PRESSED_RC
+"Break key pressed.  Macro halted"
+-3021 CANT_WRITE_STATE_DURING_REL_RC
+"Cannot write state during relink"
+-3022 STRING_NOT_FOUND_RC
+"String not found"
+-3023 NOT_USED_1_RC
+-3024 COMMAND_NOT_FOUND_RC
+"Command %s1 not found"
+-3027 FUNCTION_NOT_SUPPORTED_IN_DOS_RC
+"Function is not supported in DOS"
+-3028 FUNCTION_NOT_SUPPORTED_IN_OS2_RC
+"Function is not supported in OS/2"
+-3029 INVALID_NAME_INDEX_RC
+"Invalid name index"
+-3030 INVALID_OPTION_RC
+"Invalid option"
+-3040 NOT_ENOUGH_MEMORY_TO_CREATE_MENU_RC
+"Not enough memory to create menu"
+-3041 NO_FILE_ACTIVE_RC
+"No file active"
+-3042 OBJECT_REFERENCED_BUT_DOES_NOT_EXIST_RC
+"Object %s1 referenced but does not exist"
+-3045 CONTROL_REFERENCED_BUT_DOES_NOT_EXIST_RC
+"Control %s1 referenced but does not exist"
+-3048 EVENT_TABLE_REFERENCED_BUT_DOES_NOT_EXIST_RC
+"Event table %s1 referenced but does not exist"
+-3051 VSAPI_DLL_NOT_FOUND_RC
+"VSAPI.DLL not found"
+//-3052 ARGFILE_NOT_FOUND_RC
+//"File '%s1' not found"
+-3055 ERROR_LOADING_DLL_RC
+"Error loading DLL '%s1'"
+-3058 DLL_FUNCTION_NOT_FOUND_RC
+"DLL function '%s1' not found"
+-3061 INVALID_DLLTYPE_RC
+"DLLEXPORT: Invalid DLL type '%s1'"
+-3064 ARGINVALID_ARGUMENT_RC
+"%s1: Invalid argument"
+-3066 DELETED_ELEMENT_RC
+"Cannot reference deleted element"
+-3067 WARNINGSTRINGLEN_RC
+"Warning: A large string of length %s1 bytes about to be created.\n\nContinue?"
+-3070 INVALID_ARRAY_RC
+"Invalid array"
+-3071 ARRAY_OR_HASH_TABLE_ELEMENT_NOT_INITIALIZED_RC
+"Variable element or variable not initialized"
+-3072 INVALID_HVAR_ARGUMENT_RC
+"Invalid HVAR argument"
+-3073 INVALID_POINTER_ARGUMENT_RC
+"Invalid pointer argument"
+-3074 CALL_WITH_UNINITIALIZED_VARIABLE_RC
+"Module '%s1' contains a call to '%s2' with an uninitialized variable.  Declare a function prototype to find the error at compile time."
+-3079 CALL_WITH_NOT_ENOUGH_ARGUMENTS_RC
+"Module '%s1' contains a call to '%s2' with not enough arguments  Declare a function prototype to find the error at compile time."
+-3084 INVALID_FUNCTION_POINTER_RC
+"Invalid function pointer"
+-3085 WARNINGARRAYSIZE_RC
+"Warning: A large array of %s1 elements about to be created.\n\nContinue?"
+-3088 WARNING_POSSIBLE_REFERENCE_TO_CONTROL_WHICH_DOES_NOT_EXIST_RC
+"Module %s1 references control '%s2' which does not exist on form '%s3'.  If this message is incorrect, declare the control using the _nocheck option (see help on _nocheck)."
+-3095 CANT_SUBSCRIPT_STACK_COPY_OF_ARRAY_OR_HASH_TABLE_RC
+"Cannot subscript stack copy of array or hash table"
+-3096 VSRC_LOAD_FILES_WITH_PLUSC_OPTION_DEPRECATED
+"load_files +c option deprecated.  Use _open_temp_view() or _create_temp_view()."
+-3097 VSRC_LOAD_FILES_WITH_PLUSV_OPTION_DEPRECATED
+"load_files +v view_id option deprecated.  Use +bi view_id.p_buf_id"
+-3098 CLASS_NAME_NOT_FOUND_RC
+"Class '%s1' not found"
+-3099 CLASS_MEMBER_NOT_FOUND_RC
+"Class or struct member '%s1' not found"
+-3100 EXPECTING_CLASS_INSTANCE_RC
+"Expecting variable with class or struct type"
+-3101 SLICKC_ASSERTION_FAILURE_RC
+"Slick-C(R) assertion failure"
+-3102 SLICKC_ATTACH_DEBUGGER_RC
+"Attach Slick-C(R) debugger now?"
+-3103 SLICK_CMD_LINE_USAGE_WIN
+"Usage: vs [Options] file1 [Options] file2"
+""
+"+ or -new\t\tNew instance of the editor."
+"-sc config_path\tSpecifies the configuration directory."
+"-sr restore_path\tSpecifies the directory containing auto-restore"
+"\t\tfiles."
+"-st state_ksize\tSpecifies the maximum amount of swappable"
+"\t\tstate file data in vslick.sta to be kept in memory,"
+"\t\tin kilobytes."
+"-sul\t\tDisables byte-range file locking that SlickEdit"
+"\t\tnormally performs. Use this option when receiving"
+"\t\tan 'access denied' error with remote files."
+"-x pcode_name\tAlternate state file (.sta) or pcode file (.ex)."
+"-p cmdline\tExecute command with arguments given and exit."
+"-r cmdline\t\tExecute command with arguments given and"
+"\t\tremain resident."
+"file1 file2\t\tFiles to edit. File names may contain wildcard"
+"\t\tcharacters (* and ?)."
+"-#command\tExecute command on active buffer."
+"+ or -L[C]\t\tTurn on/off load entire file switch. The optional"
+"\t\tC suffix specifies counting the number of lines in"
+"\t\tthe file."
+"+ nnn\t\tLoad binary file(s) with a record width of nnn."
+"+T [ buf_name ]\tStart a default operating system format temporary"
+"\t\tbuffer with name buf_name."
+"+TD [ buf_name ]\tStart a DOS format temporary buffer with name"
+"\t\tbuf_name."
+"+ or -E\t\tTurn on/off expand tabs to spaces when loading"
+"\t\tfile. Default is off."
+-3104 SLICK_CMD_LINE_USAGE_NIX
+"Usage: vs [Options] file1 [Options] file2"
+""
+"   + or -new         New instance of the editor."
+"   -sc config_path   Specifies the configuration directory."
+"   -supf kbdfile     Specifies a keyboard file for mapping the keyboard"
+"                     at the X (modmap) level."
+"   -sr restore_path  Specifies the directory containing auto-restore files."
+"   -st state_ksize   Specifies the maximum amount of swappable state file"
+"                     data in vslick.stu to be kept in memory, in kilobytes."
+"   -suxft            (Linux only) Disables Xft font support."
+"   -sul              Disables the byte-range file locking that SlickEdit"
+"                     normally performs. Enable this option when receiving"
+"                     an 'access denied' error with remote files."
+"   -x pcode_name     Alternate state file (.stu) or pcode file (.ex)."
+"   -p cmdline        Execute command with arguments given and exit."
+"   -r cmdline        Execute command with arguments given and remain resident."
+"   file1 file2       Files to edit. File names may contain wildcard"
+"                     characters (* and ?)."
+"   -#command         Execute command on active buffer."
+"   + or -L[C]        Turn on/off load entire file switch. The optional C suffix"
+"                     specifies counting the number of lines in the file."
+"   + nnn             Load binary file(s) that follow with a record width nnn."
+"   +T [ buf_name ]   Start a default operating system format temporary buffer"
+"                     with name buf_name."
+"   +TU [ buf_name ]  Start a UNIX format temporary buffer with name buf_name."
+"   +TM [ buf_name ]  Start a Macintosh format temporary buffer with name buf_name."
+"                     Classic Mac line endings are a single carriage return (ASCII 13)."
+"   + or -E           Turn on/off expand tabs to spaces when loading file. "
+"                     Default is off.
+"
+-3105 SLICK_STOP_OP
+"Slick-C stop operator called."
+
+SPELL
+-3500 SPELL_TEST_RC
+"exist"
+-3501 SPELL_FILE_NOT_FOUND_RC
+"Spell file: %s1 not found"
+-3504 SPELL_ERROR_OPENING_MAIN_DICT_FILE_RC
+"Unable to open main dictionary: %s1"
+-3507 SPELL_ERROR_OPENING_USER_DICT_FILE_RC
+"Unable to open user dictionary: %s1"
+-3510 SPELL_NOT_ENOUGH_MEMORY_RC
+"Not enough memory"
+-3511 SPELL_ERROR_READING_MAIN_INDEX_RC
+"Error reading the main dictionary index: %s1"
+-3514 SPELL_ERROR_OPENING_COMMON_DICT_RC
+"Unable to open common word dictionary: %s1"
+-3517 SPELL_COMMON_DICT_TOO_LARGE_RC
+"Common word dictionary too large"
+-3518 SPELL_ERROR_READING_COMMON_DICT_RC
+"Error reading the common word dictionary: %s1"
+-3521 SPELL_USER_DICT_TOO_LARGE_RC
+"User dictionary too large: %s1"
+-3524 SPELL_ERROR_READING_USER_DICT_RC
+"Error reading the user dictionary: %s1"
+-3527 SPELL_ERROR_UPDATING_USER_DICT_FILE_RC
+"Unable to update the user dictionary: %s1"
+-3530 SPELL_ACCESS_DENIED_RC
+"Access denied writing the file: %s1"
+-3533 SPELL_OUT_OF_DISK_SPACE_RC
+"Out of disk space trying to write: %s1"
+-3536 SPELL_ERROR_READING_MAIN_DICT_RC
+"Error reading the main dictionary"
+-3537 SPELL_WORD_NOT_FOUND_RC
+"Word not found"
+-3538 SPELL_CAPITALIZATION_RC
+"Word may contain a capitalization error"
+-3539 SPELL_WORD_TOO_SMALL_RC
+"Word too small"
+-3540 SPELL_WORD_TOO_LARGE_RC
+"Word too large"
+-3541 SPELL_WORD_INVALID_RC
+"Word is invalid"
+-3542 SPELL_REPLACE_WORD_RC
+"Word has a replacement"
+-3543 SPELL_HISTORY_TOO_LARGE_RC
+"Word cannot be inserted into spell history"
+-3544 SPELL_USER_DICT_NOT_LOADED_RC
+"User dictionary not loaded"
+-3545 SPELL_NO_MORE_WORDS_RC
+"No more words to check"
+-3546 SPELL_REPEATED_WORD_RC
+"Repeated word encountered"
+
+CLEX
+-3547 CLEX_NOT_ENOUGH_MEMORY_RC
+"Not enough memory"
+-3548 CLEX_TOO_MANY_MLCOMMENTS_DEFINED_RC
+"Too many multi-line comments defined"
+-3549 CLEX_IDENTIFIER_MLCOMMENTS_NOT_SUPPORTED_RC
+"Identifier multi-line comments not supported"
+-3550 CLEX_TOO_MANY_CFLINECOMMENTS_DEFINED_RC
+"Too many checkfirst line comments defined"
+-3551 CLEX_IDCHARS_MUST_BE_DEFINED_FIRST_RC
+"IDCHARS and CASE-SENSITIVE must be defined first"
+-3552 CLEX_INVALID_STYLE_RC
+"Invalid style"
+-3553 CLEX_INVALID_MLCOMMENT_RC
+"Invalid MLCOMMENT definition"
+-3554 CLEX_INVALID_LINECOMMENT_RC
+"Invalid LINECOMMENT definition"
+-3555 CLEX_INVALID_NAME_RC
+"Invalid name"
+-3556 CLEX_FILE_NOT_FOUND_RC
+"File not found"
+-3557 CLEX_ACCESS_DENIED_RC
+"Access denied"
+-3558 CLEX_UNABLE_TO_OPEN_FILE_RC
+"Unable to open file"
+-3559 CLEX_INVALID_IDCHARS_RC
+"Invalid IDCHARS definition"
+-3560 CLEX_NO_INFO_FOR_FILE_RC
+"No color coding information for this file "
+
+GREP
+-3600 GREP_USAGE_RC
+"Usage:  %s3  [options] [pattern] [[-l] filename [[-l] filename ...]]"
+"      -c            Only print count of matches after filename and line"
+"                    and column of first match."
+"      -d infile outfile  Creates a patched version of Slick Grep which uses the"
+"                         case sensitivity & R. E. search settings specified."
+"      -e pattern    Useful if expression or string starts with '-'."
+"      -f filename   Regular expression or string taken from file."
+"      -fb filename  Binary. Same as above except all characters count."
+"      -h or ?       This help."
+"  %s1 -i            Ignore case."
+"      -l filename   Search files listed in filename."
+"      -m            Minimal output.  No filename, line, and column."
+"  %s2 -n            Normal search."
+"      %s4-r, %s5-u, or %s6-b SlickEdit or UNIX regular expression searching."
+"      -po           Print offset instead of line number and column."
+"      -t            Tree file list."
+"      -w            Whole word search. Words contain [A-Za-z0-9_$]."
+"      -w=reg-exp    Whole word search. reg-exp specifies word characters."
+"  %s7 -x            Exact case."
+"      -### [###]    Search files of record width ###. The second number"
+"                    specifies the offset of the first record."
+"   Example"
+"        %s3 BUFSIZE *.c *.h"
+"        %s3 -i -d %s3%s0 my%s3%s0"
+"        %s3 -i -300 601 James dbase.fil\n"
+-3625 GREP_EXECTING_TWO_FILENAMES_RC
+"Grep: Expecting two file names"
+-3626 GREP_EXPECTING_PATTERN_STRING_RC
+"Grep: Expecting pattern string"
+-3627 GREP_PATTERN_STRING_ALREADY_SPECIFIED_RC
+"Grep: Pattern already specified"
+-3628 GREP_EXPECTING_FILENAME_RC
+"Grep: Expecting filename"
+-3629 GREP_UNABLE_TO_OPEN_EXPRESSION_FILE_RC
+"Grep: Unable to open expression file '%s1'"
+-3630 GREP_MUST_SPECIFY_PATTERN_BEFORE_FILES_RC
+"Grep: Must specify pattern before files"
+-3631 GREP_UNKNOWN_OPTION_RC
+"Grep: unknown option '%s1' ignored"
+-3632 GREP_UNABLED_OPEN_FILE_ABORT_RC
+"Grep: Unable to open file '%s1'.  Operation aborted."
+-3633 GREP_ERROR_READING_FILE_ABORT_RC
+"Grep: Error reading file '%s1'.  Operation aborted."
+-3634 GREP_FILENAME_TOO_LONG_RC
+"Grep: File name too long.  Operation aborted."
+-3635 GREP_UNABLED_OPEN_INPUT_FILE_RC
+"Grep: Unable to open input file '%s1'"
+-3636 GREP_UNABLED_OPEN_OUTPUT_FILE_RC
+"Grep: Unable to open output file '%s1'"
+-3637 GREP_UNABLE_TO_FIND_DEFAULT_OPTIONS_RC
+"Grep: Unable to find default options"
+-3638 GREP_UNABLE_TO_WRITE_TO_OUTPUT_FILE_RC
+"Grep: Unable to write to output file.  Check your disk space."
+-3639 GREP_UNABLED_OPEN_FILE_SKIPPED_RC
+"Grep: Unable to open file '%s1'.  File skipped"
+-3640 GREP_INVALID_WORD_RE_RC
+"Grep: Invalid word regular expression"
+-3641 GREP_INVALID_RE_RC
+"Grep: Invalid regular expression"
+
+NTPINIT
+-3700 NTPINIT_ONLY_RUN_BY_SLICKEDIT_RC
+"This program is only run by SlickEdit"
+
+SLKSHELL
+-3750 SLKSHELL_HELP_RC
+"If a program prompts for input, you will need to uniconize the"
+"SlickEdit Process DOS box and type in your response there."
+-3752 SLKSHELL_PROGRAM_NOT_FOUND_RC
+"Program '%s1' not found"
+-3753 SLKSHELL_COMSPEC_MUST_BE_SET_RC
+"COMSPEC environment variable must be set"
+-3754 SLKSHELL_INVALID_DIRECTORY_RC
+"Invalid directory"
+-3755 SLKSHELL_SYNTAX_INCORRECT_RC
+"The syntax of the command is incorrect."
+
+SLKWAIT
+-3800 SLKWAIT_HIT_ANY_KEY_RC
+"Hit any key to continue"
+-3801 SLKWAIT_PRESS_ENTER_TO_CONTINUE_RC
+"Press ENTER to continue"
+-3802 SLKWAIT_JAVA_MESSAGE_RC
+"If you do not want this console to remain after the program exits, uncheck"
+"the \"Wait for keypress\" option (\"Project\", \"Project Properties...\","
+"Tools tab, select the tool name)"
+
+WDOSRC
+-3850 WDOSRC_TEMP_NOT_SET_RC
+"TEMP and TMP environment variables not set"
+-3851 WDOWRC_UNABLE_TO_OPEN_FILE_RC
+"Unable to open file %s1"
+-3852 WDOSRC_HELP_RC
+"If you are not using DOSKEY or other incompatible retrieve program,"
+"you may set the macro variable \"def_wshell\" to the command shell you"
+"want to use (e.g. command.com).  Menu item (\"Macro\",\"Set Macro Variable\")."
+""
+"If it took about 5 seconds for the concurrent process buffer to start,"
+"replace vsutil.dll with vsutil.sho to reduce this time."
+
+BTREE
+-3860 VS_TAG_FLAG_VIRTUAL_RC
+"Virtual function"
+-3861 VS_TAG_FLAG_STATIC_RC
+"Static"
+-3862 VS_TAG_FLAG_PUBLIC_RC
+"Public scope"
+-3863 VS_TAG_FLAG_PACKAGE_RC
+"Package scope"
+-3864 VS_TAG_FLAG_PROTECTED_RC
+"Protected scope"
+-3865 VS_TAG_FLAG_PRIVATE_RC
+"Private scope"
+-3866 VS_TAG_FLAG_CONST_RC
+"Const"
+-3867 VS_TAG_FLAG_FINAL_RC
+"Final"
+-3868 VS_TAG_FLAG_ABSTRACT_RC
+"Abstract"
+-3869 VS_TAG_FLAG_INLINE_RC
+"Inline function"
+-3870 VS_TAG_FLAG_OPERATOR_RC
+"Overloaded operator"
+-3871 VS_TAG_FLAG_CONSTRUCTOR_RC
+"Class constructor"
+-3872 VS_TAG_FLAG_VOLATILE_RC
+"Volatile"
+-3873 VS_TAG_FLAG_TEMPLATE_RC
+"Template or generic"
+-3874 VS_TAG_FLAG_INCLASS_RC
+"Member of class or package"
+-3875 VS_TAG_FLAG_DESTRUCTOR_RC
+"Class destructor"
+-3876 VS_TAG_FLAG_SYNCHRONIZED_RC
+"Synchronized"
+-3877 VS_TAG_FLAG_TRANSIENT_RC
+"Transient data"
+-3878 VS_TAG_FLAG_NATIVE_RC
+"Native code function"
+-3879 VS_TAG_FLAG_MACRO_RC
+"Created by preprocessor macro"
+-3880 VS_TAG_FLAG_EXTERN_RC
+"External function or data"
+-3881 VS_TAG_FLAG_MAYBE_VAR_RC
+"Ambiguous prototype/var declaration"
+-3882 VS_TAG_FLAG_ANONYMOUS_RC
+"Unnamed structure"
+-3883 VS_TAG_FLAG_MUTABLE_RC
+"Mutable"
+-3884 VS_TAG_FLAG_EXTERN_MACRO_RC
+"Part of external file"
+-3885 VS_TAG_FLAG_LINKAGE_RC
+"01 level in Cobol linkage section"
+-3886 VS_TAG_FLAG_PARTIAL_RC
+"Partial class"
+-3887 VS_TAG_FLAG_IGNORE_RC
+"Ignore/placeholder"
+-3888 VS_TAG_FLAG_FORWARD_RC
+"Forward declaration"
+-3889 VS_TAG_FLAG_OPAQUE_RC
+"Opaque enumerated type"
+
+-3900 BT_KEY_ALREADY_EXISTS_RC
+"Database index key already exists"
+-3901 BT_RECORD_NOT_FOUND_RC
+"Database record not found"
+-3902 BT_UNABLE_TO_RW_FILE_RC
+"Unable to read/write database file"
+-3903 BT_DATABASE_CORRUPT_RC
+"Database corrupt"
+-3904 BT_RECORD_LENGTH_TOO_LARGE_RC
+"Record length too large"
+-3905 BT_INCORRECT_VERSION_RC
+"Incorrect database version"
+-3906 BT_INCORRECT_MAGIC_RC
+"Incorrect database magic number"
+-3907 BT_TOO_MANY_KEYS_RC
+"Too many database keys"
+-3908 BT_FEATURE_NOT_FINISHED_RC
+"Database feature not finished"
+-3909 BT_FIELD_IS_FIXED_LENGTH_RC
+"Database field is fixed length, expected variable length"
+-3910 BT_FIELD_IS_VARIABLE_LENGTH_RC
+"Database field is variable length, expected fixed length"
+-3911 BT_BLOCK_FULL_RC
+"Database block is full"
+-3912 BT_UNABLE_TO_DELETE_RC
+"Unable to delete database item"
+-3913 BT_INVALID_BLOCK_SIZE_RC
+"Invalid database block size"
+-3914 BT_MISSING_REQUIRED_FIELD_RC
+"Database record is missing a required field"
+-3915 BT_ERROR_UPDATING_INDEX_RC
+"Unable to update database index"
+-3916 BT_ERROR_CREATING_TABLE_RC
+"Unable to create database table"
+-3917 BT_ERROR_CREATING_INDEX_RC
+"Unable to create database index"
+-3918 BT_ERROR_OPENING_TABLE_RC
+"Unable to open database table"
+-3919 BT_ERROR_OPENING_INDEX_RC
+"Unable to open database index"
+-3920 BT_FEATURE_NOT_ALLOWED_RC
+"Database feature not allowed in this context"
+-3921 BT_TABLE_NOT_FOUND_RC
+"Database table not found"
+-3922 BT_KEY_NOT_FOUND_RC
+"Database index key not found"
+-3923 BT_FIELD_NOT_FOUND_RC
+"Database field not found"
+-3924 BT_INDEX_NOT_FOUND_RC
+"Database index not found"
+-3925 BT_INTERNAL_ERROR_RC
+"Database internal error"
+-3926 BT_FIELD_NOT_SEARCHABLE_RC
+"Database field not searchable"
+-3927 BT_FIELD_ALREADY_EXISTS_RC
+"Database table field already exists"
+-3928 BT_INDEX_ALREADY_EXISTS_RC
+"Database table index already exists"
+-3929 BT_TABLE_ALREADY_EXISTS_RC
+"Database table already exists"
+-3930 BT_FIELD_NAME_REQUIRED_RC
+"Database table field must be named"
+-3931 BT_INDEX_NAME_REQUIRED_RC
+"Database table index must be named"
+-3932 BT_TABLE_NAME_REQUIRED_RC
+"Database table must be named"
+-3933 BT_DATABASE_NAME_REQUIRED_RC
+"Database must be named"
+-3934 BT_FIELD_INVALID_RC
+"Database field is not valid"
+-3935 BT_INVALID_DB_HANDLE_RC
+"Invalid database session handle"
+-3936 BT_INVALID_TAG_TYPE_RC
+"Invalid database tag type"
+-3937 BT_INVALID_TABLE_HANDLE_RC
+"Invalid table handle"
+-3938 BT_INVALID_INDEX_HANDLE_RC
+"Invalid index handle"
+-3939 BT_INVALID_SEEKPOS_RC
+"Invalid file seek position"
+-3940 BT_DATABASE_IS_FOR_UNIX_RC
+"Database is intended for use on a Unix platform"
+-3941 BT_DATABASE_IS_FOR_DOS_RC
+"Database is intended for use on a DOS/OS2/NT platform"
+-3942 BT_DATABASE_IS_READ_ONLY_RC
+"Database was opened for read only, modifications are not allowed"
+-3943 BT_INDEX_TABLE_MISMATCH_RC
+"Index handle does not belong to given table"
+-3944 BT_INCORRECT_BLOCKSIZE_RC
+"Can not open database with given block size"
+-3945 BT_TOO_MANY_FIELDS_RC
+"Too many fields in database table"
+-3946 BT_TOO_MANY_INDEXES_RC
+"Too many indexes in database table"
+-3947 BT_TOO_MANY_TABLES_RC
+"Too many tables in database"
+-3948 BT_INVALID_NODE_RC
+"Database index node is invalid"
+-3949 BT_INVALID_TABLE_RC
+"Database table is invalid"
+-3950 BT_INVALID_DATABASE_RC
+"Database header is invalid"
+-3951 BT_INVALID_BLOCK_RC
+"Database block is invalid"
+-3952 BT_TOO_MANY_SEEKPOS_RC
+"Too many database seek positions in set"
+-3953 BT_SEEKPOS_NOT_FOUND_RC
+"Database seek position not found in set"
+-3954 BT_SEEKPOS_ALREADY_EXISTS_RC
+"Database seek position already in set"
+-3955 BT_BRANCH_NOT_FOUND_RC
+"Database index node not found"
+-3956 BT_CACHE_SIZE_TOO_SMALL_RC
+"Database cache size too small"
+-3957 BT_INVALID_FILE_TYPE_RC
+"Invalid tag database file type"
+-3958 BT_SESSION_NOT_FOUND_RC
+"Database session with given file name not found"
+-3959 BT_TOO_MANY_SESSIONS_RC
+"Attempt to open too many database sessions at once"
+-3960 BT_READWRITE_NOT_ALLOWED_RC
+"Database session manager does not allow open for read-write"
+-3961 BT_CREATE_NOT_ALLOWED_RC
+"Database session manager does not allow creation"
+-3962 BT_INVALID_SESSION_HANDLE_RC
+"Invalid database session handle"
+-3963 BT_INVALID_DATABASE_TYPE_RC
+"Incorrect database application type"
+-3964 BT_HASH_NODE_FULL_RC
+"No free space in hash node"
+-3965 BT_HASH_INDEX_NOT_FOUND_RC
+"Could not locate previous index in hash node"
+-3966 BT_INVALID_HASH_INDEX_RC
+"Invalid hash table index"
+-3967 BT_INVALID_HASH_NODE_SIZE_RC
+"Invalid hash table size"
+-3968 BT_TOO_MANY_SYMBOLS_RC
+"Too many symbols found in context"
+-3969 BT_TABLE_NO_NEXT_PREV_RC
+"This database table does not support next/previous record"
+-3970 BT_RECORD_LENGTH_TOO_SMALL_RC
+"Record length too small, four bytes is the minimum"
+-3971 BT_INDEX_REQUIRES_NEXT_PREV_RC
+"Memory hash indexes require the table to have next/prev pointers"
+-3972 BT_FEATURE_IS_OBSOLETE_RC
+"Database feature is obsolete"
+-3973 TAGGING_SEARCHING_FOUND_OF_TOTAL_RC
+"Searching: %s1/%s2"
+-3974 TAGGING_TIMEOUT_RC
+"Time limit for tagging operation expired"
+-3975 TAG_DATABASE_ALREADY_BEING_REBUILT_RC
+"Tag file '%s0' is already being rebuilt."
+-3976 BACKGROUND_TAGGING_NOT_SUPPORTED_RC
+"Background tagging is not supported for this file."
+-3977 EMBEDDED_TAGGING_NOT_SUPPORTED_RC
+"Background tagging does not support embedded code blocks."
+-3978 LEFTOVER_FILE_REMOVED_FROM_DATABASE_RC
+"Removed file '%s0' from tag file because it is no longer required."
+-3979 TAGGING_NOT_SUPPORTED_FOR_FILE_RC
+"Tagging is not supported for this file."
+-3980 FILE_REMOVED_FROM_DATABASE_RC
+"Removed file '%s0' from tag file."
+-3981 BACKGROUND_TAGGING_COMPLETE_RC
+"Background tagging is complete for tag file '%s0'"
+-3982 BACKGROUND_TAGGING_IS_FINDING_FILES_RC
+"Background tagging is searching for files to tag in tag file '%s0'."
+-3983 BT_DATABASE_FULL_RC
+"Database size cannot exceed 2GB"
+-3984 BT_THREADS_CANNOT_CLOSE_FILES_RC
+"Database session should not be closed by a background thread."
+-3985 TAGGING_CAN_NOT_REBUILD_TAG_FILE_WITH_ALL_FILES_MISSING_RC
+"Can not rebuild a tag file if all the source files are missing."
+-3986 BACKGROUND_TAGGING_PREEMPTED_RC
+"Background tagging was pre-empted by a foreground tagging job."
+
+//TAGGING
+-4000 VSTAG_TYPE_DEFAULT_RC
+"Procedure"
+-4001 VSTAG_TYPE_PROC_RC
+"Procedure or command"                      
+-4002 VSTAG_TYPE_PROTO_RC
+"Function prototype"
+-4003 VSTAG_TYPE_DEFINE_RC
+"Preprocessor macro"
+-4004 VSTAG_TYPE_TYPEDEF_RC
+"Type alias"
+-4005 VSTAG_TYPE_GVAR_RC
+"Global variable"
+-4006 VSTAG_TYPE_STRUCT_RC
+"Structure type"
+-4007 VSTAG_TYPE_ENUMC_RC
+"Enumeration value"
+-4008 VSTAG_TYPE_ENUM_RC
+"Enumerated type"
+-4009 VSTAG_TYPE_CLASS_RC
+"Class type"
+-4010 VSTAG_TYPE_UNION_RC
+"Union type"
+-4011 VSTAG_TYPE_LABEL_RC
+"Statement label"
+-4012 VSTAG_TYPE_INTERFACE_RC
+"Interface type"
+-4013 VSTAG_TYPE_CONSTRUCTOR_RC
+"Class constructor"
+-4014 VSTAG_TYPE_DESTRUCTOR_RC
+"Class destructor"
+-4015 VSTAG_TYPE_PACKAGE_RC
+"Package, module, or namespace"
+-4016 VSTAG_TYPE_VAR_RC
+"Member variable"
+-4017 VSTAG_TYPE_LVAR_RC
+"Local variable"
+-4018 VSTAG_TYPE_CONSTANT_RC
+"Constant"
+-4019 VSTAG_TYPE_FUNCTION_RC
+"Function"
+-4020 VSTAG_TYPE_PROPERTY_RC
+"Class property"
+-4021 VSTAG_TYPE_PROGRAM_RC
+"Program"
+-4022 VSTAG_TYPE_LIBRARY_RC
+"Library"
+-4023 VSTAG_TYPE_PARAMETER_RC
+"Parameter"
+-4024 VSTAG_TYPE_IMPORT_RC
+"Package import or using statement"
+-4025 VSTAG_TYPE_FRIEND_RC
+"Friend relationship"
+-4026 VSTAG_TYPE_DATABASE_RC
+"Database"
+-4027 VSTAG_TYPE_TABLE_RC
+"Database table"
+-4028 VSTAG_TYPE_COLUMN_RC
+"Database column"
+-4029 VSTAG_TYPE_INDEX_RC
+"Database index"
+-4030 VSTAG_TYPE_VIEW_RC
+"Database view"
+-4031 VSTAG_TYPE_TRIGGER_RC
+"Database trigger"
+-4032 VSTAG_TYPE_FORM_RC
+"Form"
+-4033 VSTAG_TYPE_MENU_RC
+"Menu"
+-4034 VSTAG_TYPE_CONTROL_RC
+"Control or widget"
+-4035 VSTAG_TYPE_EVENTTAB_RC
+"Event table"
+-4036 VSTAG_TYPE_PROCPROTO_RC
+"Procedure prototype"
+-4037 VSTAG_TYPE_TASK_RC
+"Task"
+-4038 VSTAG_TYPE_INCLUDE_RC
+"Preprocessor include"
+-4039 VSTAG_TYPE_FILE_RC
+"File descriptor"
+-4040 VSTAG_TYPE_GROUP_RC
+"Container variable"
+-4041 VSTAG_TYPE_SUBFUNC_RC
+"Nested function"
+-4042 VSTAG_TYPE_SUBPROC_RC
+"Nested procedure or paragraph"
+-4043 VSTAG_TYPE_CURSOR_RC
+"Database cursor"
+-4044 VSTAG_TYPE_TAG_RC
+"XML tag"
+-4045 VSTAG_TYPE_TAGUSE_RC
+"XML tag instance"
+-4046 VSTAG_TYPE_STATEMENT_RC
+"Statement"
+-4047 VSTAG_TYPE_ANNOTYPE_RC
+"Annotation or attribute type"
+-4048 VSTAG_TYPE_ANNOTATION_RC
+"Annotation or attribute instance"
+-4049 VSTAG_TYPE_CALL_RC
+"Function call"
+-4050 VSTAG_TYPE_IF_RC
+"Conditional statement"
+-4051 VSTAG_TYPE_LOOP_RC
+"Loop statement"
+-4052 VSTAG_TYPE_BREAK_RC
+"Break statement"
+-4053 VSTAG_TYPE_CONTINUE_RC
+"Continue statement"
+-4054 VSTAG_TYPE_RETURN_RC
+"Return statement"
+-4055 VSTAG_TYPE_GOTO_RC
+"Goto statement"
+-4056 VSTAG_TYPE_TRYCATCH_RC
+"Try statement"
+-4057 VSTAG_TYPE_PP_RC
+"Preprocessing statement"
+-4058 VSTAG_TYPE_BLOCK_RC
+"Block statement"
+-4059 VSTAG_TYPE_MIXIN_RC
+"Mixin construct"
+-4060 VSTAG_TYPE_TARGET_RC
+"Build target"
+
+-4061 VSCODEHELPRC_CONTEXT_NOT_VALID
+"Context not valid"
+-4062 VSCODEHELPRC_NOT_IN_ARGUMENT_LIST
+"The cursor is not in a function argument list"
+-4063 VSCODEHELPRC_NO_HELP_FOR_FUNCTION
+"No help found for this function: %s1"
+-4064 VSCODEHELPRC_NO_SYMBOLS_FOUND
+"No symbols found matching %s1"
+-4065 VSCODEHELPRC_CONTEXT_EXPRESSION_TOO_COMPLEX
+"The expression (%s1) is too complex"
+-4066 VSCODEHELPRC_UNABLE_TO_EVALUATE_CONTEXT
+"Unable to evaluate type expression (%s1)"
+-4067 VSCODEHELPRC_DOT_FOR_POINTER
+"Attempt to use operator '%s1', but variable '%s2' is a pointer"
+-4068 VSCODEHELPRC_DASHGREATER_FOR_NON_POINTER
+"Attempt to use operator '%s1', but variable '%s2' is not a pointer"
+-4069 VSCODEHELPRC_INVALID_NEW_EXPRESSION
+"Unable to evaluate 'new' expression (%s1)"
+-4070 VSCODEHELPRC_PARENTHESIS_MISMATCH
+"Unable to evaluate expression with mismatched parenthesis"
+-4071 VSCODEHELPRC_BRACKETS_MISMATCH
+"Unable to evaluate expression with mismatched brackets"
+-4072 VSCODEHELPRC_DASHGREATER_FOR_PTR_TO_POINTER
+"Attempt to use operator '%s1', but variable '%s2' is a pointer to pointer"
+-4073 VSCODEHELPRC_SUBSCRIPT_BUT_NOT_ARRAY_TYPE
+"Attempt to use subscript '[]', but variable '%s1' is not an array type"
+-4074 VSCODEHELPRC_OVERLOADED_RETURN_TYPE
+"Unable to determine type due to overloaded symbol '%s1'"
+-4075 VSCODEHELPRC_NOT_A_TEMPLATE_CLASS
+"Template parameters found, but class '%s1' is not a template"
+-4076 VSCODEHELPRC_RETURN_TYPE_NOT_FOUND
+"Unable to locate definition of expression type: '%s1'"
+-4077 VSCODEHELPRC_TEMPLATE_ARGS_MISMATCH
+"Unable to evaluate expression with mismatched template arguments"
+-4078 VSCODEHELPRC_BUILTIN_TYPE
+"Symbol %s1 is declared as a simple type '%s2'"
+-4079 VSCODEHELPRC_NO_LABELS_DEFINED
+"No labels defined in current function or procedure"
+-4080 VSCODEHELPRC_DOT_FOR_ARRAY
+"Attempt to use operator '%s1', but variable '%s2' is an array"
+-4081 VSCODEHELPRC_LIST_PARAMS_NOT_SUPPORTED
+"Auto list parameters is not supported for this language"
+-4082 VSCODEHELPRC_RETURN_TYPE_IS_VOID
+"Function returns void: '%s1'"
+-4083 VSCODEHELPRC_LIST_MEMBERS_TIMEOUT
+"Auto list members timed out"
+-4084 VSCODEHELPRC_FUNCTION_HELP_TIMEOUT
+"Auto paramter information timed out"
+-4083 VSCODEHELPRC_LIST_MEMBERS_LIMITED
+"Auto list members found maximum number of symbols"
+
+BSC
+-4100 BSC_INCORRECT_EXTENSION_RC
+"Expected .BSC file extension"
+-4101 BSC_ERROR_OPENING_FILE_RC
+"Error opening browse database"
+-4102 BSC_NO_INSTANCES_RC
+"Could not obtain browser database instances"
+-4103 BSC_ONLY_ON_WINDOWS_RC
+"BSC databases are not supported on this platform"
+-4104 BSC_CANNOT_OPEN_DLL_RC
+"Can not open msbsc50.dll, maybe Visual C++ is not installed"
+
+JAVA
+-4125 JAVA_CLASS_INCOMPLETE_HEADER_RC
+"Incomplete header in Java class file"
+-4126 JAVA_CLASS_BAD_MAGIC_NUMBER_RC
+"Invalid magic number for Java class file"
+-4127 JAVA_CLASS_UNSUPPORTED_VERSION_RC
+"Unsupported Java class file version"
+-4128 JAVA_CLASS_UNKNOWN_CONSTANT_TYPE_RC
+"Java class constant pool contains unrecognized type"
+-4129 JAVA_CLASS_ATTRIBUTE_LENGTH_MISMATCH_RC
+"Java class attribute length mismatch"
+-4130 JAVA_CLASS_SOURCE_NOT_FOUND_RC
+"Could not locate Java source file"
+-4131 JAVA_CLASS_INVALID_CONSTANT_INDEX_RC
+"Invalid index into Java class constant pool"
+-4132 JAVA_CLASS_STRING_NOT_FOUND_RC
+"Could not find string in Java class constant pool"
+-4133 JAVA_JAR_INCOMPLETE_HEADER_RC
+"Incomplete header in Java archive file"
+-4134 JAVA_JAR_BAD_MAGIC_NUMBER_RC
+"Invalid magic number for Java archive file"
+-4135 JAVA_JAR_UNSUPPORTED_VERSION_RC
+"Unsupported Java archive file version"
+-4136 JAVA_JAR_DECOMPRESS_ERROR_RC
+"Error uncompressing contents of Java archive file"
+-4137 JAVA_JAR_CORRUPT_HEADER_RC
+"Corrupt header in Java archive file"
+
+OBJECT
+-4150 OBJECT_FILE_INCOMPLETE_HEADER_RC
+"Incomplete header in object file"
+-4151 OBJECT_FILE_BAD_MAGIC_NUMBER_RC
+"Invalid magic number for object file"
+-4152 OBJECT_FILE_UNRECOGNIZED_RC
+"Unrecognized object file type"
+-4153 OBJECT_FILE_NO_DEBUG_RC
+"Object file has no debug information"
+
+METADATA
+-4175 METADATA_NOT_SUPPORTED_ON_UNIX_RC
+"C# library parsing is not supported on Unix"
+-4176 METADATA_CAN_NOT_CREATE_INSTANCE_RC
+"Could not open metadata DLL instance"
+-4177 METADATA_CAN_NOT_CREATE_IMPORTER_RC
+"Could not import from metadata DLL"
+
+VSBUILD
+-4200 VSBUILDRC_USAGE
+"Usage: vsbuild [WorkspaceName] [ProjectName] [-t TargetName] [Options]"
+""
+"   WorkspaceName     Name of workspace. Not required if there are no"
+"                     dependencies and ProjectName is specified."
+"   ProjectName       Project file that is part of the workspace."
+"                     Defaults to the current project."
+"   -t <TargetName>   Target name is the name of the target to run."
+"   -c <ConfigName>   Config name is the name of the configuration to build."
+"   -b <BufferName>   Buffer name is the name of the current buffer in the editor."
+"   -d                Do not build, display dependencies."
+"   -v or -verbose    Verbose mode."
+"   -verbosefiles     Verbose mode + dump contents of temporary list files."
+"   -verboseenv       Verbose mode + dump environment variables set."
+"   -quiet            Quiet mode."
+"   -nodep            Do not process project dependencies."
+"   -beep             Beep at the end of a build to signal success or failure."
+"   -time             Display time elapsed during build."
+"   -log              Output build info to a per-project log file."
+"   -wc <Wildcards>   Semi-colon delimited list of wildcards."
+"   -execute <CmdLine>"
+"                     This option must be last."
+"                     Executes the target given and if successful, executes the"
+"                     <CmdLine> given."
+"   -execAsTarget <CmdLine>"
+"                     This option must be last."
+"                     Executes the command given as if it were a target."
+"   -doNotCreateObjectDir"
+"                     Do not create object directories."
+"Example"
+"    vsbuild project.vpj -t Build"
+"         Compile files in the project which are out-of-date."
+""
+"    vsbuild project.vpj -t Rebuild"
+"         Recompiles all files in the project."
+""
+"    vsbuild project.vpj -t \"Make Jar\""
+"         Compile Java files in the project which are out-of-date and"
+"         update the project jar file."
+""
+"    vsbuild project.vpj -t \"Javadoc All\""
+"         Update HTML documentation for all Java files in the project."
+""
+-4201 VSBUILDRC_CANNOT_OPEN_FILE
+"%s1Cannot open file '%s2'"
+-4202 VSBUILDRC_ERROR_READ_FILE
+"%s1Could not read file '%s2'"
+-4203 VSBUILDRC_CANNOT_USE_M_OPTION
+"%s1Cannot use %M option when using vsbuild"
+-4204 VSBUILDRC_CANNOT_USE_C_OPTION
+"%s1Cannot use %C option when using vsbuild"
+-4205 VSBUILDRC_CANNOT_USE_L_OPTION
+"%s1Cannot use %L option when using vsbuild"
+-4206 VSBUILDRC_CANNOT_USE_NNN_OPTION
+"%s1Cannot use %NNN option when using vsbuild"
+-4207 VSBUILDRC_CANNOT_USE_FILTER_OPTION
+"%s1Warning: %{filter} option does not currently support files in associated project files"
+-4208 VSBUILDRC_WORKSPACE_FILE_NOT_FOUND
+"%s1Workspace file '%s2' not found"
+-4209 VSBUILDRC_HISTORY_FILE_NOT_FOUND
+"%s1Workspace history file '%s2' not found"
+-4210 VSBUILDRC_PROJECT_FILE_NOT_FOUND
+"%s1Project file '%s2' not found"
+-4211 VSBUILDRC_NO_DEPENDENCIES
+"%s1No dependencies for %s2"
+-4212 VSBUILDRC_DEPENDS_ON
+"%s1'%s2' depends on '%s3'"
+-4213 VSBUILDRC_COMMAND_NOT_DEFINED_IN_PROJECT
+"%s1Command '%s2' not defined in project file '%s3'"
+-4214 VSBUILDRC_COULD_NOT_CHANGE_DIRECTORY
+"%s1Could not change to directory '%s2'"
+-4215 VSBUILDRC_CHANGED_TO_DIRECTORY
+"%s1Changed to directory '%s2'"
+-4216 VSBUILDRC_NO_BUILD_COMMAND_FOR_PROJECT
+"%s1No build command for project '%s2'"
+-4217 VSBUILDRC_PROGRAM_NOT_FOUND
+"%s1Program '%s2' not found"
+-4218 VSBUILDRC_ALL_FILES_HAVE_BEEN_COMPILED
+"%s1All files are up-to-date"
+-4219 VSBUILDRC_STOP_WITH_ERROR
+"%s1Build stopped. %s2 returned %s3"
+-4220 VSBUILDRC_NO_CURRENT_PROJECT
+"%s1No current project"
+-4221 VSBUILDRC_JAR_COMMAND_MUST_SPECIFY_F_OPTION
+"%s1jar command for project '%s2' must specify 'f' option"
+-4222 VSBUILDRC_JAR_COMMAND_MUST_SPECIFY_C_OR_U_OPTION
+"%s1jar command for project '%s2' must specify 'c' or 'u' option"
+-4223 VSBUILDRC_UNKNOWN_OPTION
+"%s1Unknown option '%s2'"
+-4224 VSBUILDRC_UNABLE_TO_OPEN_TEMP_LIST_FILE
+"%s1Unable to open temp list file '%s2'"
+-4225 VSBUILDRC_OUT_OF_DISK_SPACE_WRITING_TO_TEMP_LIST_FILE
+"%s1Out of disk space writing to temp list file '%s2'"
+-4226 VSBUILDRC_CANNOT_INIT_DEPENDENCY_DATABASE
+"%s1Unable to initialize dependency analyzer.  Check disk space and permissions for the object directory."
+-4227 VSBUILDRC_INFINITE_COMMAND_RECURSION
+"%s1Cannot specify vsbuild as build tool without specifying an operation"
+-4228 VSBUILDRC_ERRORS_OCCURRED
+"%s1*** Errors occurred during this build ***"
+-4229 VSBUILDRC_BUILD_SUCCESSFUL
+"%s1Build successful"
+-4230 VSBUILDRC_BUILDING_PROJECT
+"%s1---------- Build Project: '%s2' - '%s3' ----------"
+-4231 VSBUILDRC_REBUILDING_PROJECT
+"%s1---------- Rebuild Project: '%s2' - '%s3' ----------"
+-4232 VSBUILDRC_JARRING_PROJECT
+"%s1---------- Jar Project: '%s2' - '%s3' ----------"
+-4233 VSBUILDRC_JAVADOCING_PROJECT
+"%s1---------- Javadoc Project: '%s2' - '%s3' ----------"
+-4234 VSBUILDRC_NO_FILES_IN_PROJECT
+"%s1No files in project"
+-4235 VSBUILDRC_DEPENDENCY_DATABASE_NOT_FOUND
+"%s1Dependency database not found.  Rebuilding..."
+-4236 VSBUILDRC_DEPENDENCY_DATABASE_OUTDATED
+"%s1Dependency database outdated.  Rebuilding..."
+-4237 VSBUILDRC_NOTHING_TO_LINK
+"%s1Nothing to link"
+-4238 VSBUILDRC_INFINITE_LOOP_DETECTED_IN_COMMAND
+"%s1Infinite recursion detected while replacing '%s2'"
+-4239 VSBUILDRC_NO_CONFIG_SPECIFIED
+"%s1No config specified and no active config found in history file."
+-4240 VSBUILDRC_CONFIG_NOT_FOUND
+"%s1Config '%s2' not found in project file '%s3'"
+-4241 VSBUILDRC_FILE_NOT_FOUND
+"%s1File '%s2' not found"
+-4242 VSBUILDRC_ERROR_SETTING_UP_ENVIRONMENT
+"%s1Could not setup environment"
+-4243 VSBUILDRC_CLEANING_PROJECT
+"%s1---------- Clean Project: '%s2' - '%s3' ----------"
+-4244 VSBUILDRC_CANNOT_REMOVE_FILE
+"%s1Unable to remove file '%s2'"
+-4245 VSBUILDRC_CPP_COMMAND_CHANGE_DETECTED
+"%s1Compile/Link command change detected.  Some files may be rebuilt."
+-4246 VSBUILDRC_JAVA_CONFIG_OR_COMMAND_CHANGE_DETECTED
+"%s1Configuration or command change detected.  All files will be rebuilt."
+-4247 VSBUILDRC_INVALID_FILE_FORMAT
+"%s1File '%s2' is an invalid format and cannot be read."
+-4248 VSBUILDRC_TARGET_REQUIRED
+"%s1Target must be specified for dependency that is internal to the project."
+-4249 VSBUILDRC_TARGET_NOT_FOUND
+"%s1Target '%s2' not found in project file '%s3' config '%s4'"
+-4250 VSBUILDRC_CANNOT_READ_DEPENDENCY_DATABASE
+"%s1Cannot read dependency database."
+-4251 VSBUILDRC_ANT_HOME_NOT_FOUND
+"%s1Cannot build with ant because ANT_HOME and/or JAVA_HOME are not set."
+-4252 VSBUILDRC_CPP_OBJECT_COUNT_CHANGE_DETECTED
+"%s1Linkable object count change detected.  The project will be relinked."
+-4253 VSBUILDRC_VSBUILD_COMMAND_CANT_CHANGE_WORKSPACE_PROJECT_CONFIG_OR_TARGET
+"%s1vsbuild command can't change workspace, project, config, or target. Use CallTarget"
+-4254 VSBUILDRC_TARGET_PROJECT
+"%s1---------- '%s2' Project: '%s3' - '%s4' ----------"
+-4255 VSBUILDRC_INVALID_ARGUMENT
+"%s1Invalid arguments: %s"
+-4256 VSBUILDRC_NO_COMPILE_RULE_FOUND_FOR_FILE_2ARG
+"%s1No rule found for file '%s2'"
+
+
+LICENSE
+-4300 VSLM_RUN_VSUPDATE_WIN_RC
+"Run the vsupdatw program as shown below (Start, Run) to transfer serial number and license information."
+""
+"Usage:"
+"\tvsupdatw old-exe-name new-exe-name"
+""
+"\told-exe-name\tName of original executable to take license info from."
+"\tnew-exe-name\tName of new executable to transfer license info to."
+
+-4301  VSLM_RUN_VSUPDATE_OS2_RC
+"Run the vsupdate program as shown below to transfer serial number and license information."
+""
+"Usage:"
+"\tvsupdatw old-exe-name new-exe-name"
+""
+"\told-exe-name\tName of original executable to take license info from."
+"\tnew-exe-name\tName of new executable to transfer license info to."
+
+-4302  VSLM_RUN_VSUPDATE_UNIX_RC
+"Run the vsupdate program as shown below to transfer serial number and license information."
+""
+"Usage:"
+"\tvsupdate old-exe-name new-exe-name"
+""
+"\told-exe-name\tName of original executable to take license info from."
+"\tnew-exe-name\tName of new executable to transfer license info to."
+
+-4303  VSLM_RUN_VSUPDATE_UNIXDLL_RC
+"Run the vsupdate program as shown below to transfer serial number and license information."
+""
+"   vsupdate  <old-libvsapi-name> <new-libvsapi-name>"
+""
+-4304 VSLM_SERIAL_NUMBER_NOT_VALID_RC
+"The serial #%s1 is not valid.\nPlease contact SlickEdit Support."
+
+-4305 VSLM_UNABLE_TO_OBTAIN_FLEXLM_LICENSE_RC
+"Unable to obtain a FLEXlm license to run %s1.\nFLEXlm reports the following error:\n\n"
+
+-4306 VSLM_ERROR_SEEKING_TO_BEGINNING_RC
+"Error seeking to beginning of license file"
+
+-4307 VSLM_ERROR_SEEKING_TO_END_RC
+"Error seeking to end of license file"
+
+-4308 VSLM_ERROR_WRITING_TO_FILE_RC
+"Error writing to file '%s1'.  Check disk space."
+
+-4309 VSLM_ERROR_READING_LICENSE_FILE_RC
+"Error reading license file '%s1'"
+
+-4310 VSLM_USER_NOT_FOUND_RC
+"User '%s1' not found in '%s2'"
+
+-4311 VSLM_ERROR_OPENING_OR_CREATING_RC
+"Timeout opening or creating license file '%s1'.  Make sure your system administrator has given all users read/write access to this file and that this file exists."
+
+-4312 VSLM_ERROR_OPENING_RC
+"Timeout opening license file '%s1'. Make sure your system administrator has given all users read access to this file and that this file exists."
+
+-4313 VSLM_SERIAL_NUMBER_AND_LICENSE_NOT_VALID_RC
+"The serial #%s1 and license #%s2 are not valid.\nPlease contact SlickEdit Support."
+
+-4314 VSLM_UNABLE_TO_CREATE_LICENSE_MANAGER_DIR_RC
+"Unable to create license manager directory.  Have your system administrator create the directory '%s1' and give all users access to this directory"
+
+-4315 VSLM_USER_NOT_AUTHORIZED_RC
+"User '%s1' is not authorized to run SlickEdit. Please consult your system administrator to have your user name added to the license file."
+""
+
+-4316 VSLM_LICENSE_LIMIT_REACHED_WIN_RC
+"License limit of %s1 users for serial #%s2 in package <%s4> reached.  You may purchase additional licenses or wait until someone exits the editor."
+""
+"To check how many users are running the editor, type the following command:"
+""
+"    type %s3"
+""
+"The total usage count is FirstLineCount+NoflinesInFile-1."
+""
+"An abnormal exit from the editor will cause this count to be incorrect.  After an abnormal exit from the editor, that user should run the vsdelw program (Start, Run)."
+""
+"Using the vsdelw program to intentionally decrement the count below the actual usage count violates this program's license agreement."
+
+
+-4317 VSLM_LICENSE_LIMIT_REACHED_OS2_RC
+"License limit of %s1 users for serial #%s2 in package <%s4> reached.  You may purchase additional licenses or wait until someone exits the editor."
+""
+"To check how many users are running the editor, type the following command:"
+""
+"    type %s3"
+""
+"The total usage count is FirstLineCount+NoflinesInFile-1.\n"
+""
+"An abnormal exit from the editor will cause this count to be incorrect.  After an abnormal exit from the editor, that user should run the vsdel program."
+""
+"Using the vsdel program to intentionally decrement the count below the actual usage count violates this program's license agreement."
+
+-4318 VSLM_LICENSE_LIMIT_REACHED_UNIX_RC
+"License limit of %s1 users for serial #%s2 reached.  You may purchase additional licenses or wait until someone exits the editor."
+""
+"To check how many users are running the editor, type the following command:"
+""
+"    cat %s3"
+""
+"The total usage count is FirstLineCount+NoflinesInFile-1.\n"
+""
+"An abnormal exit from the editor will cause this count to be incorrect.  After an abnormal exit from the editor, that user should run the vsdel program."
+""
+"Using the vsdel program to intentionally decrement the count below the actual usage count violates this program's license agreement."
+
+-4319 VSTRIAL_FAILED_TO_OPEN_TRIAL_SIZE_FILE_RC
+"Failed to open trial size file"
+
+-4320 VSTRIAL_ERROR_IN_TRIAL_SIZE_FILE_RC
+"Error in trial size file"
+
+-4321 VSTRIAL_FAILED_TO_OPEN_TRIAL_EXECUTABLE_RC
+"Failed to open trial executable"
+
+-4322 VSTRIAL_PATCH_SERIAL_NUMBER_AND_LICENSE_RC
+"Serial number and license information must be patched into the product.  This step is necessary to personalize your copy of the product and to receive prompt technical support."
+""
+"You will need your license code that was provided to you.  If you ordered online you may receive the code separately via email.  Call SlickEdit support at 800-934-3348 or 919.473.0100 if you have lost your code.  If you choose not to perform this step at this time you will be prompted with this message each time SlickEdit is invoked."
+""
+"Update serial number and license information now?"
+
+-4323 VSTRIAL_FAILED_TO_EXECUTE_RC
+"Failed to execute %s1.  Could be out of memory."
+""
+"Exit SlickEdit and run %s2vssetlnw.exe to patch serial number and license information.  Have your license code ready."
+
+-4324 VSDEL_HELP_UNIX_RC
+"Version 12.0"
+""
+"This program is used to remove a user from the %s1 file.  This is necessary only if a user exits the editor abnormally."
+""
+"Usage:"
+""
+"vsdel <path>/%s1 user [-s section [-s section ...]]"
+""
+"\tpath\tPath to license file '%s1'."
+"\tuser\tName of user to delete from license file."
+"\tsection\tOptional.  Name of a package section to delete user from (e.g. 'STD')."
+"\t\tIf not given, then user is deleted from all sections."
+""
+"Using the vsdel program to intentionally delete a user who is still using SlickEdit violates this program's license agreement."
+""
+-4325 VSDELW_HELP_WIN_RC
+"Version 12.0"
+""
+"This program is used to remove a user from the %s1 file.  This is necessary only if a user exits the editor abnormally."
+""
+"Usage:"
+""
+"    vsdelw <path>\\%s1 [user] [-s section [-s section ...]]"
+""
+"\tpath\tPath to license file '%s1'."
+"\tuser\tName of user to delete from license file.  User name comes from the"
+"\t\tVSUSER environment variable or Windows login.  If the user name is"
+"\t\tnot given, then global license count is decremented."
+"\tsection\tOptional.  Name of a package section to delete user from (e.g. 'STD')."
+"\t\tIf not given, then user is deleted from all sections."
+""
+"Using the vsdelw program to intentionally decrement the usage count below the actual usage count violates this program's license agreement."
+""
+-4326 VSLM_DEMO_EXPIRED_RC
+"Demo version has expired"
+
+-4327 DEMO_EXPIRATION_DATE_RC
+""
+
+-4328 VSTRIAL_ERROR_IN_TRIAL_RC
+"Error in trial"
+
+-4329 VSLM_PACKAGE_NOT_VALID_RC
+"The package <%s1> is not valid.\nPlease contact SlickEdit Support."
+
+-4330 VSLM_SERIAL_AND_LICENSE_MISMATCH_RC
+// The value in %s3 is completely arbitrary.  The value is used for
+// debugging purposes.
+"The serial #%s1 does not match the license for package <%s2> (%s3).\nPlease contact SlickEdit Support."
+
+-4331 VSLM_INVALID_PACKAGE_RC
+// The value in %s1 is completely arbitrary.  The value is used for
+// debugging purposes.
+"The package is invalid or missing (%s1).\nPlease contact SlickEdit Support."
+
+-4332 VSLM_TOO_MANY_PACKAGES_RC
+"Too many packages.\nPlease contact SlickEdit Support."
+
+-4333 VSLM_PACKAGES_NOT_LICENSED_RC
+"The following packages could not be licensed because the user limit has been reached, or the user is not licensed for these packages.  Licensing can also fail when the license file is set to read only and/or a user's name does not appear in the list of licensed users.  Read the \"License Manager\" section of the manual for more information on the format of the license file."
+
+-4334 VSLM_USER_NOT_FOUND2_RC
+"User '%s1' not found in '%s2' for the following packages: "
+
+-4335 VSLM_PACKAGES_NOT_LICENSED2_RC
+"You have not installed a license key for the following packages.  This can happen when you have package sections in your license file that you are not/no longer licensed for.  The system administrator can use the '%s1' utility to add support for additional packages."
+
+-4336 VSLM_INVALID_PACKAGE2_RC
+"The package <%s1> is invalid."
+""
+
+-4337 VSREG_MACRO_NOT_FOUND_RC
+"The registration macro was not found. Call SlickEdit Support."
+
+-4338 VSREG_ERROR_OPENING_DATA_FILE_RC
+"Error opening registration data file"
+
+-4339 VSREG_ERROR_READING_DATA_FILE_RC
+"Error reading registration data file"
+
+-4340 VSREG_INVALID_DATA_VERSION_RC
+"Invalid or unsupported registration data version"
+
+-4341 VSTRIAL_INVALID_TRIAL_RC
+"Invalid trial. Please contact SlickEdit Support."
+
+-4342 VSTRIAL_EXPIRING_RC
+"This trial will expire on %s1"
+
+-4343 VSTRIAL_MACRO_NOT_FOUND_RC
+"The trial registration macro was not found. Call SlickEdit Support."
+
+-4344 VSTRIAL_TRIAL_EXPIRED_RC
+"This trial has expired. SlickEdit will now exit."
+
+-4345 VSTRIAL_EXPIRING2_RC
+"Thank you for trying %s0.\n\nThis trial will expire soon. If you would like to purchase, please contact our sales department."
+
+-4346 VSTRIAL_ECLIPSE_TRIAL_EXPIRED_RC
+"This trial has expired. SlickEdit Core will now be disabled."
+
+-4347 VSTRIAL_ERROR_CONTACTING_REGISTRATION_SERVER_RC
+"Unable to contact registration server (status = %rc%)."
+"<p>"
+"If you are accessing the internet through a proxy, use the \"Proxy Settings...\" button to configure your proxy settings. Some more sophisticated proxies that require a login are not currently supported. If you are behind one of these types of proxies, then please do one of the following:"
+"<p>"
+"Paste the following link into the Address bar of your web browser. You will be emailed back instructions to activate your trial license."
+"<p>"
+"%link%"
+"<p>"
+
+-4348 VSRC_DEMO_NAG_MESSAGE
+"To purchase %s1, please contact SlickEdit Sales at 800 934-3348 or +1 919.473.0100 purchase online at www.slickedit.com."
+
+-4349 VSLM_UNABLE_TO_OBTAIN_FLEXLM_LICENSE_FROM_FILE_RC
+"Unable to obtain license using license file(s):\n%s2\n\nFLEXlm reports the following error:\n\n"
+
+-4350 VSLM_UNABLE_TO_OBTAIN_LICENSE_RC
+"Unable to obtain license using license file(s)."
+
+-4351 VSLM_UNABLE_TO_RETURN_LICENSE_RC
+"Unable to return license to license server:\n%s2\n\Error:\n"
+
+-4352 VSLM_UNABLE_TO_WRITE_BORROW_LICENSE_RC
+"Unable to write borrow license.\n\File:\n\n"
+
+-4353 VSLM_UNABLE_TO_BORROW_LICENSE_RC
+"Unable to checkout borrow license.\n\Error:\n"
+
+-4354 VSLM_RETURN_FAILED_CHECKOUT_LICENSE_RC
+"Return license failed.\nCheckout license from server %s2?"
+
+-4355 VSLM_BORROW_INCORRECT_LICENSE_RC
+"Borrows are not allowed with this license."
+
+-4356 VSLM_BORROW_FAILURE_RC
+"Unable to borrow license from server.\n\Error:\n"
+
+VSEXECFROMFILE
+-4500 RCVSEXECFROMFILE_USAGE
+"Usage: vsexecfromfile [-d] <filename>"
+""
+"Where <filename> contains a one line command line to be executed."
+"Specify -d to erase the file after executing is completed."
+
+-4501 RCVSEXECFROMFILE_UNABLE_TO_OPEN_FILE
+"Unable to open '%s1'.  Make sure the file exists"
+
+-4502 RCVSEXECFROMFILE_ERROR_READING_COMMAND_LINE
+"Unable to read line from '%s1'.  Make sure file has a command line"
+
+-4503 RCVSEXECFROMFILE_EXECUTING
+"Executing"
+-4504 RCVSEXECFROMFILE_ARGUMENT_LIST_TOO_BIG
+"Executing"
+-4505 RCVSEXECFROMFILE_INVALID_EXECUTABLE
+"Command-interpreter file has invalid format and is not executable"
+-4506 RCVSEXECFROMFILE_COMMAND_INTERPRETER_NOT_FOUND
+"Command interpreter cannot be found."
+-4507 RCVSEXECFROMFILE_PROGRAM_NOT_FOUND
+"Program not found. Command: %s1"
+-4508 RCVSEXECFROMFILE_NOT_ENOUGH_MEMORY
+"Not enough memory is available to execute command; or available memory has been corrupted; or invalid block exists, indicating that process making call was not allocated properly."
+
+-4509 RCVSEXECFROMFILE_ERROR_EXECUTING_COMMAND
+"Error executing command"
+
+SLICKC_COMPILER
+-5000 SCCOMPERR_FILEPOS
+"%s1 %s2 %s3: %s4:"
+
+-5001 SCCOMPERR_SPACEFILEPOS
+"\"%s1\" %s2 %s3: %s4:"
+
+-5002 SCCOMPERR_ERROR
+"Error"
+
+-5003 SCCOMPERR_WARNING
+"Warning"
+
+-5004 SCCOMPERR_FATALERROR
+"Fatal error"
+
+-5005 SCCOMPERR_DEFINE_NOT_INITIALIZED
+"Preprocessing variable not initialized.  Initialize variable with #define,#undef statement or /d,/u invocation option"
+
+-5006 SCCOMPERR_ID_TOO_LONG
+"Identifier too long.  Identifier truncated"
+
+-5006 SCCOMPERR_COMMENT_NOT_TERMINATED
+"Comment not terminated"
+
+-5007 SCCOMPERR_ILLEGAL_CHARACTER
+"Illegal character"
+
+-5008 SCCOMPERR_STRING_NOT_TERMINATED
+"String not terminated"
+
+-5009 SCCOMPERR_INVALID_STRING_TOKEN
+"Invalid string token"
+
+-5010 SCCOMPERR_UNRECOGNIZED_ESCAPE_SEQUENCE
+"Unrecognized escape sequence"
+
+-5011 SCCOMPERR_EMPTY_CHARACTER_LITERAL
+"Empty character literal"
+
+-5012 SCCOMPERR_SINGLE_LINE_COMMENT_OR_EOF_EXPECTED
+"Single-line comment or end-of-line expected"
+
+-5013 SCCOMPERR_UNRECOGNIZED_PREPROCESSOR_DIRECTIVE
+"Unrecognized preprocessor directive"
+
+-5014 SCCOMPERR_PREPROCESSING_NESTED_TOO_DEEP
+"#IF preprocessing nested too deep"
+
+-5015 SCCOMPERR_UNEXPECTED_PREPROCESSOR_DIRECTIVE
+"Unexpected preprocessor directive"
+
+-5016 SCCOMPERR_RIGHT_PAREN_EXPECTED
+") expected"
+
+-5017 SCCOMPERR_INVALID_PREPROCESSOR_EXPRESSION
+"Invalid preprocessor expression"
+
+-5018 SCCOMPERR_ERROR_DIRECTIVE
+"#error %5"
+
+-5019 SCCOMPERR_IDENTIFIER_EXPECTED
+"Identifier expected"
+
+XMLCFG
+-5400 VSRC_XMLCFG_EXPECTING_ROOT_ELEMENT_NAME
+"Expecting root element name in DOCTYPE"
+-5401 VSRC_XMLCFG_EXPECTING_QUOTED_SYSTEM_ID
+"Expecting quoted system id"
+-5402 VSRC_XMLCFG_STRING_NOT_TERMINATED
+"String not terminated"
+-5403 VSRC_XMLCFG_NOT_USED1
+""
+-5404 VSRC_XMLCFG_START_TAG_NOT_TERMINATED
+"'%s4' start tag not terminated"
+-5405 VSRC_XMLCFG_COMMENT_NOT_TERMINATED
+"Comment not terminated"
+-5406 VSRC_XMLCFG_INVALID_CHARACTERS_IN_COMMENT
+"Invalid characters in comment"
+-5407 VSRC_XMLCFG_EXPECTING_AN_ELEMENT_NAME
+"Expecting an element name"
+-5408 VSRC_XMLCFG_EXPECTING_ATTRIBUTE_NAME
+"Expecting attribute name"
+-5409 VSRC_XMLCFG_EXPECTING_EQUAL_AFTER_ATTRIBUTE_NAME
+"Expecting '=' after attribute name"
+-5410 VSRC_XMLCFG_ATTRIBUTE_VALUE_MUST_BE_QUOTED
+"Attribute value must be quoted"
+-5411 VSRC_XMLCFG_PROCESSING_INSTRUCTION_NOT_TERMINATED
+"Processing instruction not terminated"
+-5412 VSRC_XMLCFG_INPUT_ENDED_BEFORE_ALL_TAGS_WERE_TERMINATED
+"The input ended before all tags were terminated."
+-5413 VSRC_XMLCFG_EXPECTING_QUOTED_PUBLIC_ID
+"Expecting quoted public id"
+-5414 VSRC_XMLCFG_DOCTYPE_INTERNAL_SUBSET_NOT_TERMINATED
+"DOCTYPE Internal subset not terminated"
+-5414 VSRC_XMLCFG_INVALID_DOCUMENT_STRUCTURE
+"Invalid document structure"
+-5416 VSRC_XMLCFG_EXPECTING_SYSTEM_OR_PUBLIC_ID
+"Expecting SYSTEM or PUBLIC id"
+-5417 VSRC_XMLCFG_EXPECTING_PROCESSOR_NAME
+"Expecting processor name"
+-5418 VSRC_XMLCFG_FILE_ALREADY_OPEN
+"File already open"
+-5419 VSRC_XMLCFG_XML_DECLARATION_NOT_TERMIANTED
+"?xml declaration not terminated"
+-5420 VSRC_XMLCFG_EXPECTING_COMMENT_OR_CDATA
+"Expecting comment or CDATA"
+-5421 VSRC_XMLCFG_CDATA_NOT_TERMINATED
+"CDATA not terminated"
+-5422 VSRC_XMLCFG_ATTRIBUTE_NOT_FOUND
+"Attribute not found"
+-5423 VSRC_XMLCFG_NAME_NOT_FOUND
+"Name not found"
+-5424 VSRC_XMLCFG_CANT_ADD_CHILD_NODE_TO_ATTRIBUTE_NODE
+"Cannot add child node to an attribute node"
+-5425 VSRC_XMLCFG_ATTRIBUTES_MUST_BE_THE_FIRST_CHILDREN
+"Attributes must be the first children of element nodes"
+-5426 VSRC_XMLCFG_CANT_ADD_SIBLING_TO_ROOT_NODE
+"Cannot add sibling to root node"
+-5427 VSRC_XML_SYSTEM_FAILED_TO_INITIALIZE
+"Unable to initialize XML system (%s2) : %s1"
+-5428 VSRC_XML_UNEXPECTED_PARSING_ERROR1
+"Unexpected parsing error: %s1"
+-5429 VSRC_XML_GENERAL_PARSING_ERROR
+"Parsing error (%s2): %s1"
+-5430 VSRC_XML_UNEXPECTED_PARSING_ERROR
+"Unexpected parsing error."
+-5431 VSRC_XML_INTERNAL_ERROR_PROC_INDEX_NOT_FOUND
+"Internal XML error.  Proc index not found for _mapxml_find_system_file"
+-5432 VSRC_XMLCFG_NO_CHILDREN_COPIED
+"No children copied"
+-5433 VSRC_XMLCFG_INVALID_HANDLE
+"Invalid XMLCFG handle"
+-5434 VSRC_XMLCFG_INVALID_NODE_INDEX
+"Invalid XMLCFG node index"
+-5435 VSRC_XMLCFG_TOO_MANY_END_TAGS
+"Too many end tags"
+
+DEBUGGER
+-5500 DEBUG_NOT_INITIALIZED_RC
+"The debugger has not been initialized"
+-5501 DEBUG_BREAKPOINT_NOT_FOUND_RC
+"Breakpoint not found"
+-5502 DEBUG_THREAD_NOT_SUSPENDED_RC
+"This operation is allowed only when the thread is suspended"
+-5503 DEBUG_INVALID_ID_RC
+"Invalid JDWP ID"
+-5504 DEBUG_INVALID_INDEX_RC
+"Index of debugger item is out of range or invalid"
+-5505 DEBUG_BREAKPOINT_CONDITION_UNSUPPORTED_RC
+"Conditional breakpoints are not yet supported"
+-5506 DEBUG_THREAD_WAITING_FOR_SUSPEND_RC
+"Waiting for thread(s) to suspend"
+-5507 DEBUG_THREAD_NOT_FOUND_RC
+"Could not find specified thread"
+-5508 DEBUG_CLASS_NOT_FOUND_RC
+"Could not find specified class"
+-5509 DEBUG_FUNCTION_NOT_FOUND_RC
+"Could not find specified function"
+-5510 DEBUG_FIELD_NOT_FOUND_RC
+"Could not find specified variable"
+-5511 DEBUG_BREAKPOINT_NOT_DISABLED_RC
+"Can not remove an enabled breakpoint"
+-5512 DEBUG_BREAKPOINT_ALREADY_EXISTS_RC
+"Breakpoint already exists at this location"
+-5513 DEBUG_PROGRAM_FINISHED_RC
+"Program finished executing"
+-5514 DEBUG_BREAKPOINT_LINE_NOT_FOUND_RC
+"Could not set breakpoint on specified line"
+-5515 DEBUG_BREAKPOINT_NOT_ALLOWED_RC
+"Breakpoints are not allowed in this context"
+-5516 DEBUG_WATCH_NOT_ALLOWED_RC
+"Can not set watch on specified symbol"
+-5517 DEBUG_NO_DEBUG_INFORMATION_RC
+"Current function was not compiled with debug"
+-5518 DEBUG_EXCEPTION_NOT_FOUND_RC
+"Exception not found"
+-5519 DEBUG_THREAD_NO_FRAMES_RC
+"Thread has no stack frames"
+-5520 DEBUG_WATCH_ALREADY_EXISTS_RC
+"This expression is already being watched"
+-5521 DEBUG_NO_CURRENT_THREAD_RC
+"There is no current thread"
+-5522 DEBUG_NO_MEMBERS_RC
+"There are no class members in this scope"
+-5523 DEBUG_INSTRUCTION_NOT_FOUND_RC
+"Could not find specified disassembly instruction"
+-5524 DEBUG_FILE_NOT_FOUND_RC
+"Could not find specified file"
+-5525 DEBUG_FEATURE_NOT_IMPLEMENTED_RC
+"Requested feature is not implemented for this debugger"
+-5526 DEBUG_INVALID_SESSION_ID_RC
+"Invalid debugging session ID"
+-5527 DEBUG_NOT_A_WATCHPOINT_RC
+"Expecting a watchpoint, not a breakpoint"
+-5528 DEBUG_INVALID_BREAKPOINT_TYPE_RC
+"Unrecognized breakpoint type"
+-5529 DEBUG_INVALID_WATCHPOINT_CONDITION_RC
+"Invalid watchpoint condition"
+-5530 DEBUG_BREAKPOINTS_NOT_ENABLED_ON_STARTUP_RC
+"One or more breakpoints could not be enabled on startup and will be disabled"
+-5531 DEBUG_FEATURE_REMOVED_RC
+"The requested feature is no longer available."
+-5532 DEBUG_CAN_NOT_RESUME_CORE_FILE_RC
+"This operation is allowed only when inspecting a core file"
+
+-5550 DEBUG_EXPR_EXPECTING_COLON_RC
+"Missing ':' in conditional expression"
+-5551 DEBUG_EXPR_GENERAL_ERROR_RC
+"Error parsing expression"
+-5552 DEBUG_EXPR_INVALID_OPERATOR_RC
+"Expression contains an invalid operator"
+-5553 DEBUG_EXPR_EXPECTING_CLOSE_PAREN_RC
+"Expecting closing parenthesis"
+-5554 DEBUG_EXPR_DIVIDE_BY_ZERO_RC
+"Attempt to divide by zero in expression"
+-5555 DEBUG_EXPR_EXPECTING_COMMA_RC
+"Expecting ',' or ')' in function call expression"
+-5556 DEBUG_EXPR_EXPECTING_CLOSE_BRACKET_RC
+"Expecting closing bracket"
+-5557 DEBUG_EXPR_INVALID_CONDITION_RC
+"Invalid condition in ?: expression"
+-5558 DEBUG_EXPR_CANNOT_CAST_VOID_RC
+"Can not cast a void expression"
+-5559 DEBUG_EXPR_CANNOT_CAST_BOOLEAN_RC
+"Can not cast a boolean to another type"
+-5560 DEBUG_EXPR_CANNOT_CAST_STRING_RC
+"Can not cast a string to another type"
+-5561 DEBUG_EXPR_CANNOT_CAST_OBJECT_RC
+"Can not implicitly cast a class object to another type"
+-5562 DEBUG_EXPR_INCOMPATIBLE_TYPE_RC
+"A type is incompatible with the specified operator"
+-5563 DEBUG_EXPR_LOSS_OF_PRECISION
+"Can not cast due to a possible loss of precision"
+-5564 DEBUG_EXPR_LHS_NOT_CLASS_RC
+"Left hand side of '.' operator is not a package, class or object"
+-5565 DEBUG_EXPR_RHS_INVALID_RC
+"Right hand side of '.' operator is not an identifier"
+-5566 DEBUG_EXPR_CANNOT_CAST_FUNCTION_RC
+"Can not cast a function to another type"
+-5567 DEBUG_EXPR_CANNOT_CAST_ARRAY_RC
+"Can not cast an array to another type"
+-5568 DEBUG_EXPR_SYNTAX_ERROR_RC
+"Syntax error in watch expression"
+-5569 DEBUG_EXPR_CANNOT_FIND_CONTEXT_RC
+"Can not find function context in this thread"
+-5570 DEBUG_EXPR_SYMBOL_NOT_FOUND_RC
+"Symbol not found in this scope"
+-5572 DEBUG_EXPR_NOT_ARRAY_RC
+"Variable is not an array or string type"
+-5573 DEBUG_EXPR_INVALID_ARRAY_INDEX_RC
+"Array index is out of range"
+-5574 DEBUG_EXPR_NOT_FUNCTION_RC
+"Identifier is not a function"
+-5575 DEBUG_EXPR_CANNOT_CALL_FUNCTION_RC
+"Can not call specified function"
+-5576 DEBUG_EXPR_EXCEPTION_RC
+"An exception was thrown"
+-5577 DEBUG_EXPR_INVALID_ARGUMENT_RC
+"Invalid argument"
+-5578 DEBUG_EXPR_WRONG_NUMBER_OF_ARGUMENTS_RC
+"Too many or too few arguments"
+-5579 DEBUG_EXPR_ARGUMENT_MISMATCH_RC
+"Could not find function matching arguments"
+-5580 DEBUG_EXPR_NOT_CLASS_RC
+"Identifier is not a class type"
+-5581 DEBUG_EXPR_CONTAINS_NEW_RC
+"Can not evaluate expression containing 'new'"
+-5582 DEBUG_EXPR_EXPECTING_OBJECT_RC
+"Expecting object type with 'instanceof' operator"
+-5583 DEBUG_EXPR_TOO_MANY_LEVELS_RC
+"Too many levels of inheritance"
+-5584 DEBUG_EXPR_CANNOT_EVALUATE_RC
+"Can not evaluate expression"
+-5585 DEBUG_EXPR_STATIC_METHOD_RC
+"Can not use 'this' in a static method"
+
+-5600 DEBUG_JDWP_INVALID_SIZE_ARGUMENT_RC
+"Unsupported size for object ID"
+-5601 DEBUG_JDWP_PAST_END_OF_PACKET_RC
+"Attempted to read past end of packet"
+-5602 DEBUG_JDWP_INVALID_TAG_CONSTANT_RC
+"Invalid JDWP type tag constant"
+-5603 DEBUG_JDWP_UNSUPPORTED_TAG_RC
+"Unsupported JDWP data type"
+-5604 DEBUG_JDWP_INVALID_HANDSHAKE_RC
+"Did not receive correct handshake from virtual machine"
+-5605 DEBUG_JDWP_UNSUPPORTED_BY_VIRTUAL_MACHINE_RC
+"The requested action is not supported by the virtual machine"
+-5606 DEBUG_JDWP_INVALID_PACKET_SIZE_RC
+"Packet header contains invalid packet size"
+-5607 DEBUG_JDWP_INVALID_ARRAY_SIZE_RC
+"Packet contains invalid array size"
+-5608 DEBUG_JDWP_ERROR_MODIFYING_VARIABLE_RC
+"Can not modify the value of expressions"
+-5609 DEBUG_JDWP_WATCHPOINT_NOT_SUPPORTED_RC
+"Watchpoints are not supported by the virtual machine"
+-5610 DEBUG_JDWP_LOCAL_WATCHPOINT_NOT_SUPPORTED_RC
+"The Java debugger does not support watchpoints on local variables"
+
+-5650 DEBUG_DBGP_INVALID_PACKET_SIZE_RC
+"Packet header contains invalid packet size"
+-5651 DEBUG_DBGP_NO_MORE_DATA_RC
+"No more data"
+-5652 DEBUG_DBGP_ALREADY_CONNECTED_RC
+"Already connected"
+-5653 DEBUG_DBGP_UNEXPECTED_RC
+"Something unexpected"
+-5654 DEBUG_DBGP_NOT_CONNECTED_RC
+"Not connected"
+-5655 DEBUG_DBGP_VERSION_NOT_SUPPORTED_RC
+"Version not supported"
+-5656 DEBUG_DBGP_COMMAND_NOT_SUPPORTED_RC
+"Command not supported"
+
+-5700 DEBUG_GDB_EMPTY_REPLY_RC
+"Received empty reply packet"
+-5701 DEBUG_GDB_TIMEOUT_RC
+"Timed out waiting for response from GDB"
+-5702 DEBUG_GDB_TERMINATED_RC
+"GDB has terminated prematurely"
+-5703 DEBUG_GDB_APP_EXITED_RC
+"The application has exited"
+-5704 DEBUG_GDB_INVALID_REPLY_RC
+"Received an invalid reply"
+-5705 DEBUG_GDB_ERROR_REPLY_RC
+"Received an error message"
+-5706 DEBUG_GDB_THREAD_OPERATION_UNSUPPORTED_RC
+"Operations on individual threads are not supported"
+-5707 DEBUG_GDB_ERROR_OPENING_FILE_RC
+"GDB returned an error opening the executable"
+-5708 DEBUG_GDB_ERROR_SETTING_ARGS_RC
+"GDB returned an error setting the program arguments"
+-5709 DEBUG_GDB_ERROR_ATTACHING_RC
+"GDB returned an error attaching to the process ID"
+-5710 DEBUG_GDB_ERROR_LISTING_THREADS_RC
+"GDB returned an error listing threads"
+-5711 DEBUG_GDB_ERROR_SELECTING_THREAD_RC
+"GDB returned an error selecting a thread"
+-5712 DEBUG_GDB_ERROR_SELECTING_FRAME_RC
+"GDB returned an error selecting a stack frame"
+-5713 DEBUG_GDB_ERROR_LISTING_STACK_RC
+"GDB returned an error listing stack frames"
+-5714 DEBUG_GDB_ERROR_LISTING_LOCALS_RC
+"GDB returned an error listing local variables"
+-5715 DEBUG_GDB_ERROR_LISTING_ARGUMENTS_RC
+"GDB returned an error listing arguments"
+-5716 DEBUG_GDB_ERROR_EVALUATING_EXPRESSION_RC
+"GDB could not evaluate expression"
+-5717 DEBUG_GDB_ERROR_MODIFYING_VARIABLE_RC
+"GDB returned an error modifying this variable"
+-5718 DEBUG_GDB_ERROR_CONTINUING_RC
+"GDB could not continue application"
+-5719 DEBUG_GDB_ERROR_RUNNING_RC
+"GDB could not start application"
+-5720 DEBUG_GDB_ERROR_STEPPING_RC
+"GDB could not step application"
+-5721 DEBUG_GDB_ERROR_INTERRUPT_RC
+"GDB returned an error when interupting application"
+-5722 DEBUG_GDB_ERROR_SETTING_BREAKPOINT_RC
+"GDB returned an error setting breakpoint"
+-5723 DEBUG_GDB_ERROR_DELETING_BREAKPOINT_RC
+"GDB returned an error deleting breakpoint"
+-5724 DEBUG_GDB_ERROR_SUSPENDING_RC
+"GDB returned an error suspending the application"
+-5725 DEBUG_GDB_INVALID_HANDSHAKE_RC
+"Did not receive correct handshake from vsdebugio"
+-5726 DEBUG_GDB_INVALID_PACKET_RC
+"Invalid packet header received by vsdebugio"
+-5727 DEBUG_GDB_ERROR_DETACHING_RC
+"Error detaching debugger from target process"
+-5728 DEBUG_GDB_ERROR_LISTING_REGISTERS_RC
+"GDB returned an error listing registers"
+-5729 DEBUG_GDB_ERROR_LISTING_MEMORY_RC
+"GDB returned an error listing memory contents"
+-5730 DEBUG_GDB_ALL_PTYS_IN_USE_RC
+"All psuedo-terminals (ptys) are in use"
+-5731 DEBUG_GDB_CANNOT_OPEN_SLAVE_PTY_RC
+"Cannot open slave psuedo-terminal (pty)"
+-5732 DEBUG_GDB_MISSING_GDB_RC
+"GNU debugger (gdb) not found"
+-5733 DEBUG_GDB_ERROR_ATTACHING_REMOTE_RC
+"GDB returned an error attaching to the remote process"
+-5734 DEBUG_GDB_ERROR_ATTACHING_CORE_RC
+"GDB returned an error attaching to the core file"
+-5735 DEBUG_GDB_ERROR_STARTING_PROXY_RC
+"Error starting gdb proxy application"
+-5736 DEBUG_GDB_PROXY_NOT_RUNNING_RC
+"The gdb proxy application is not running"
+-5737 DEBUG_GDB_PROXY_ERROR_SENDING_RC
+"Error sending message to gdb proxy application"
+-5738 DEBUG_GDB_PROXY_WINDOW_NOT_FOUND_RC
+"Could not find the gdb proxy application window"
+-5739 DEBUG_GDB_PROXY_NOT_FOUND_RC
+"Could not find the gdb proxy application"
+-5740 DEBUG_GDB_ERROR_LISTING_DISASSEMBLY_RC
+"GDB returned an error listing disassembly"
+-5741 DEBUG_GDB_TRUNCATED_VALUE_RC
+"String value truncated by GDB"
+-5742 DEBUG_GDB_EXIT_REPLY_RC
+"Received an exit message"
+
+-5800 DEBUG_DOTNET_NO_PROCESS_RC
+"No process running"
+-5801 DEBUG_DOTNET_ERROR_LISTING_THREADS_RC
+"An error occured while listing threads"
+-5802 DEBUG_DOTNET_ERROR_LISTING_STACK_RC
+"An error occured while stack frames"
+-5803 DEBUG_DOTNET_NO_CURRENT_MANAGED_FRAME_RC
+"No current managed MSIL frame"
+-5804 DEBUG_DOTNET_ERROR_GETTING_VARIABLES_RC
+"Cannot get variable names"
+-5805 DEBUG_DOTNET_ERROR_GETTING_CODE_RC
+"Error getting code for frame"
+-5806 DEBUG_DOTNET_ERROR_GETTING_FUNCITON_RC
+"Error getting function for frame"
+-5807 DEBUG_DOTNET_ERROR_GETTING_LINE_RC
+"Error getting line number"
+-5808 DEBUG_DOTNET_COULD_NOT_START_DEBUGGEE_RC
+"Could not start app for debugging"
+-5809 DEBUG_DOTNET_PDB_FILE_OUT_OF_DATE_RC
+"The pdb file is out of date.  This project needs to be rebuilt."
+-5810 DEBUG_DOTNET_NOT_AN_ARRAY_RC
+"Variable specified is not an array"
+-5811 DEBUG_DOTNET_CORDBG_E_FUNCTION_NOT_IL_RC
+"The function has no managed body"
+-5812 DEBUG_DOTNET_CORDBG_E_UNRECOVERABLE_ERROR_RC
+"Unrecoverable internal error"
+-5813 DEBUG_DOTNET_CORDBG_E_PROCESS_TERMINATED_RC
+"The debuggee has terminated"
+-5814 DEBUG_DOTNET_CORDBG_E_PROCESS_NOT_SYNCHRONIZED_RC
+"Unable to process while debuggee is running"
+-5815 DEBUG_DOTNET_CORDBG_E_CLASS_NOT_LOADED_RC
+"A class has not been loaded yet by the debuggee"
+-5816 DEBUG_DOTNET_CORDBG_E_IL_VAR_NOT_AVAILABLE_RC
+"The variable is not available"
+-5817 DEBUG_DOTNET_CORDBG_E_BAD_REFERENCE_VALUE_RC
+"The reference is invalid"
+-5818 DEBUG_DOTNET_CORDBG_E_FIELD_NOT_AVAILABLE_RC
+"The field is not available."
+-5819 DEBUG_DOTNET_CORDBG_E_VARIABLE_IS_ACTUALLY_LITERAL_RC
+"The field is not available because it is a constant optimized away by the runtime."
+-5820 DEBUG_DOTNET_CORDBG_E_NON_NATIVE_FRAME_RC
+"The frame type is incorrect"
+-5821 DEBUG_DOTNET_CORDBG_E_NONCONTINUABLE_EXCEPTION_RC
+"The exception cannot be continued from"
+-5822 DEBUG_DOTNET_CORDBG_E_CODE_NOT_AVAILABLE_RC
+"The code is not available at this time"
+-5823 DEBUG_DOTNET_CORDBG_S_BAD_START_SEQUENCE_POINT_RC
+"The operation cannot be started at the current IP"
+-5824 DEBUG_DOTNET_CORDBG_S_BAD_END_SEQUENCE_POINT_RC
+"The destination IP is not valid"
+-5825 DEBUG_DOTNET_CORDBG_S_INSUFFICIENT_INFO_FOR_SET_IP_RC
+"Insufficient information to perform Set IP"
+-5826 DEBUG_DOTNET_CORDBG_E_CANT_SET_IP_INTO_FINALLY_RC
+"Cannot Set IP into a finally clause"
+-5827 DEBUG_DOTNET_CORDBG_E_CANT_SET_IP_OUT_OF_FINALLY_RC
+"Cannot Set IP out of a finally clause"
+-5828 DEBUG_DOTNET_CORDBG_E_CANT_SET_IP_INTO_CATCH_RC
+"Cannot Set IP into a catch clause"
+-5829 DEBUG_DOTNET_CORDBG_E_SET_IP_IMPOSSIBLE_RC
+"Unable to Set IP"
+-5830 DEBUG_DOTNET_CORDBG_E_SET_IP_NOT_ALLOWED_ON_NONLEAF_FRAME_RC
+"Can't Set IP on a non-leaf frame"
+-5831 DEBUG_DOTNET_CORDBG_E_FUNC_EVAL_BAD_START_POINT_RC
+"Cannot perform a func eval at the current IP"
+-5832 DEBUG_DOTNET_CORDBG_E_INVALID_OBJECT_RC
+"The object value is no longer valid"
+-5833 DEBUG_DOTNET_CORDBG_E_FUNC_EVAL_NOT_COMPLETE_RC
+"The func eval is still being processed"
+-5834 DEBUG_DOTNET_CORDBG_S_FUNC_EVAL_HAS_NO_RESULT_RC
+"The func eval has no result"
+-5835 DEBUG_DOTNET_CORDBG_S_VALUE_POINTS_TO_VOID_RC
+"Can't dereference a void pointer"
+-5836 DEBUG_DOTNET_CORDBG_E_INPROC_NOT_IMPL_RC
+"The API is not usable in-process"
+-5837 DEBUG_DOTNET_CORDBG_S_FUNC_EVAL_ABORTED_RC
+"The func eval was aborted"
+-5838 DEBUG_DOTNET_CORDBG_E_STATIC_VAR_NOT_AVAILABLE_RC
+"The static variable is not available (not yet initialized)"
+-5839 DEBUG_DOTNET_CORDBG_E_OBJECT_IS_NOT_COPYABLE_VALUE_CLASS_RC
+"The value class object cannot be copied"
+-5840 DEBUG_DOTNET_CORDBG_E_CANT_SETIP_INTO_OR_OUT_OF_FILTER_RC
+"Cannot Set IP into or out of a filter"
+-5841 DEBUG_DOTNET_CORDBG_E_CANT_CHANGE_JIT_SETTING_FOR_ZAP_MODULE_RC
+"Cannot change JIT setting for pre-jitted module"
+-5842 DEBUG_DOTNET_CORDBG_E_BAD_THREAD_STATE_RC
+"The thread's state is invalid"
+-5843 DEBUG_DOTNET_CORDBG_E_DEBUGGING_NOT_POSSIBLE_RC
+"Debugging is not possible due to a runtime configuration issue"
+-5844 DEBUG_DOTNET_CORDBG_E_KERNEL_DEBUGGER_ENABLED_RC
+"Debugging is not possible because there is a kernel debugger enabled on your system"
+-5845 DEBUG_DOTNET_CORDBG_E_KERNEL_DEBUGGER_PRESENT_RC
+"Debugging is not possible because there is a kernel debugger present on your system"
+-5846 DEBUG_DOTNET_CORDBG_E_INCOMPATIBLE_PROTOCOL_RC
+"The process cannot be debugged because the debugger'sinternal debugging protocol is incompatible with the protocol supportedby the process."
+-5847 DEBUG_DOTNET_FIRST_CHANCE_EXCEPTION_RC
+"First chance exception generated: "
+-5848 DEBUG_DOTNET_UNEXPECTED_ERROR_RC
+"Unexpected error occured: "
+-5849 DEBUG_DOTNET_UNHANDLED_EXCEPTION_RC
+"Unhandled exception generated: "
+-5850 DEBUG_DOTNET_PROCESS_NOT_RUNNING_RC
+"Process not running."
+-5851 DEBUG_DOTNET_THREAD_NO_LONGER_EXISTS_RC
+"Thread no longer exists."
+-5852 DEBUG_DOTNET_CREATE_STEPPER_FAILED_RC
+"Could not create stepper."
+-5853 DEBUG_DOTNET_DEBUGGER_ALREADY_ATTACHED_RC
+"A debugger is already attached to this process."
+
+-5900 DEBUG_CAPTION_SEPARATOR_RC
+", "
+-5901 DEBUG_CAPTION_VERIFIED_RC
+"Verified"
+-5902 DEBUG_CAPTION_PREPARED_RC
+"Prepared"
+-5903 DEBUG_CAPTION_INITIALIZED_RC
+"Initialized"
+-5904 DEBUG_CAPTION_ERROR_RC
+"Error"
+-5905 DEBUG_CAPTION_UNKNOWN_RC
+"Unknown"
+-5906 DEBUG_CAPTION_MONITOR_RC
+"Monitor"
+-5907 DEBUG_CAPTION_RUNNING_RC
+"Running"
+-5908 DEBUG_CAPTION_SLEEPING_RC
+"Sleeping"
+-5909 DEBUG_CAPTION_WAITING_RC
+"Waiting"
+-5910 DEBUG_CAPTION_ZOMBIE_RC
+"Zombie"
+-5911 DEBUG_CAPTION_SUSPENDED_RC
+"Suspended"
+-5912 DEBUG_CAPTION_ALIVE_RC
+"Alive"
+-5913 DEBUG_CAPTION_DEFAULT_RC
+"[Default]"
+-5914 DEBUG_CAPTION_ITEM_RC
+"item"
+-5915 DEBUG_CAPTION_ITEMS_RC
+"items"
+-5916 DEBUG_CAPTION_NULL_RC
+"null"
+-5917 DEBUG_CAPTION_TRUE_RC
+"true"
+-5918 DEBUG_CAPTION_FALSE_RC
+"false"
+-5919 DEBUG_CAPTION_VOID_RC
+"void"
+-5920 DEBUG_CAPTION_CLASS_RC
+"class"
+-5921 DEBUG_CAPTION_THROWN_RC
+"Thrown"
+-5922 DEBUG_CAPTION_CAUGHT_RC
+"Caught"
+-5923 DEBUG_CAPTION_UNCAUGHT_RC
+"Uncaught"
+-5924 DEBUG_CAPTION_IGNORE_RC
+"Ignore"
+-5925 DEBUG_CAPTION_CURR_TOP_OF_STACK_RC
+"Current execution line"
+-5926 DEBUG_CAPTION_CURR_FRAME_OF_STACK_RC
+"A line on the execution call stack"
+-5927 DEBUG_CAPTION_LAST_TOP_OF_STACK_RC
+"Last current execution line"
+-5928 DEBUG_CAPTION_LAST_FRAME_OF_STACK_RC
+"A line on the last execution call stack"
+-5929 DEBUG_CAPTION_BREAKPOINT_ENABLED_RC
+"Enabled breakpoint"
+-5930 DEBUG_CAPTION_BREAKPOINT_DISABLED_RC
+"Disabled breakpoint"
+-5931 DEBUG_CAPTION_FROZEN_RC
+"Frozen"
+-5932 DEBUG_CAPTION_UNDEFINED_VALUE_RC
+"undefined"
+-5933 DEBUG_CAPTION_WATCHPOINT_ENABLED_RC
+"Enabled watchpoint"
+-5934 DEBUG_CAPTION_WATCHPOINT_DISABLED_RC
+"Disabled watchpoint"
+
+JDWP
+-6000 JDWP_ERROR_NONE_RC
+"JDWP error: No error has occurred"
+-6010 JDWP_ERROR_INVALID_THREAD_RC
+"JDWP error: Passed thread is not a valid thread or has exited"
+-6011 JDWP_ERROR_INVALID_THREAD_GROUP_RC
+"JDWP error: Invalid thread group"
+-6012 JDWP_ERROR_INVALID_PRIORITY_RC
+"JDWP error: Invalid priority setting"
+-6013 JDWP_ERROR_THREAD_NOT_SUSPENDED_RC
+"JDWP error: Thread not suspended"
+-6014 JDWP_ERROR_THREAD_SUSPENDED_RC
+"JDWP error: Thread already suspended"
+-6020 JDWP_ERROR_INVALID_OBJECT_RC
+"JDWP error: Passed object is invalid or has been unloaded and garbage collected"
+-6021 JDWP_ERROR_INVALID_CLASS_RC
+"JDWP error: Invalid class ID"
+-6022 JDWP_ERROR_CLASS_NOT_PREPARED_RC
+"JDWP error: Class has been loaded but not yet prepared"
+-6023 JDWP_ERROR_INVALID_METHODID_RC
+"JDWP error: Invalid method ID"
+-6024 JDWP_ERROR_INVALID_LOCATION_RC
+"JDWP error: Invalid location"
+-6025 JDWP_ERROR_INVALID_FIELDID_RC
+"JDWP error: Invalid field ID"
+-6030 JDWP_ERROR_INVALID_FRAMEID_RC
+"JDWP error: Invalid frame ID"
+-6031 JDWP_ERROR_NO_MORE_FRAMES_RC
+"JDWP error: There are no more Java or JNI frames on the call stack"
+-6032 JDWP_ERROR_OPAQUE_FRAME_RC
+"JDWP error: Information about the frame is unavailable"
+-6033 JDWP_ERROR_NOT_CURRENT_FRAME_RC
+"JDWP error: Operation can only be performed on the current frame"
+-6034 JDWP_ERROR_TYPE_MISMATCH_RC
+"JDWP error: The variable is not an appropriate type for the function used"
+-6035 JDWP_ERROR_INVALID_SLOT_RC
+"JDWP error: Invalid slot"
+-6040 JDWP_ERROR_DUPLICATE_RC
+"JDWP error: Item already set"
+-6041 JDWP_ERROR_NOT_FOUND_RC
+"JDWP error: Requested item not found"
+-6050 JDWP_ERROR_INVALID_MONITOR_RC
+"JDWP error: Invalid monitor"
+-6051 JDWP_ERROR_NOT_MONITOR_OWNER_RC
+"JDWP error: This thread doesn't own the monitor"
+-6052 JDWP_ERROR_INTERRUPT_RC
+"JDWP error: The call has been interrupted before completion"
+-6060 JDWP_ERROR_INVALID_CLASS_FORMAT_RC
+"JDWP error: The virtual machine attempted to read a malformed class file"
+-6061 JDWP_ERROR_CIRCULAR_CLASS_DEFINITION_RC
+"JDWP error: A circularity has been detected while initializing a class"
+-6062 JDWP_ERROR_FAILS_VERIFICATION_RC
+"JDWP error: Class failed verification"
+-6063 JDWP_ERROR_ADD_METHOD_NOT_IMPLEMENTED_RC
+"JDWP error: Add method not implemented"
+-6064 JDWP_ERROR_SCHEMA_CHANGE_NOT_IMPLEMENTED_RC
+"JDWP error: Schema change not implemented"
+-6065 JDWP_ERROR_INVALID_TYPESTATE_RC
+"JDWP error: The state of the thread has been modified and is now inconsistent"
+-6066 JDWP_ERROR_HIERARCHY_CHANGE_NOT_IMPLEMENTED_RC
+"JDWP error: A direct superclass is different for the new class version"
+-6067 JDWP_ERROR_DELETE_METHOD_NOT_IMPLEMENTED_RC
+"JDWP error: The new class version does not implement a method declared in the old class version"
+-6068 JDWP_ERROR_UNSUPPORTED_VERSION_RC
+"JDWP error: A class file has a version number not supported by this VM"
+-6069 JDWP_ERROR_NAMES_DONT_MATCH_RC
+"JDWP error: The class name defined in the new class file does not match the original class name"
+-6070 JDWP_ERROR_CLASS_MODIFIERS_CHANGE_NOT_IMPLEMENTED_RC
+"JDWP error: The new class version has different modifiers than the original class"
+-6071 JDWP_ERROR_METHOD_MODIFIERS_CHANGE_NOT_IMPLEMENTED_RC
+"JDWP error: A method in the new class version has different modifiers than the original method"
+-6099 JDWP_ERROR_NOT_IMPLEMENTED_RC
+"JDWP error: Feature not implemented in this virtual machine"
+-6100 JDWP_ERROR_NULL_POINTER_RC
+"JDWP error: Null pointer"
+-6101 JDWP_ERROR_ABSENT_INFORMATION_RC
+"JDWP error: Requested information is not available"
+-6102 JDWP_ERROR_INVALID_EVENT_TYPE_RC
+"JDWP error: The specified event type is not recognized"
+-6103 JDWP_ERROR_ILLEGAL_ARGUMENT_RC
+"JDWP error: Illegal argument"
+-6110 JDWP_ERROR_OUT_OF_MEMORY_RC
+"JDWP error: Out of memory"
+-6111 JDWP_ERROR_ACCESS_DENIED_RC
+"JDWP error: Access denied; Debugging may not be enabled on this virtual machine"
+-6112 JDWP_ERROR_VM_DEAD_RC
+"JDWP error: The virtual machine is not running"
+-6113 JDWP_ERROR_INTERNAL_RC
+"JDWP error: An unexpected internal error has occurred in the virtual machine"
+-6115 JDWP_ERROR_UNATTACHED_THREAD_RC
+"JDWP error: The thread being used to call this function is not attached to the virtual machine"
+-6500 JDWP_ERROR_INVALID_TAG_RC
+"JDWP error: Invalid object type ID or class tag"
+-6502 JDWP_ERROR_ALREADY_INVOKING_RC
+"JDWP error: Previous method or constructor invocation not complete"
+-6503 JDWP_ERROR_INVALID_INDEX_RC
+"JDWP error: Invalid array index"
+-6504 JDWP_ERROR_INVALID_LENGTH_RC
+"JDWP error: Invalid array length"
+-6506 JDWP_ERROR_INVALID_STRING_RC
+"JDWP error: Invalid string"
+-6507 JDWP_ERROR_INVALID_CLASS_LOADER_RC
+"JDWP error: Invalid class loader"
+-6508 JDWP_ERROR_INVALID_ARRAY_RC
+"JDWP error: Invalid array object"
+-6509 JDWP_ERROR_TRANSPORT_LOAD_RC
+"JDWP error: Error loading transport layer"
+-6510 JDWP_ERROR_TRANSPORT_INIT_RC
+"JDWP error: Error initializing transport layer"
+-6511 JDWP_ERROR_NATIVE_METHOD_RC
+"JDWP error: Operation not allowed for native methods"
+-6512 JDWP_ERROR_INVALID_COUNT_RC
+"JDWP error: Invalid item count"
+-6513 JDWP_ERROR_INVALID_COMMAND_SET_RC
+"JDWP error: The specified command set is not recognized"
+-6514 JDWP_ERROR_INVALID_COMMAND_RC
+"JDWP error: The specified command is not recognized"
+
+CVS
+-6600 CVS_ERROR_NOT_LOGGED_IN
+"CVS error: You are not logged on"
+-6601 CVS_ERROR_EXE_NOT_FOUND
+"CVS executable not found"
+-6602 CVS_ERROR_CHECKOUT_FAILED_RC
+"CVS checkout failed"
+
+SUBVERSION
+-6650 SVN_COMMAND_RETURNED_ERROR_RC
+"%s0 %s1 returned %s2"
+-6651 SVN_DIRECTORIES_NOT_SUPPORTED_RC
+"This command does not support directories"
+-6652 SVN_FILE_NOT_CONTROLLED_RC
+"This file was not checked out from %s0"
+-6653 SVN_APP_NAME_RC
+"Subversion"
+-6654 SVN_COULD_NOT_GET_LOG_INFO_RC
+"Could not get log info for %s0"
+-6655 SVN_ERROR_CHECKOUT_FAILED_RC
+"Subversion checkout failed"
+-6656 SVN_ERROR_CANT_GET_PASSWORD
+"Can't get Subversion password (perform \"svn status\" from console)"
+-6657 SVN_OUTPUT_TOO_LARGE
+"Subversion output exceeds configured maximum output size"
+-6658 SVN_COMMAND_RETURNED_ERROR_FOR_PATH_RC
+"Subversion returned an error for the path(s): %s0"
+
+SVC
+-6670 SVC_COULD_NOT_GET_VC_INTERFACE_RC
+"Could not get interface for %s0"
+-6671 SVC_VC_INTERFACE_NOT_AVAILABLE_RC
+"Interface for %s0 not available"
+-6672 SVC_COULD_NOT_GET_VC_FILE_INTERFACE_RC
+"Could not get interface for %s0"
+-6673 SVC_FILE_INTERFACE_NOT_AVAILABLE_RC
+"Interface for %s0 not available"
+-6674 SVC_FILE_NOT_FOUND_RC
+"File %s0 not found"
+-6675 SVC_SYSTEM_NOT_SUPPORTED_RC
+"File %s0 not found"
+-6676 SVC_ANNOTATIONS_NOT_AVAILABLE_RC
+"Annotations for file %s0 not found"
+
+VSMKTAGS
+-6700 VSMKTAGSRC_USAGE
+"Usage: vsmktags [Options] Workspace1 [Workspace2] ..."
+""
+"   Workspace(n)      Name of workspace. Multiple workspaces can be specified."
+"   -retag            Retag all files.  Defaults to incremental retagging."
+"   -refs=[on/off]    Enable/disable references.  Defaults to no change."
+"   -thread=[on/off]  Enable/disable threaded tagging.  Default is on."
+"   -sc <configdir>   VSE configuration dir."
+""
+"Example"
+"    vsmktags workspace.vpw"
+"         Build tag file for all files in workspace."
+""
+-6701 VSMKTAGSRC_CANNOT_FIND_FILE
+"Cannot find file '%s1'"
+
+UPDATE
+-6800 UPDATE_CANNOT_WRITE_FILE_RC
+"Could not write to file %s0\n\nPossible Causes:\n\n*Do not have write permissions for file\n\n*Out of disk space"
+-6801 UPDATE_GENERAL_COPY_ERROR_RC
+"Error copying files"
+-6802 UPDATE_BACKUP_ERROR_RC
+"Could not backup file %s0\n\nContinue?"
+-6803 UPDATE_COULD_NOT_CREATE_PATH_ERROR_RC
+"Could not create path %s0"
+-6804 UPDATE_UPDATING_FILES_RC
+"Updating Files - %s0"
+-6805 UPDATE_COMPILING_FILES_RC
+"Compiling Macro Files - %s0"
+-6806 UPDATE_FILE_DOES_NOT_EXIST_RC
+"File %s1 does not exist in the specified path"
+-6807 UPDATE_COULD_NOT_SERIALIZE_RC
+"Could not copy serial information to new %s0.\nPossible Causes:\n\n\t* The executable path \"%s1\" is incorrect.\n\n\t* Someone is running %s2.\n\n\t* %s3%s4 is a demo executable.\n\n\t* %s5%s6 is an old version and cannot be updated with this program"
+-6808 UPDATE_COULD_NOT_DECOMPRESS_VSAPI_RC
+"Could not decompress %s0"
+-6809 UPDATE_COULD_NOT_FIND_UNINST_LIST_RC
+"Could not find uninstall list file.  SlickEdit's uninstall may fail to remove some new files in this patch.\n\nContinue?"
+-6810 UPDATE_CANNOT_UPDATE_TRIAL_RC
+"%s0 is a trial install, and cannot be updated\n\nTo purchase please contact sales at SlickEdit Inc. at 800 934-3348 or 919 473-0100."
+-6811 UPDATE_NETWORK_INSTALL_RC
+"If this is a network installation:\n\nThis update should only be run by the network administrator.\nOther users will automatically be updated.\n\nContinue?"
+-6812 UPDATE_INSUFFICIENT_DISK_SPACE_RC
+"To run this update, you will need to have 19MB of free space available on the partition where SlickEdit resides.\n\nYou currently have %s0 bytes.\n\nPlease clear some space and try again"
+-6813 UPDATE_FAILED_RC
+"Update failed"
+-6814 UPDATE_COMPLETE_RC
+"Update complete"
+-6815 UPDATE_PATH_DOES_NOT_EXIST_RC
+"Path %s0 does not exist or is incorrect"
+-6816 UPDATE_BAD_ECLIPSE_PATH
+"There does not appear to be a SlickEdit plugin in the path %s0."
+-6817 UPDATE_COULD_NOT_UPDATE_ECLIPSE_FEATURE_RC
+"Could not update the feature.xml file"
+-6818 UPDATE_COULD_NOT_UPDATE_ECLIPSE_EXTENSION_RC
+"Could not update the .eclipseextension file"
+-6819 UPDATE_RESTART_ECLIPSE_EXTENSION_RC
+"You will need to restart WebSphere Studio or Eclipse now"
+-6820 UPDATE_CANNOT_OPEN_FILE_RC
+"Could not open file %s0"
+
+FTP
+-6851 VSRC_FTP_BAD_RESPONSE
+"Bad or unexpected response"
+-6852 VSRC_FTP_CONNECTION_DEAD
+"Connection lost"
+-6853 VSRC_FTP_CANNOT_STAT
+"Cannot stat file or directory"
+-6854 VSRC_FTP_WAITING_FOR_REPLY
+"Waiting for reply"
+-6855 VSRC_FTP_BAD_CONFIG
+"Bad or missing configuration"
+-6856 VSRC_FTP_CANNOT_AUTHENTICATE
+"Authentication failure"
+
+-6899 VSRC_FTP_END_ERRORS
+"reserve thru 6899 for FTP"
+
+DELTASAVE
+-6900 DS_COULD_NOT_CREATE_ARCHIVE_FILE_RC
+ "Could not create archive file"
+-6901 DS_ARCHIVE_FILE_NOT_OPEN_RC
+ "Could not create archive file"
+-6902 DS_SOURCE_FILENAME_NOT_SET_RC
+ "Source filename not set"
+-6903 DS_VERSION_NOT_FOUND_RC
+ "Version %s0 of '%s1' not found"
+-6904 DS_PRE_CALLBACK_FAILED_RC
+ "Pre-backup callback failed"
+-6905 DS_POST_CALLBACK_FAILED_RC
+ "Post-backup callback failed"
+-6906 DS_FILE_MATCHED_RC
+ "Files matched"
+-6907 DS_NOT_CURRENT_BUFFER_RC
+ "A delta cannot be created because '%s0' is not the current file"
+-6908 DS_COULD_NOT_OPEN_FILE_WITH_CODE_PAGE_RC
+ "The original encoding for the backup of this file (%s0) can no longer be used.\n\nThe file was opened using active code page"
+-6909 DS_FILE_EXCLUDED_RC
+ "A delta cannot be created because '%s0' is in a directory which is excluded from backup history"
+
+VSDIFF
+-7000 VSDIFF_USAGE_RC
+ ""
+ "vsdiff"
+ ""
+ "Usage:"
+ "\tTo compare two files:"
+ "\tvsdiff  [-r1][-r2] <File1> <File2>"
+ "\tIf files have the same name, only give path for File2"
+ "\tex:"
+ "\t\tvsdiff <path1>/file1.c <path2>"
+ "\t -r1 option will make file on left read only"
+ "\t -r2 option will make file on right read only"
+ ""
+ "\tTo compare two directories:"
+ "\tvsdiff [-norecurse] -filespec \"<filespec>\" [-excludefilespec \"<excludefilespec>\"]"
+ "\t\t directory recursion is on by default. Use -norecurse to diff directories without recursing"
+ "\t\t-filespec and -excludefilespec can be delimited with spaces or %s0"
+ "\tex:"
+ "\t\tvsdiff -filespec \"*.c *.h\" -excludefilespec \"test*\" <path1> <path2>"
+ ""
+ ""
+ "\tOr:"
+ ""
+ ""
+ "\tvsdiff [-norecurse] <Path And Filespec1> <Path2>"
+ "\tex:"
+ "\t\tvsdiff <path1>*.c <path2>"
+ ""
+ "\tTo launch DIFFzilla(R) dialog:"
+ ""
+ "\tvsdiff"
+ ""
+ ""
+ "\tA SlickEdit configuration path may be specified with a -sc option "
+ "\tex:"
+ "\t\tvsdiff -sc <configpath> ..."
+-7001 VSDIFF_FILE_NOT_FOUND_RC
+ "vsdiff: could not find file \"%s0\""
+-7002 VSDIFF_NO_MORE_DIFFERENCES_RC
+ "No more differences"
+-7003 VSDIFF_NO_MORE_CONFLICTS_RC
+ "No more conflicts"
+-7004 VSDIFF_APP_NAME
+ "vsdiff"
+-7005 VSDIFF_NO_MORE_DIFFERENCES_CLOSE_RC
+ "No more differences.  Close now?"
+-7006 VSDIFF_TIMED_OUT_RC
+ "Diff timed out"
+
+VSMERGE
+-7100 VSMERGE_USAGE_RC
+ ""
+ "vsmerge"
+ ""
+ "Usage:"
+ ""
+ "vsmerge [options] <basefile> <revision1file> <revision2file> <outputfile>"
+ "\toptions are as follows:"
+ "\t\t-smart:\tAttempt to resolve simple conficts"
+ "\t\t-quiet:\tSupress \"No conficts detected\" message"
+ "\t\t-showchanges:\tForce user to merge in non-conflict changes"
+ "\t\t-ignorespaces:\tIgnore spaces in the files being merged"
+ "Usage:"
+ "\tTo launch 3-way merge dialog:"
+ ""
+ "\tvsmerge"
+ ""
+ ""
+ "\tA SlickEdit configuration path may be specified with a -sc option "
+ "\tex:"
+ "\t\tvsmerge -sc <configpath> ..."
+-7101 VSMERGE_FILE_NOT_FOUND_RC
+ "vsmerge: Could not find file \"%s0\""
+-7102 VSMERGE_APP_NAME
+ "vsmerge"
+-7103 VSMERGE_INVALID_OPTION_RC
+ "vsmerge: Invalid option \"%s0\""
+
+VSMFUNDO
+-7200 VSRC_MFUNDO_STACK_EMPTY
+"Multi file undo stack empty"
+-7201 VSRC_MFUNDO_STEP_ALREADY_ENDED
+"Multi file undo step has already beeen ended"
+-7202 VSRC_MFUNDO_END_STEP_NOT_CALLED
+"vsMFUndoEndStep() not called to generate redo information"
+-7203 VSRC_FAILED_TO_GENERATE_REDO_INFO
+"Failed to generate redo information"
+-7204 VSRC_MFUNDO_BEGIN_NOT_CALLED
+"vsMFUndoBegin() not called"
+-7205 VSRC_MFUNDO_BEGIN_STEP_NOT_CALLED
+"vsMFUndoBeginStep() not called"
+
+VSREFACTOR
+-7500 VSRC_VSREFACTOR_CONFIGURATION_NOT_FOUND_1A
+"Could not find parser configuration:  '%s0'"
+-7501 VSRC_VSREFACTOR_CONFIGURATION_FILE_NOT_OPEN
+"Refactoring configuration file not open"
+-7502 VSRC_VSREFACTOR_TRANSACTION_HANDLE_INVALID
+"Invalid refactoring transaction handle"
+-7503 VSRC_VSREFACTOR_INTERNAL_ERROR
+"internal error"
+-7504 VSRC_VSREFACTOR_SYMBOL_NOT_FOUND_1A
+"Could not find symbol:  '%s0'"
+-7505 VSRC_VSREFACTOR_INVALID_SYMBOL_1A
+"Invalid symbol for this operation:  '%s0'"
+-7506 VSRC_VSREFACTOR_INVALID_INCLUDE_PATH
+"Invalid include path"
+-7507 VSRC_VSREFACTOR_INVALID_DEFINE
+"Invalid #define/#undef"
+-7508 VSRC_VSREFACTOR_INVALID_CONFIGURATION_FILE
+"Invalid configuration file"
+-7509 VSRC_VSREFACTOR_STATIC_TO_INSTANCE_METHOD_WARNING
+"This reference to the refactored method can not resolve an instance"
+-7510 VSRC_VSREFACTOR_CANNOT_REPLACE_CODE_WITH_CALL
+"Cannot replace the selected code block with a function call."
+-7511 VSRC_VSREFACTOR_CANNOT_REPLACE_CODE_WITH_CONSTRUCTOR
+"A declaration within the selected code block calls a class constructor."
+-7512 VSRC_VSREFACTOR_CANNOT_REPLACE_CODE_WITH_GOTO
+"The selected code block contains a goto statement."
+-7513 VSRC_VSREFACTOR_CANNOT_REPLACE_CODE_WITH_RETURN
+"The selected code block contains a return statement."
+-7514 VSRC_VSREFACTOR_CANNOT_REPLACE_CODE_WITH_BREAK
+"The selected code block contains a break statement."
+-7515 VSRC_VSREFACTOR_CANNOT_REPLACE_CODE_WITH_CONTINUE
+"The selected code block contains a continue statement."
+-7516 VSRC_VSREFACTOR_PARSING_FAILURE_1A
+"%s0 errors found parsing.  Please see the Output Toolbar for details."
+-7517 VSRC_VSREFACTOR_PLEASE_WAIT
+"Please wait..."
+-7518 VSRC_VSREFACTOR_ANALYZING
+"Analyzing..."
+-7519 VSRC_VSREFACTOR_PROCESSING_TEMPLATES
+"Processing Templates..."
+-7520 VSRC_VSREFACTOR_PARSING
+"Parsing..."
+-7521 VSRC_VSREFACTOR_FILE_1A
+"File:  %s0"
+-7522 VSRC_VSREFACTOR_FILE_3A
+"File %s1/%s2:  %s0"
+-7523 VSRC_VSREFACTOR_REFACTORING
+"Refactoring..."
+-7524 VSRC_VSREFACTOR_FINDING_MODIFIED
+"Finding modified files..."
+-7525 VSRC_VSREFACTOR_SAVING
+"Saving..."
+-7526 VSRC_VSREFACTOR_CLEANING_UP
+"Cleaning up..."
+-7527 VSRC_VSREFACTOR_SYMBOL_IS_NOT_A_CLASS
+"This reference is not a class."
+-7528 VSRC_VSREFACTOR_CLASS_DEFINITION_FILE_DOES_NOT_EXIST
+"The file to move the static definition to does not exist."
+-7529 VSRC_VSREFACTOR_SYMBOL_ALREADY_DEFINED_1A
+"There is already a symbol named '%s0'"
+-7530 VSRC_VSREFACTOR_SYMBOL_IS_NOT_A_FUNCTION_1A
+"The symbol '%s0' is not a function."
+-7531 VSRC_VSREFACTOR_FUNCTION_CONFLICT
+"Modified function conflicts with an already existing overloaded function"
+-7532 VSRC_VSREFACTOR_NEW_PARAMETER_CONFLICT
+"New parameter name matches the name of a variable in the function context"
+-7533 VSRC_VSREFACTOR_NOT_A_CLASS_MEMBER
+"The symbol is not a member of a class."
+-7534 VSRC_VSREFACTOR_SYMBOL_WOULD_BE_HIDDEN_1A
+"The symbol '%s0' would be hidden by moving it to this super class." 
+-7535 VSRC_VSREFACTOR_PREPROCESSING
+"Preprocessing..."
+-7535 VSRC_VSREFACTOR_CONFIGURATION_UNEXPECTED_TYPE
+"Unexpected compiler configuration type encountered."
+// reserve thru 7999 for VSREFACTOR
+-7999 VSRC_VSREFACTOR_END_ERRORS
+"reserve thru 7999 for VSREFACTOR"
+
+VSPARSER
+-8000 VSRC_VSPARSER_ERROR_PREFIX
+"%s0(%s1,%s2): error %s3: "
+-8001 VSRC_VSPARSER_SYNTAX_ERROR_1A
+"syntax error '%s0'"
+-8002 VSRC_VSPARSER_EXPECTING_1A
+"expecting '%s0'"
+-8003 VSRC_VSPARSER_RECOVER_FAILED
+"attempt to recover after last error failed."
+-8004 VSRC_VSPARSER_EXPECTING_IDENTIFIER
+"expecting identifier"
+-8005 VSRC_VSPARSER_EXPECTING_NEWLINE
+"expecting newline"
+-8006 VSRC_VSPARSER_UNRECOGNIZED_CHARACTER
+"unrecognized character"
+-8007 VSRC_VSPARSER_UNTERMINATED_COMMENT
+"unterminated block comment"
+-8008 VSRC_VSPARSER_UNTERMINATED_STRING
+"unterminated string or character constant"
+-8009 VSRC_VSPARSER_MALFORMED_NUMBER
+"malformed numeric literal"
+-8010 VSRC_VSPARSER_UNEXPECTED_TOKEN_1A
+"unexpected token: '%s0'"
+-8011 VSRC_VSPARSER_EXPECTING_NUMBER
+"expecting number"
+-8012 VSRC_VSPARSER_EXPECTING_ARGUMENT
+"expecting argument name"
+-8013 VSRC_VSPARSER_MISMATCHED_GROUP_2A
+"%s0 without matching %s1"
+-8014 VSRC_VSPARSER_UNRECOGNIZED_IDENTIFER_1A
+"unrecognized identifier: '%s0'"
+-8015 VSRC_VSPARSER_WARNING_PREFIX
+"%s0(%s1,%s2): warning %s3: "
+-8016 VSRC_VSPARSER_REUSE_OF_MACRO_PARAMETER_1A
+"reuse of macro formal parameter '%s0'"
+-8017 VSRC_VSPARSER_MACRO_REDEFINITION_1A
+"redefinition of macro '%s0'"
+-8018 VSRC_VSPARSER_SEE_PREVIOUS_DEFINITION_1A
+"see previous definition of '%s0'"
+-8019 VSRC_VSPARSER_SEE_DEFINITION_1A
+"see definition of '%s0'"
+-8020 VSRC_VSPARSER_SYMBOL_NOT_FOUND_1A
+"undefined symbol '%s0'"
+-8021 VSRC_VSPARSER_INTERNAL_ERROR
+"internal error"
+-8022 VSRC_VSPARSER_CANNOT_ADD_TWO_POINTERS
+"cannot add two pointers"
+-8023 VSRC_VSPARSER_NO_SUCH_OPERATOR_1A
+"no '%s0' operator defined which matches the operands"
+-8024 VSRC_VSPARSER_INCOMPLETE_EXPRESSION
+"incomplete expression"
+-8025 VSRC_VSPARSER_INVALID_ARRAY_INDEX
+"array index must have integral type"
+-8026 VSRC_VSPARSER_INTEGRAL_TYPE_EXPECTED_1A
+"operands to the '%s0' operator must have integral types"
+-8027 VSRC_VSPARSER_EXPECTING_LVALUE
+"expecting modifyable lvalue"
+-8028 VSRC_VSPARSER_CANNOT_ASSIGN_TO_2A
+"cannot assign from '%s0' to '%s1' -- types are incompatible and there is no suitable conversion"
+-8029 VSRC_VSPARSER_LOSS_OF_PRECISION
+"conversion may result in loss of precision"
+-8030 VSRC_VSPARSER_TYPES_ARE_INCOMPATIBLE
+"types are incompatible or can not be converted unambiguously"
+-8031 VSRC_VSPARSER_EXPECTING_POINTER_TYPE
+"expecting a pointer type"
+-8032 VSRC_VSPARSER_UNEXPECTED_POINTER_TYPE
+"operator '.' used where '->' was expected"
+-8033 VSRC_VSPARSER_EXPECTING_CLASS_TYPE
+"expecting class, struct, or union type"
+-8034 VSRC_VSPARSER_DIVISION_BY_ZERO
+"constant expression results in division by zero"
+-8035 VSRC_VSPARSER_CANNOT_MODULO_FLOAT
+"operator '%' can not be applied to floating point operands"
+-8036 VSRC_VSPARSER_POINTER_TO_MEMBER_EXPECTED
+"expecting pointer to member"
+-8037 VSRC_VSPARSER_COULD_NOT_CALCULATE_SIZE
+"could not calculate size of expression."
+-8038 VSRC_VSPARSER_EXPECTING_INTEGRAL_TYPE
+"expecting integral type"
+-8039 VSRC_VSPARSER_EXPECTING_CONSTANT_EXPRESSION
+"expecting constant expression"
+-8040 VSRC_VSPARSER_INITIALIZER_NOT_ALLOWED
+"initializer not allowed"
+-8041 VSRC_VSPARSER_SYMBOL_ALREADY_DEFINED_1A
+"symbol '%s0' is already defined"
+-8042 VSRC_VSPARSER_REPEATED_QUALIFIER
+"same type qualifier used more than once"
+-8043 VSRC_VSPARSER_CANNOT_CONVERT_TYPE_2A
+"cannot convert from '%s0' to '%s1'"
+-8044 VSRC_VSPARSER_FUNCTION_MUST_RETURN_VALUE
+"function must return a value"
+-8045 VSRC_VSPARSER_THIS_NOT_ALLOWED
+"static member functions do not have 'this' pointer"
+-8046 VSRC_VSPARSER_EXPECTING_TEMPLATE
+"expecting template name"
+-8047 VSRC_VSPARSER_INCOMPATIBLE_TEMPLATE_ARGUMENT_1A
+"invalid template argument '%s0'"
+-8048 VSRC_VSPARSER_CANNOT_NEW_REFERENCE_TYPE
+"references cannot be created by new-expressions"
+-8049 VSRC_VSPARSER_EXPECTING_NAMESPACE_1A
+"'%s0' is not a namespace identifier"
+-8050 VSRC_VSPARSER_PRIVATE_MEMBER_1A
+"cannot access private member '%s0' from this scope"
+-8051 VSRC_VSPARSER_PROTECTED_MEMBER_1A
+"cannot access protected member '%s0' from this scope"
+-8052 VSRC_VSPARSER_PURE_BUT_NOT_VIRTUAL
+"pure virtual specifier applies only to virtual functions"
+-8053 VSRC_VSPARSER_INLINE_BUT_NOT_FUNCTION
+"inline specifier applies only to functions"
+-8054 VSRC_VSPARSER_VIRTUAL_BUT_NOT_FUNCTION
+"virtual specifier applies only to functions"
+-8055 VSRC_VSPARSER_EXPLICIT_BUT_NOT_CONSTRUCTOR
+"explicit specifier applies only to constructors"
+-8056 VSRC_VSPARSER_VIRTUAL_CONSTRUCTOR
+"virtual specifier not allowed for a constructor"
+-8057 VSRC_VSPARSER_RETURN_TYPE_NOT_ALLOWED
+"constructors, destructors, and conversion operators are not allowed to have return types"
+-8058 VSRC_VSPARSER_EXPECTING_STATIC_MEMBER_1A
+"'%s0' is not static"
+-8059 VSRC_VSPARSER_FUNCTION_CANNOT_RETURN_VALUE
+"void function cannot return a value"
+-8060 VSRC_VSPARSER_STATIC_AND_VIRTUAL
+"static specifier can not be used with virtual"
+-8061 VSRC_VSPARSER_INITIALIZER_LIST_NOT_ALLOWED_1A
+"initializer list not allowed for '%s0'"
+-8062 VSRC_VSPARSER_TOO_MANY_INITIALIZERS
+"too many initializer expressions"
+-8063 VSRC_VSPARSER_AMBIGUOUS_FUNCTION_CALL_1A
+"ambiguous call to overloaded function '%s0'"
+-8064 VSRC_VSPARSER_FUNCTION_WRONG_NUMBER_ARGUMENTS_2A
+"function '%s0' does not take %s1 arguments"
+-8065 VSRC_VSPARSER_TOO_MANY_ARGUMENTS
+"too many arguments"
+-8066 VSRC_VSPARSER_NO_DEFAULT_ARGUMENT
+"no default argument"
+-8067 VSRC_VSPARSER_ARGUMENT_LISTS_DO_NOT_MATCH
+"argument lists do not match"
+-8068 VSRC_VSPARSER_TEMPLATE_WRONG_NUMBER_ARGUMENTS_2A
+"template '%s0' does not take %s1 arguments"
+-8069 VSRC_VSPARSER_TEMPLATE_INSTANTIATED_BEFORE_SPECIALIZATION_1A
+"template '%s0' was instantiated before it was specialized"
+-8070 VSRC_VSPARSER_TEMPLATE_INSTANTIATED_WITH_FORWARD_DECLARED_TYPE_1A
+"template '%s0' instantiated with a forward declared type"
+-8071 VSRC_VSPARSER_TEMPLATE_UNABLE_TO_DETERMINE_ARGUMENTS_2A
+"unable to determine type of template argument '%s1' in template '%s0'"
+-8072 VSRC_VSPARSER_RECURSIVELY_INCLUDED_HEADER_FILE_1A
+"detected possible recursive or mutually recursive include file(s): '%s0'"
+-8073 VSRC_VSPARSER_SWITCH_HAS_MORE_THAN_ONE_DEFAULT
+"switch statement contains more than one default case"
+-8074 VSRC_VSPARSER_INCOMPLETE_TYPE_INFO
+"incomplete type info"
+-8075 VSRC_VSPARSER_LINE_COMMENT_HAS_CONTINUATION
+"line comment has line continuation"
+-8076 VSRC_VSPARSER_NOT_A_MEMBER_OF_2A
+"'%s0' is not a member of '%s1'"
+-8077 VSRC_VSPARSER_SWITCH_HAS_NO_CASE_OR_DEFAULT
+"switch statement contains no cases or default"
+-8078 VSRC_VSPARSER_INTERNAL_ERROR_2A
+"internal error: %s0.%s1"
+-8079 VSRC_VSPARSER_PREPROCESSING_LOCATION
+"preprocessing expanded from here"
+-8080 VSRC_VSPARSER_DEFAULT_VALUE_REDEFINITION_1A
+"redefinition of default value for parameter '%s0'"
+-8081 VSRC_VSPARSER_TRY_REQUIRES_HANDLER
+"try statement requires at least one handler statement"
+-8082 VSRC_VSPARSER_POINTER_ARITHMETIC_REQUIRES_INTEGRAL_TYPE
+"pointer arithmetic requires integral type on right"
+-8083 VSRC_VSPARSER_TEMPLATE_PARAMETER_AMBIGUOUS_2A
+"template parameter '%s1' in template '%s0' is ambiguous"
+-8084 VSRC_VSPARSER_VARIABLE_LENGTH_ARRAYS_NOT_ALLOWED_HERE
+"variable length array dimensions can not be used in this context"
+-8085 VSRC_VSPARSER_VOID_ILLEGALLY_USED_AS_ARGUMENT_TYPE
+"'void' cannot be an argument type, except for '(void)'"
+-8086 VSRC_VSPARSER_CANNOT_ASSIGN_TO_CONST_2A
+"cannot assign from '%s0' to '%s1' -- left hand side specifies const object"
+-8087 VSRC_VSPARSER_MUTABLE_AND_CONST
+"mutable specifier can not be used with const"
+-8088 VSRC_VSPARSER_CANNOT_INCREMENT_CONST_1A
+"cannot assign to const object of type '%s0'"
+-8089 VSRC_VSPARSER_CANNOT_USE_CONST_OR_VOLATILE_OUTSIDE_OF_CLASS
+"cannot use const or volatile modifiers on a function outside of a class declaration"
+// reserve thru 8999 for VSPARSER
+-8999 VSRC_VSPARSER_END_ERRORS
+"reserve thru 8999 for VSPARSER"
+
+UPCHECK
+-9000 VSRC_UPCHECK_HELP
+""
+"Update Check Version %s0"
+""
+"This program is used to check for and retrieve product updates."
+""
+"Usage: %s1 [-help] [-proxy hostname:port] [-noproxy] [-i] [-updatebase base] [-c command]"
+"where:"
+"\t-help     \tDisplay this message."
+"\t-i            \tInteractive mode."
+"\t-updatebase \tHTTP base url for fetching updates (do NOT include 'http://')."
+"\t-proxy   \tUse HTTP proxy at hostname on port."
+"\t-noproxy \tWindows only. Do not use Internet Explorer proxy/connection settings."
+"\t-c           \tExecute command then exit. If given, this must be the last argument."
+""
+-9001 VSRC_UPCHECK_UNKNOWN_COMMAND
+"Unknown command '%s0'"
+-9002 VSRC_UPCHECK_INVALID_ARGUMENT
+"Invalid option '%s0'"
+-9003 VSRC_UPCHECK_ERROR_OPENING_OUTPUT_FILE
+"Error opening output file: '%s0'"
+-9004 VSRC_UPCHECK_NOT_ENOUGH_ARGUMENTS
+"Not enough arguments. %s0"
+-9005 VSRC_UPCHECK_ACTION_FAILED
+"Action failed for '%s0': %s1"
+-9006 VSRC_UPCHECK_MISSING_ACTION_STATUS
+"Missing status for action '%s0'"
+-9007 VSRC_UPCHECK_NOT_FOUND
+"Missing 'upcheck' command at location '%s0'"
+-9008 VSRC_UPCHECK_ERROR_STARTING
+"Error starting 'upcheck' command"
+-9009 VSRC_UPCHECK_TIMED_OUT
+"Timed out waiting for reply"
+-9010 VSRC_UPCHECK_INVALID_RESPONSE
+"Invalid response"
+-9011 VSRC_UPCHECK_VERSION_NOT_SUPPORTED
+"Version not supported: %s0"
+-9012 VSRC_UPCHECK_ERROR_CREATING_LOG
+"Error creating upcheck log"
+-9013 VSRC_UPCHECK_ERROR_SAVING_MANIFEST
+"Error saving manifest file '%s0'"
+-9014 VSRC_UPCHECK_ERROR_RETRIEVING_UPDATES
+"Error retrieving updates"
+-9015 VSRC_UPCHECK_MANUAL_CHECK_HELP
+"You can check for new updates anytime from the Help>Product Updates menu"
+
+VSRTE
+// errors thrown during JVM creation
+-9100 RTE_CANT_LOAD_JVM_LIB
+"Unable to load JVM library"
+-9101 RTE_CANT_FIND_CREATE_VM
+"Unable to find JVM creation function"
+// errors thrown during compilation
+-9102 RTE_NO_JVM
+"No JVM found for RTE"
+-9103 RTE_CANT_ATTACH
+"Cannot attach current thread to the JVM"
+-9104 RTE_CANT_CREATE_ENV
+"Cannot create JVM environment"
+-9105 RTE_CANT_FIND_COMPILER_CLASS
+"Cannot find RTE compiler"
+-9106 RTE_CANT_FIND_CONSTRUCTOR
+"Cannot find constructor for RTE compiler class"
+-9107 RTE_CANT_INSTANTIATE_CLASS
+"Cannot instantiate RTE compiler class"
+-9108 RTE_CANT_CREATE_JSTRING
+"Failure creating jstring"
+-9109 RTE_CANT_FIND_COMPILE_ID
+"Cannot locate RTE compiler method"
+-9110 RTE_CANT_GET_ERRORS
+"Failure retrieving errors from Java"
+-9111 RTE_MESSAGE_TYPE
+"Java Live Error"
+-9112 RTE_INVALID_ARGS_FOR_OPTION
+"Invalid number of arguments specified for Javac option"
+// reserved through 9200 for RTE
+-9200 RTE_END_ERRORS
+"reserved through 9200 for RTE"
+
+DBGP
+// 000 Command parsing errors
+-9201 DBGP_ERROR_NONE_RC
+"DBGP error: No error has occurred"
+-9203 DBGP_ERROR_PARSE_RC
+"DBGP error: Parse error in command"
+-9204 DBGP_ERROR_DUPLICATE_ARGS_RC
+"DBGP error: Duplicate arguments in command"
+-9205 DBGP_ERROR_INVALID_OPTIONS_RC
+"DBGP error: Invalid options"
+-9206 DBGP_ERROR_UNIMPLEMENTED_RC
+"DBGP error: Unimplemented command"
+-9207 DBGP_ERROR_COMMAND_NOT_AVAILABLE_RC
+"DBGP error: Command not available"
+// 100 File related errors
+-9208 DBGP_ERROR_OPENING_FILE_RC
+"DBGP error: Can not open file"
+-9209 DBGP_ERROR_STREAM_REDIRECT_FAILED_RC
+"DBGP error: Stream redirect failed"
+// 200 Breakpoint or code flow errors
+-9210 DBGP_ERROR_BREAKPOINT_NOT_SET_RC
+"DBGP error: Breakpoint could not be set"
+-9211 DBGP_ERROR_BREAKPOINT_NOT_SUPPORTED_RC
+"DBGP error: Breakpoint type not supported"
+-9212 DBGP_ERROR_BREAKPOINT_INVALID_RC
+"DBGP error: Invalid breakpoint"
+-9213 DBGP_ERROR_BREAKPOINT_NO_CODE_RC
+"DBGP error: No code on breakpoint line"
+-9214 DBGP_ERROR_BREAKPOINT_INVALID_STATE_RC
+"DBGP error: Invalid breakpoint state"
+-9215 DBGP_ERROR_BREAKPOINT_NOT_EXIST_RC
+"DBGP error: No such breakpoint"
+-9216 DBGP_ERROR_EVAL_RC
+"DBGP error: Error evaluating code"
+-9217 DBGP_ERROR_EXPR_RC
+"DBGP error: Invalid expression"
+// 300 Data errors
+-9218 DBGP_ERROR_INVALID_PROPERTY_RC
+"DBGP error: Can not get property"
+-9219 DBGP_ERROR_INVALID_STACK_DEPTH_RC
+"DBGP error: Stack depth invalid"
+-9220 DBGP_ERROR_INVALID_CONTEXT_RC
+"DBGP error: Context invalid"
+// 900 Protocol errors
+-9221 DBGP_ERROR_ENCODING_NOT_SUPPORTED_RC
+"DBGP error: Encoding not supported"
+-9222 DBGP_ERROR_INTERNAL_EXCEPTION_RC
+"DBGP error: An internal exception in the debugger occurred"
+-9223 DBGP_ERROR_UNKNOWN_RC
+"DBGP error: Unknown error"
+
+-9300 DBGP_END_ERRORS
+"reserved through 9300 for DBGP"
+
+WINDBG
+-9301 WINDBG_ERROR_NONE_RC
+"WINDBG error: None"
+-9302 WINDBG_ERROR_INIT_FAILED
+"Initialization failed"
+-9303 WINDBG_ERROR_CREATE_PROCESS_RC
+"CreateProcess failed"
+-9304 WINDBG_ERROR_ATTACH_PROCESS_RC
+"AttachProcess failed"
+-9305 WINDBG_ERROR_OPEN_DUMP_FILE_RC
+"OpenDumpFile failed"
+-9306 WINDBG_ERROR_WRITE_DUMP_FILE_RC
+"WriteDumpFile failed"
+-9307 WINDBG_ERROR_DETACH_PROCESS_RC
+"DetachProcesses failed"
+-9308 WINDBG_ERROR_TERMINATE_PROCESS_RC
+"TerminateProcesses failed"
+-9309 WINDBG_ERROR_RESUMING_RC
+"Error resuming the application"
+-9310 WINDBG_ERROR_SUSPENDING_RC
+"Error suspending the application"
+-9311 WINDBG_ERROR_EXECUTION_STATUS_RC
+"SetExecutionStatus failed"
+-9312 WINDBG_ERROR_GET_THREADS_RC
+"GetNumberThreads failed"
+-9313 WINDBG_ERROR_GET_CURRENT_THREAD_RC
+"GetCurrentThreadId failed"
+-9314 WINDBG_ERROR_SET_CURRENT_THREAD_RC
+"SetCurrentThreadId failed"
+-9315 WINDBG_ERROR_GET_REGISTERS_RC
+"GetNumberRegisters failed"
+-9316 WINDBG_ERROR_EVALUATE_RC
+"Evaluate failed"
+-9317 WINDBG_ERROR_GET_MEMORY_RC
+"ReadVirtual failed"
+-9318 WINDBG_ERROR_GET_STACK_RC
+"GetStackTrace failed"
+-9319 WINDBG_ERROR_SET_SCOPE_RC
+"SetScope failed"
+-9320 WINDBG_ERROR_GET_LOCALS_RC
+"GetLocals failed"
+-9321 WINDBG_ERROR_MODIFY_VAR_RC
+"Modify variable failed"
+-9322 WINDBG_ERROR_GET_THIS_RC
+"GetThis failed"
+-9323 WINDBG_ERROR_ENABLE_BREAKPOINT_RC
+"EnableBreakpoint failed"
+-9324 WINDBG_ERROR_EVALUATE_BREAKPOINT_RC
+"Evaluate breakpoint failed"
+-9325 WINDBG_ERROR_SYMBOLGROUP_RC
+"CreateSymbolGroup failed"
+-9326 WINDBG_ERROR_SYMBOL_NAME_RC
+"GetSymbolName failed"
+-9327 WINDBG_ERROR_SYMBOL_TYPENAME_RC
+"GetSymbolTypeName failed"
+-9328 WINDBG_ERROR_SYMBOL_PARAMETERS_RC
+"GetSymbolParameters failed"
+-9329 WINDBG_ERROR_EXPAND_VAR_RC
+"ExpandSymbol failed"
+-9330 WINDBG_ERROR_GET_OFFSET_LINE_RC
+"GetOffsetByLine failed"
+-9331 WINDBG_NO_MORE_EVENTS_RC
+"No more events"
+-9332 WINDBG_ERROR_DBGENG_FAILED_RC
+"Failed to load dbgeng.dll"
+-9333 WINDBG_ERROR_WRITESYMBOL_FAILED_RC
+"WriteSymbol failed"
+-9334 WINDBG_ERROR_DEBUGCREATE_FAILED_RC
+"DebugCreate failed"
+-9335 WINDBG_ERROR_QUERY_FAILED_RC
+"QueryInterface failed"
+-9336 WINDBG_ERROR_ADDSYMBOLGROUP_RC
+"AddSymbolGroup failed"
+-9337 WINDBG_ERROR_WATCH_RC
+"SetWatch failed"
+-9338 WINDBG_ERROR_GET_GROUP_RC
+"GetGroup failed"
+-9339 WINDBG_INVALID_DEBUGGER_ARGS_RC
+"Invalid debugger args"
+-9340 WINDBG_SYMBOL_TIMED_OUT_RC
+"Symbol evaluation timed out"
+-9341 WINDBG_ERROR_UNSUPPORTED_RC
+"Unsupported"
+-9400 WINDBG_END_ERRORS
+"reserved through 9400 for WINDBG"
+
+MACRO
+// The following definitions are for the contents of the Elements
+// combo box on the _font_configuration_form
+-101100 VSRC_FCF_ELEMENTS_COMMAND_LINE
+"Command Line"
+
+-101101 VSRC_FCF_ELEMENTS_STATUS_LINE
+"Status Line"
+
+-101102 VSRC_FCF_ELEMENTS_SBCS_DBCS_SOURCE_WINDOWS
+"SBCS/DBCS Source Windows"
+
+-101103 VSRC_FCF_ELEMENTS_HEX_SOURCE_WINDOWS
+"Hex Source Windows"
+
+-101104 VSRC_FCF_ELEMENTS_UNICODE_SOURCE_WINDOWS
+"Unicode Source Windows"
+
+-101105 VSRC_FCF_ELEMENTS_FILE_MANAGER_WINDOWS
+"File Manager Windows"
+
+-101106 VSRC_FCF_ELEMENTS_PARAMETER_INFO
+"Parameter Info"
+
+-101107 VSRC_FCF_ELEMENTS_PARAMETER_INFO_FIXED
+"Parameter Info Fixed"
+
+-101108 VSRC_FCF_ELEMENTS_SELECTION_LIST
+"Selection List"
+
+-101109 VSRC_FCF_ELEMENTS_MENU
+"Menu"
+
+-101110 VSRC_FCF_ELEMENTS_DIALOG
+"Dialog"
+
+-101111 VSRC_FCF_ELEMENTS_MDI_CHILD_ICON
+"MDI Child Icon"
+
+-101112 VSRC_FCF_ELEMENTS_MDI_CHILD_TITLE
+"MDI Child Title"
+
+-101113 VSRC_FCF_ELEMENTS_DIFF_EDITOR_WINDOWS
+"Diff Editor Source Windows"
+
+-101114 VSRC_FCF_ELEMENTS_MINIHTML_PROPORTIONAL
+"HTML Proportional"
+
+-101115 VSRC_FCF_ELEMENTS_MINIHTML_FIXED
+"HTML Fixed"
+
+
+// The following are used in the Screen Element list on the _color_form
+
+-101120 VSRC_CFG_COMMENT
+"Block Comment"
+
+-101121 VSRC_CFG_CURRENT_LINE
+"Current Line"
+
+-101122 VSRC_CFG_CURSOR
+"Cursor"
+
+-101123 VSRC_CFG_NOSAVE_LINE
+"No Save Line"
+
+-101124 VSRC_CFG_INSERTED_LINE
+"Inserted Line"
+
+-101125 VSRC_CFG_KEYWORD
+"Keyword"
+
+-101126 VSRC_CFG_LINE_NUMBER
+"Line Number"
+
+-101127 VSRC_CFG_LINE_PREFIX_AREA
+"Line Prefix Area"
+
+-101128 VSRC_CFG_MESSAGE
+"Message"
+
+-101129 VSRC_CFG_MODIFIED_LINE
+"Modified Line"
+
+-101130 VSRC_CFG_NUMBER
+"Number"
+
+-101131 VSRC_CFG_PREPROCESSOR
+"Preprocessor"
+
+-101132 VSRC_CFG_SELECTED_CURRENT_LINE
+"Selected Current Line"
+
+-101133 VSRC_CFG_SELECTION
+"Selection"
+
+-101134 VSRC_CFG_STATUS
+"Status"
+
+-101135 VSRC_CFG_STRING
+"String"
+
+-101136 VSRC_CFG_WINDOW_TEXT
+"Window Text"
+
+-101137 VSRC_CFG_PUNCTUATION
+"Punctuation"
+
+-101138 VSRC_CFG_LIBRARY_SYMBOL
+"Library Symbol"
+
+-101139 VSRC_CFG_OPERATOR
+"Operator"
+
+-101140 VSRC_CFG_USER_DEFINED_SYMBOL
+"User Defined Keyword"
+
+-101141 VSRC_CFG_FUNCTION
+"Function"
+
+-101142 VSRC_CFG_FILENAME
+"Filename"
+
+-101143 VSRC_CFG_HIGHLIGHT
+"Highlight"
+
+-101144 VSRC_CFG_ATTRIBUTE
+"Attribute"
+
+-101145 VSRC_CFG_UNKNOWN_XML_ELEMENT
+"Unknown Tag Name"
+
+-101146 VSRC_CFG_XHTML_ELEMENT_IN_XSL
+"XHTML Element in XSL"
+
+-101147 VSRC_CFG_ACTIVE_TOOL_WINDOW_CAPTION
+"Active Tool Window Caption"
+
+-101148 VSRC_CFG_INACTIVE_TOOL_WINDOW_CAPTION
+"Inactive Tool Window Caption"
+
+-101149 VSRC_CFG_LINE_COMMENT
+"Line Comment"
+
+// Messages for the _color_form
+-101150 VSRC_CFG_UNABLE_TO_OPEN_SYSTEM_COLOR_SCHEME
+"Unable to open system color scheme file."
+
+-101151 VSRC_CFG_COLOR_SCHEME_MODIFIED
+"The current color scheme has been modified.  Are you sure you want to discard the changes?"
+
+-101152 VSRC_CFG_NO_ACTIVE_SCHEME_TO_RENAME
+"There is no active color scheme to rename."
+
+-101153 VSRC_CFG_FILE_NOT_FOUND
+"File %s0 not found."
+
+-101154 VSRC_CFG_ERROR_READING_FILE
+"Error reading %s0."
+
+-101155 VSRC_CFG_CANNOT_FIND_USER_SCHEME
+"Cannot find user scheme: %s0.  System schemes cannot be renamed."
+
+-101156 VSRC_CFG_INVALID_SCHEME_NAME
+"Invalid scheme name."
+
+-101157 VSRC_CFG_SCHEME_ALREADY_EXISTS
+"A scheme with this name already exists."
+
+-101158 VSRC_CFG_UNABLE_TO_SAVE
+"Unable to save file %s0."
+
+-101159 VSRC_CFG_NO_ACTIVE_SCHEME_TO_REMOVE
+"There is no active color scheme to remove."
+
+-101160 VSRC_CFG_UNABLE_TO_REMOVE
+"Unable to remove scheme: %s0.  It does not exist."
+
+-101161 VSRC_CFG_CANNOT_REMOVE_SYSTEM_SCHEMES
+"System schemes cannot be removed."
+
+-101162 VSRC_CFG_REMOVE_SCHEME_CONFIRMATION
+"Are you sure you want to remove this scheme: %s0?"
+
+-101163 VSRC_CFG_RENAME_SCHEME
+"Rename Scheme"
+
+-101164 VSRC_CFG_RENAME_TO
+"Rename To"
+
+-101165 VSRC_CFG_RGB_VALUES_RANGE_WARNING
+"RGB values must be between 0 and 255."
+
+-101166 VSRC_CFG_INVALID_COLOR
+"Invalid color.  Unable to update sample."
+
+-101167 VSRC_CFG_SPECIFY_COLOR_SCHEME_NAME
+"Please specify a name for the color scheme."
+
+-101168 VSRC_CFG_INVALID_COLOR_SCHEME_NAME
+"Color scheme name is invalid.  Letters, numbers, and spaces are valid."
+
+-101169 VSRC_CFG_CANNOT_OVERWRITE_SYSTEM_SCHEME
+"You cannot overwrite the system color scheme, %s0.  Please choose another name."
+
+-101170 VSRC_CFG_OVERWRITE_SCHEME_CONFIRMATION
+"Overwrite existing scheme, %s0?"
+
+-101171 VSRC_CFG_COLOR_SCHEME_INCOMPATIBLE
+"The current color scheme is not considered compatible with the symbol coloring scheme.\n\nAre you sure you want to switch schemes?"
+
+-101172 VSRC_CFG_DOCUMENTATION_COMMENT
+"Documentation Comment"
+
+-101173 VSRC_CFG_DOCUMENTATION_KEYWORD
+"Documentation Keyword"
+
+-101174 VSRC_CFG_DOCUMENTATION_PUNCTUATION
+"Documentation Punctuation"
+
+-101175 VSRC_CFG_DOCUMENTATION_ATTRIBUTE
+"Documentation Attribute"
+
+-101176 VSRC_CFG_DOCUMENTATION_ATTR_VALUE
+"Documentation Attribute Value"
+
+-101177 VSRC_CFG_IDENTIFIER
+"Identifier"
+
+-101178 VSRC_CFG_FLOATING_NUMBER
+"Floating Point Number"
+
+-101179 VSRC_CFG_HEX_NUMBER
+"Hexadecimal Number"
+
+-101180 VSRC_CFG_SINGLE_QUOTED_STRING
+"Single Quoted String"
+
+-101181 VSRC_CFG_BACKQUOTED_STRING
+"Backquoted String"
+
+-101182 VSRC_CFG_UNTERMINATED_STRING
+"Unterminated String"
+
+-101183 VSRC_CFG_INACTIVE_CODE
+"Inactive Code"
+
+-101184 VSRC_CFG_INACTIVE_KEYWORD
+"Inactive Code Keyword"
+
+-101185 VSRC_CFG_IMAGINARY_SPACE
+"Modified Whitespace"
+
+-101186 VSRC_CFG_INACTIVE_COMMENT
+"Inactive Code Comment"
+
+-101187 VSRC_CFG_ERROR
+"Compiler Errors"
+
+// String values for _find_form
+-101200 VSRC_FF_OTHER
+"Other"
+
+-101201 VSRC_FF_KEYWORD
+"Keyword"
+
+-101202 VSRC_FF_NUMBER
+"Number"
+
+-101203 VSRC_FF_STRING
+"String"
+
+-101204 VSRC_FF_COMMENT
+"Comment"
+
+-101205 VSRC_FF_PREPROCESSING
+"Preprocessing"
+
+-101206 VSRC_FF_LINE_NUMBER
+"Line Number"
+
+-101207 VSRC_FF_SYMBOL1
+"Punctuation"
+
+-101208 VSRC_FF_SYMBOL2
+"Lib Symbol"
+
+-101209 VSRC_FF_SYMBOL3
+"Operator"
+
+-101210 VSRC_FF_SYMBOL4
+"User Defined"
+
+-101211 VSRC_FF_FUNCTION
+"Function"
+
+-101212 VSRC_FF_ATTRIBUTE
+"Attribute"
+
+-101220 VSRC_FF_NOT
+"not"
+
+-101221 VSRC_FF_CHOOSE_DIRECTORY
+"Choose Directory"
+
+-101222 VSRC_FF_CURDIR_IS
+"Directory:"
+
+-101223 VSRC_FF_OF_SELECTED
+"%s0 of %s1 selected"
+
+-101225 VSRC_FF_CANNOT_GENERATE_MACRO
+"Sorry, cannot generate macro code for this operation."
+
+-101226 VSRC_FF_NO_FILES_SELECTED
+"No files selected."
+
+-101227 VSRC_FF_COULD_NOT_OPEN_WORKSPACE_FILE
+"Could not open workspace file: %s0.\n\n%s1"      // %s0 will be substituted with the filename and %s1 will be the status.
+
+-101228 VSRC_FF_INVALID_SWITCH
+"Invalid swtich."
+
+-101229 VSRC_FF_FILE_NOT_FOUND
+"File not found: %s0"
+
+-101230 VSRC_FF_NO_FILES_SELECTED_READ_ONLY
+"No files selected.\n\nRead only files can't be modified."
+
+-101231 VSRC_FF_FOLLOWING_LINES_SKIPPED
+"The following lines were skipped to prevent line truncation:\n\n"
+
+// Font configuration messages
+
+-101250 VSRC_FC_INVALID_FONT_SIZE
+"Invalid font size."
+
+-101251 VSRC_FC_TERMINAL_FONT_SIZE
+"Currently we only allow the size for the Terminal font to be selected in pixel width X pixel height form."
+
+-101252 VSRC_FC_INVALID_FONT_NAME
+"Invalid font name."
+
+-101253 VSRC_FC_CHILD_WINDOWS_NOT_UPDATED
+"Existing child edit windows are not updated."
+
+-101254 VSRC_FC_MUST_EXIT_AND_RESTART
+"You must exit and restart SlickEdit for Dialog font changes to appear."
+
+-101255 VSRC_FC_CHANGE_FONT_IN_ALL_WINDOWS
+"Do you wish to change the editor font in all windows?"
+
+// The following values are used to display the Script values in the Font Configuration Dialog
+-101275 VSRC_CHARSET_WESTERN
+"Western"
+
+-101276 VSRC_CHARSET_DEFAULT
+"Default"
+
+-101277 VSRC_CHARSET_SYMBOL
+"Symbol"
+
+-101278 VSRC_CHARSET_SHIFTJIS
+"Shiftjis"
+
+-101279 VSRC_CHARSET_HANGEUL
+"Hanguel"
+
+-101280 VSRC_CHARSET_GB2312
+"GB2312"
+
+-101281 VSRC_CHARSET_CHINESEBIG5
+"Chinesebig5"
+
+-101282 VSRC_CHARSET_OEMDOS
+"OEM/DOS"
+
+-101283 VSRC_CHARSET_JOHAB
+"Johab"
+
+-101284 VSRC_CHARSET_HEBREW
+"Hebrew"
+
+-101285 VSRC_CHARSET_ARABIC
+"Arabic"
+
+-101286 VSRC_CHARSET_GREEK
+"Greek"
+
+-101287 VSRC_CHARSET_TURKISH
+"Turkish"
+
+-101288 VSRC_CHARSET_THAI
+"Thai"
+
+-101289 VSRC_CHARSET_CENTRALEUROPEAN
+"Central European"
+
+-101290 VSRC_CHARSET_CYRILLIC
+"Cyrillic"
+
+-101291 VSRC_CHARSET_MAC
+"Mac"
+
+-101292 VSRC_CHARSET_BALTIC
+"Baltic"
+
+-101293 VSRC_CHARSET_VIETNAMESE
+"Vietnamese"
+
+//  Update Manager Options form
+-101325 VSRC_UPCHECK_INTERVAL_1DAY
+"Once per day"
+
+-101326 VSRC_UPCHECK_INTERVAL_1WEEK
+"Once per week"
+
+-101327 VSRC_UPCHECK_INTERVAL_NEVER
+"Never"
+
+-101328 VSRC_UPCHECK_INTERVAL_CUSTOM
+"Custom"
+
+// Used by the Help>About dialog
+-101340 VSRC_ABOUT_WEBSITE
+"www.slickedit.com"
+
+-101341 VSRC_ABOUT_SUPPORT_PHONE
+"1 919.473.0100"
+
+// Captions used by dialogs (e.g. About dialog)
+-101343 VSRC_CAPTION_SERIAL_NUMBER
+"Serial number"
+
+-101344 VSRC_CAPTION_LICENSED_PACKAGES
+"Licensed packages"
+
+-101345 VSRC_CAPTION_WEBSITE
+"Website"
+
+-101346 VSRC_CAPTION_SUPPORT_PHONE
+"Technical Support Phone"
+
+-101347 VSRC_CAPTION_SUPPORT_EMAIL
+"Technical Support Email"
+
+-101348 VSRC_CAPTION_EXPIRATION_DATE
+"Expiration Date"
+
+-101348 VSRC_CAPTION_EMULATION
+"Emulation"
+
+-101349 VSRC_CAPTION_INSTALLATION_DIRECTORY
+"Installation Directory"
+
+-101350 VSRC_CAPTION_CONFIGURATION_DIRECTORY
+"Configuration Directory"
+
+-101351 VSRC_CAPTION_CONFIGURATION_DRIVE_USAGE
+"Configuration Drive Usage"
+
+-101352 VSRC_CAPTION_SPILL_FILE
+"Spill File"
+
+-101353 VSRC_CAPTION_SPILL_FILE_DIRECTORY_DRIVE_USAGE
+"Spill File Directory Drive Usage"
+
+-101354 VSRC_CAPTION_BUILD_DATE
+"Build Date"
+
+-101355 VSRC_CAPTION_OPERATING_SYSTEM
+"OS"
+-101356 VSRC_CAPTION_OPERATING_SYSTEM_VERSION
+"OS Version"
+
+-101357 VSRC_CAPTION_VERSION
+"Version"
+
+-101358 VSRC_CAPTION_KERNEL_LEVEL
+"Kernel Level"
+
+-101359 VSRC_CAPTION_BUILD_VERSION
+"Build Version"
+
+-101360 VSRC_CAPTION_XSERVER_VENDOR
+"X Server Vendor"
+
+-101361 VSRC_CAPTION_MEMORY_LOAD
+"Load"
+
+-101362 VSRC_CAPTION_PHYSICAL_MEMORY_USAGE
+"Physical"
+
+-101363 VSRC_CAPTION_PAGE_FILE_USAGE
+"Page File"
+
+-101364 VSRC_CAPTION_VIRTUAL_MEMORY_USAGE
+"Virtual"
+
+-101365 VSRC_CAPTION_DIRECTORY
+"Directory"
+
+-101366 VSRC_CAPTION_FLEXLM_SERIAL_NUMBER
+"FLEXlm reported serial number"
+
+-101367 VSRC_CFG_SPECIALCHARS
+"Special Characters"
+
+-101368 VSRC_CFG_CURRENT_LINE_BOX
+"Current Line Box"
+
+-101369 VSRC_CFG_VERTICAL_COL_LINE
+"Vertical Column Line"
+
+-101370 VSRC_CFG_MARGINS_COL_LINE
+"Margin Column Line(s)"
+
+-101371 VSRC_CFG_TRUNCATION_COL_LINE
+"Truncation Column Line"
+
+-101372 VSRC_CFG_PREFIX_AREA_LINE
+"Line Prefix Divider Line"
+
+-101373 VSRC_CFG_BLOCK_MATCHING
+"Block Matching"
+
+-101374 VSRC_PUSHED_BOOKMARK_NAME
+"Pushed Bookmark #"
+
+-101375 VSRC_CFG_INC_SEARCH_CURRENT
+"Incremental Search Current Match"
+
+-101376 VSRC_CFG_INC_SEARCH_MATCH
+"Incremental Search Highlight"
+
+-101377 VSRC_CFG_HEX_MODE_COLOR
+"Hex Mode"
+
+-101378 VSRC_DYNAMIC_SURROUND_MESSAGE
+"Cursor Up/Down to surround lines of code. Hit Esc when done."
+
+-101379 VSRC_DYNAMIC_SURROUND_NO_MORE_UP
+"Can not move end up any further"
+
+-101380 VSRC_DYNAMIC_SURROUND_NO_MORE_DOWN
+"Can not move end down any further"
+
+-101381 VSRC_CAPTION_NOFUSERS
+"Licensed number of users"
+
+-101382 VSRC_CFG_SYMBOL_HIGHLIGHT
+"Symbol Highlight"
+
+-101383 VSRC_CAPTION_LICENSE_EXPIRATION
+"License expiration"
+
+-101384 VSRC_CAPTION_LICENSE_TO
+"Licensed to"
+
+-101385 VSRC_CFG_MODIFIED_FILE_TAB
+"Modified file"
+
+-101386 VSRC_CAPTION_LICENSE_FILE
+"License file"
+
+-101387 VSRC_CAPTION_MEMORY
+"Memory"
+
+-101388 VSRC_CFG_MODIFIED_ITEM
+"Modified variable"
+
+-101389 VSRC_CAPTION_CURRENT_PROJECT_TYPE
+"Project Type"
+-101390 VSRC_CAPTION_CURRENT_LANGUAGE
+"Language"
+-101391 VSRC_CAPTION_SCREEN_RESOLUTION
+"Screen Size"
+-101392 VSRC_CAPTION_SHELL_INFO
+"Shell Info"
+-101393 VSRC_CAPTION_PROCESSOR_ARCH
+"Processor Architecture"
+
+-101394 VSRC_CAPTION_LICENSE_SERVER
+"License server"
+
+-101395 VSRC_CAPTION_LICENSE_BORROW_EXPIRATION
+"Borrow expiration"
+
+-101400 VSRC_COLOR_CATEGORY_EDITOR_CURSOR
+"Selections"
+-101401 VSRC_COLOR_CATEGORY_EDITOR_TEXT
+"General"
+-101402 VSRC_COLOR_CATEGORY_MISC
+"Application colors"
+-101403 VSRC_COLOR_CATEGORY_DIFF
+"Modifications"
+-101404 VSRC_COLOR_CATEGORY_HIGHLIGHTS
+"Highlighting"
+-101405 VSRC_COLOR_CATEGORY_XML
+"HTML and XML"
+-101406 VSRC_COLOR_CATEGORY_EDITOR_COLUMNS
+"Margins"
+-101407 VSRC_COLOR_CATEGORY_COMMENTS
+"Comments"
+-101408 VSRC_COLOR_CATEGORY_STRINGS
+"Strings"
+-101409 VSRC_COLOR_CATEGORY_NUMBERS
+"Numbers"
+
+-101410 VSRC_CFG_SELECTION_DESCRIPTION
+"Selection color is used for all selections in the editor windows.  Selections use the foreground color of underlying color coded text if visible against the selected background color."
+-101411 VSRC_CFG_WINDOW_TEXT_DESCRIPTION
+"This is the default color for all text which is not color coded otherwise.  Window text is the master color that other colors are allowed to inherit their background color from."
+-101412 VSRC_CFG_CURRENT_LINE_DESCRIPTION
+"Current Line color is used for the line under the cursor.  If the foreground color of text is visible against the Current Line background color, they are used together.  Otherwise, the Current Line foreground and background colors are used.  Current Line coloring can be enabled on per-language basis in the language “View” options."
+-101413 VSRC_CFG_SELECTED_CURRENT_LINE_DESCRIPTION
+"Selected current line color is used for the current line under the cursor within a selection.  This color uses the foreground color of underlying color coded text if visible against the selected background color."
+-101414 VSRC_CFG_MESSAGE_DESCRIPTION
+"The message color is used for messages that appear on the SlickEdit message bar at the bottom of the window.  Typically it simply uses the system default color."
+-101415 VSRC_CFG_STATUS_DESCRIPTION
+"The status color is used for text in the SlickEdit status bar at the bottom of the window.  Typically it simply uses the system default color."
+-101416 VSRC_CFG_CURSOR_DESCRIPTION
+"Cursor color is used for the character under the cursor when focus is away from the editor window or when in overstrike mode."
+-101417 VSRC_CFG_MODIFIED_LINE_DESCRIPTION
+"Modified line color is used in the left margin of editor windows for modified lines.  This color is only used if modified line coloring is enabled for the current language.  Modified line color is also used to color text in diff."
+-101418 VSRC_CFG_INSERTED_LINE_DESCRIPTION
+"Inserted line color is used in the left margin of editor windows for newly inserted lines.    This color is only used if modified line coloring is enabled for the current language.  Inserted line color is also used in diff to highlight lines which have been inserted."
+-101419 VSRC_CFG_KEYWORD_DESCRIPTION
+"Keyword color is used to highlight language specific keywords."
+-101420 VSRC_CFG_LINE_NUMBER_DESCRIPTION
+"Line number color is used for coloring line numbers in languages that require line numbers.  It should not be confused with View > Line Numbers, which displays line numbers in the editor margin."
+-101421 VSRC_CFG_NUMBER_DESCRIPTION
+"Number color is used for language specific integer constants."
+-101422 VSRC_CFG_STRING_DESCRIPTION
+"String color is used for language specific string literals.  It can also be used for here documents in certain languages and quoted attribute values in HTML/XML markup languages."
+-101423 VSRC_CFG_COMMENT_DESCRIPTION
+"Block comment color is used for language specific block comments."
+-101424 VSRC_CFG_PREPROCESSOR_DESCRIPTION
+"Preprocessor color is used for language specific preprocessor keywords."
+-101425 VSRC_CFG_PUNCTUATION_DESCRIPTION
+"Punctuation color us used for language specific punctuation symbols, such as braces in C/C++."
+-101426 VSRC_CFG_LIBRARY_SYMBOL_DESCRIPTION
+"Library color is used for language intrinsics and very common standard language library functions, such as strcmp() in C."
+-101427 VSRC_CFG_OPERATOR_DESCRIPTION
+"Operator color is used for language specific mathematical and logical operators."
+-101428 VSRC_CFG_USER_DEFINED_SYMBOL_DESCRIPTION
+"User defined keyword color is used for additional language specific keywords or symbols the user configures to have color coded."
+-101429 VSRC_CFG_NOSAVE_LINE_DESCRIPTION
+"No save (imaginary) line color is used for lines that are inserted in an editor window which will not be saved to the file.  No save lines are also used in diff."
+-101430 VSRC_CFG_FUNCTION_DESCRIPTION
+"Function color is used to highlight identifiers which appear to be function names by virtue of being followed by a parenthesis."
+-101431 VSRC_CFG_LINE_PREFIX_AREA_DESCRIPTION
+"The line prefix area color is used for the right margin of the editor window.  This is the color used for line numbers when using View > Line Numbers."
+-101432 VSRC_CFG_FILENAME_DESCRIPTION
+"The filename color is used to highlight file names in the Search Results tool window."
+-101433 VSRC_CFG_HIGHLIGHT_DESCRIPTION
+"The highlight color is used to highlight string matches in the Search Results tool window."
+-101434 VSRC_CFG_ATTRIBUTE_DESCRIPTION
+"The attribute color is used to highlight tag attribute names in HTML and XML."
+-101435 VSRC_CFG_UNKNOWN_XML_ELEMENT_DESCRIPTION
+"The unknown XML element color is used to highlight XML tags which are not defined in the current document type definition or schema."
+-101436 VSRC_CFG_XHTML_ELEMENT_IN_XSL_DESCRIPTION
+"This color is used to highlight an XHTML element in an XSL style sheet."
+-101437 VSRC_CFG_SPECIALCHARS_DESCRIPTION
+"Special characters color is used to display special characters, such as spaces, tab characters and line endings when the view options are enabled to display those characters."
+-101438 VSRC_CFG_CURRENT_LINE_BOX_DESCRIPTION
+"The current line box color is used when you have draw box around current line enabled."
+-101439 VSRC_CFG_VERTICAL_COL_LINE_DESCRIPTION
+"The vertical line column color is used for drawing a vertical line at a designated marker column.  This is only drawn when the vertical line column is enabled and the editor font is a fixed width font."
+-101440 VSRC_CFG_MARGINS_COL_LINE_DESCRIPTION
+"The margins column line color is used to display the current soft-wrap margin settings when soft-wrap is enabled.  If you never want to see the margin column lines, set this color to the same as your Window Text background color."
+-101441 VSRC_CFG_TRUNCATION_COL_LINE_DESCRIPTION
+"The truncation column line color is used for drawing the truncation column line when line truncation is enabled for the current language."
+-101442 VSRC_CFG_PREFIX_AREA_LINE_DESCRIPTION
+"The prefix area line color is the color of the vertical line which divides the left editor margin (gutter) from the editor text area."
+-101443 VSRC_CFG_BLOCK_MATCHING_DESCRIPTION
+"The block matching color is used to highlight matching parentheses, braces, or begin/end keyword pairs for the item under the cursor."
+-101444 VSRC_CFG_INC_SEARCH_CURRENT_DESCRIPTION
+"This color is used to highlight the current incremental search match under the cursor."
+-101445 VSRC_CFG_INC_SEARCH_MATCH_DESCRIPTION
+"This color is used to highlight other incremental search matches in the current file."
+-101446 VSRC_CFG_HEX_MODE_COLOR_DESCRIPTION
+"This color is used for hex editing mode."
+-101447 VSRC_CFG_SYMBOL_HIGHLIGHT_DESCRIPTION
+"This color is used to highlight other references to the symbol under the cursor.  This color is only used if highlight matching symbols is enabled for the current language."
+-101448 VSRC_CFG_MODIFIED_FILE_TAB_DESCRIPTION
+"This color is used to highlight modified files in the File Tabs tool window and the Files tool window."
+-101449 VSRC_CFG_LINE_COMMENT_DESCRIPTION
+"Line comment color is used for language specific line comments."
+-101450 VSRC_CFG_DOC_COMMENT_DESCRIPTION
+"Documentation comment color is used for language specific documentation comments."
+-101451 VSRC_CFG_DOCUMENTATION_KEYWORD_DESCRIPTION
+"This color is used for keywords and tags in language specific documentation comments."
+-101452 VSRC_CFG_DOCUMENTATION_PUNCTUATION_DESCRIPTION
+"This color is used for punctuation in language specific documentation comments."
+-101453 VSRC_CFG_DOCUMENTATION_ATTRIBUTE_DESCRIPTION
+"This color is used for tag attribute names in language specific documentation comments with XML or HTML markup."
+-101454 VSRC_CFG_DOCUMENTATION_ATTR_VALUE_DESCRIPTION
+"This color is used for tag attribute values in language specific documentation comments with XML or HTML markup."
+-101455 VSRC_CFG_FLOATING_NUMBER_DESCRIPTION
+"Floating point number color is used for language specific floating point numeric constants."
+-101456 VSRC_CFG_HEX_NUMBER_DESCRIPTION
+"Hexadecimal number color is used for language specific integer and floating point numeric constants written in hexadecimal notation."
+-101457 VSRC_CFG_SINGLE_QUOTED_STRING_DESCRIPTION
+"Single quoted string color is used for language specific character and string literals."
+-101458 VSRC_CFG_BACKQUOTED_STRING_DESCRIPTION
+"Backquoted striing color is used for language specific string literals using backwards single quotes, such as are used in shell scripts."
+-101459 VSRC_CFG_UNTERMINATED_STRING_DESCRIPTION
+"Unterminated string color is used at the end of a line that has a string literal which is missing its closing quote."
+-101460 VSRC_CFG_IDENTIFIER_DESCRIPTION
+"Identifier color is used for symbols which match the language specific identifier characters."
+-101461 VSRC_CFG_INACTIVE_CODE_DESCRIPTION
+"This color is used for code which is preprocessed out, such as #if 0 blocks."
+-101462 VSRC_CFG_INACTIVE_KEYWORD_DESCRIPTION
+"This color is used for keywords in code which is preprocessed out, such as #if 0 blocks."
+-101463 VSRC_CFG_IMAGINARY_SPACE_DESCRIPTION
+"Imaginary space is used in the difference editor to display whitespace which is inserted in order to balance the whitespace between the current document and the one it is being compared to."
+-101464 VSRC_CFG_INACTIVE_COMMENT_DESCRIPTION
+"This color is used for comments in code which is preprocessed out, such as #if 0 blocks."
+-101465 VSRC_CFG_MODIFIED_ITEM_DESCRIPTION
+"This color is used to highlight variables or watches in the debugger windows which changed while stepping through code."
+
+-101466 VSRC_CFG_NAVHINT
+"Navigation Hint"
+-101467 VSRC_CFG_NAVHINT_DESCRIPTION
+"This color is used for navigation hints.  Navigation hints appear in the editor window and indicate the location you will be taken."
+
+-101468 VSRC_CFG_XML_CHARACTER_REF
+"XML/HTML numeric character reference"
+-101469 VSRC_CFG_XML_CHARACTER_REF_DESCRIPTION
+"This color is used for XML/HTML numeric character references &#nnnn; (decimal) or &#xhhhh; (hexadecimal)."
+
+-101470 VSRC_CFG_TAG_FILES_LOADING
+"File list: loading..."
+-101471 VSRC_CFG_TAG_FILES_NONE
+"File list: no tag file selected"
+-101472 VSRC_CFG_TAG_FILES_COUNT
+"File list:  %s0 files.  Tag file size: %s1"
+-101473 VSRC_CFG_ERROR_DESCRIPTION
+"This color is used to mark the position of compiler errors on the vertical scrollbar."
+
+-101475 VSRC_CODEHELP_TITLE_LOCALS
+"Locals"
+-101476 VSRC_CODEHELP_TITLE_MEMBERS
+"Members"
+-101477 VSRC_CODEHELP_TITLE_IMPORTS
+"Imports"
+-101478 VSRC_CODEHELP_TITLE_STATICS
+"Static Imports"
+-101479 VSRC_CODEHELP_TITLE_BUFFER
+"Current Buffer"
+-101480 VSRC_CODEHELP_TITLE_GLOBALS
+"Globals"
+-101481 VSRC_CODEHELP_TITLE_PACKAGES
+"Packages"
+-101482 VSRC_CODEHELP_TITLE_CLASSES
+"Classes"
+-101483 VSRC_CODEHELP_TITLE_PROPS
+"Properties"
+-101484 VSRC_CODEHELP_TITLE_BUILTINS
+"Builtins"
+-101485 VSRC_CODEHELP_TITLE_PARAMS
+"Parameters"
+-101486 VSRC_CODEHELP_TITLE_CONTROLS
+"Controls"
+-101487 VSRC_CODEHELP_TITLE_KEYWORDS
+"Keywords"
+-101488 VSRC_CODEHELP_TITLE_FUNCTIONS
+"Functions"
+-101489 VSRC_CODEHELP_TITLE_PROCEDURES
+"Procedures"
+-101490 VSRC_CODEHELP_TITLE_VARIABLES
+"Variables"
+-101491 VSRC_CODEHELP_TITLE_DEFINES
+"Defines"
+-101492 VSRC_CODEHELP_TITLE_EXPRS
+"Expressions"
+
+-101493 VSRC_CFG_SEARCH_RESULT_TRUNCATED
+"Search Result Truncated"
+-101494 VSRC_CFG_SEARCH_RESULT_TRUNCATED_DESCRIPTION
+"This color is used in the Search Results tool window to highlight leading and/or trailing part of search result line is truncated."
+
+SCC
+-102000 VSSCC_ERROR_COULD_NOT_FIND_INSTALLED_PROVIDER_KEY_RC
+"VSSCC_ERROR_COULD_NOT_FIND_INSTALLED_PROVIDER_KEY_RC"
+-102001 VSSCC_ERROR_COULD_NOT_FIND_SPECIFIC_PROVIDER_KEY_RC
+"VSSCC_ERROR_COULD_NOT_FIND_SPECIFIC_PROVIDER_KEY_RC"
+-102002 VSSCC_ERROR_COULD_NOT_FIND_SCCSERVERPATH_RC
+"VSSCC_ERROR_COULD_NOT_FIND_SCCSERVERPATH_RC"
+-102003 VSSCC_ERROR_COULD_NOT_LOAD_LIBRARY_RC
+"VSSCC_ERROR_COULD_NOT_LOAD_LIBRARY_RC"
+-102004 VSSCC_ERROR_INIT_FAILED_RC
+"VSSCC_ERROR_INIT_FAILED_RC"
+-102005 VSSCC_ERROR_OPTION_NOT_SUPPORTED_RC
+"VSSCC_ERROR_OPTION_NOT_SUPPORTED_RC"
+-102008 VSSCC_ERROR_MAY_BE_32_BIT_DLL_RC
+"The SCC provider you have configured is 32-bit and cannot be loaded by the 64-bit version of SlickEdit.  If you wish to use this system, you should use the 32-bit version of SlickEdit.\n\nSome 64-bit version control systems still have 32-bit SCC provider DLLs."
+-102009 VSSCC_WARN_ABOUT_32_BIT_SCC_SYSTEMS_RC
+"%s0 32-bit SCC systems are installed. These cannot be used by the 64-bit version of SlickEdit.  You may wish to try using the 32-bit version of SlickEdit.\n\nSome 64-bit version control systems still have 32-bit SCC provider DLLs."
+-102020 VSSCC_E_INITIALIZEFAILED_RC
+"Initialize failed"
+-102021 VSSCC_E_UNKNOWNPROJECT_RC
+"Unknown project"
+-102022 VSSCC_E_COULDNOTCREATEPROJECT_RC
+"Could not create project"
+-102023 VSSCC_E_NOTCHECKEDOUT_RC
+"Not checked out"
+-102024 VSSCC_E_ALREADYCHECKEDOUT_RC
+"Already checked out"
+-102025 VSSCC_E_FILEISLOCKED_RC
+"File is locked"
+-102026 VSSCC_E_FILEOUTEXCLUSIVE_RC
+"File checked out exclusive"
+-102027 VSSCC_E_ACCESSFAILURE_RC
+"Access failure"
+-102028 VSSCC_E_CHECKINCONFLICT_RC
+"Checkin conflict"
+-102029 VSSCC_E_FILEALREADYEXISTS_RC
+"File already exists"
+-102030 VSSCC_E_FILENOTCONTROLLED_RC
+"File not controlled"
+-102031 VSSCC_E_FILEISCHECKEDOUT_RC
+"File is checked out"
+-102032 VSSCC_E_NOSPECIFIEDVERSION_RC
+"No specified version"
+-102033 VSSCC_E_OPNOTSUPPORTED_RC
+"Opereation not supported"
+-102034 VSSCC_E_NONSPECIFICERROR_RC
+"The version control system returned a non specific error code"
+-102035 VSSCC_E_OPNOTPERFORMED_RC
+"Operation not performed"
+-102036 VSSCC_E_TYPENOTSUPPORTED_RC
+"Type not supported"
+-102037 VSSCC_E_VERIFYMERGE_RC
+"Verify Merge"
+-102038 VSSCC_E_FIXMERGE_RC
+"Fix Merge"
+-102039 VSSCC_E_SHELLFAILURE_RC
+"Shell failure"
+-102040 VSSCC_E_INVALIDUSER_RC
+"Invalid user"
+-102041 VSSCC_E_PROJECTALREADYOPEN_RC
+"Project already open"
+-102042 VSSCC_E_PROJSYNTAXERR_RC
+"Project syntax error"
+-102043 VSSCC_E_INVALIDFILEPATH_RC
+"Invalid file path"
+-102044 VSSCC_E_PROJNOTOPEN_RC
+"Project not open"
+-102045 VSSCC_E_NOTAUTHORIZED_RC
+"Not authorized"
+-102046 VSSCC_E_FILESYNTAXERR_RC
+"File syntax error"
+-102047 VSSCC_E_FILENOTEXIST_RC
+"File does not exist"
+
+BEAUTIFIER
+-102300 BEAUTIFIER_INVALID_PROFILE_NAME_RC
+"%s1 is not a valid profile name."
+-102301 BEAUTIFIER_CANT_OPEN_PROFILE_RC
+"Can't open/create beautifier profile %s1."
+-102302 BEAUTIFIER_NO_SUCH_PROFILE_RC
+"Can't find beautifier profile named '%s1'  for language '%s2'."
+-102303 BEAUTIFIER_NULL_OPTION_RC
+"Null option in %s1, %s2."
+-102304 BEAUTIFIER_UNRECOGNIZED_OPTION_RC
+"Beautifier for '%s1' does not recognize the option '%s2' in profile '%s3', file %s4."
+-102305 BEAUTIFIER_PROBLEM_GENERATING_CFG_RC
+"Problem creating beautifier profile %s1, %s2: %s3."
+-102306 BEAUTIFIER_EMPTY_PROFILE_RC
+"Attempt to save an empty beautifier profile."
+-102307 BEAUTIFIER_INCOMPLETE_PROFILE_RC
+"Attempt to save an incomplete beautifier profile."
+-102308 BEAUTIFIER_NOT_REGISTERED_RC
+"No beautifier registered for language %s1."
+-102309 BEAUTIFIER_BAD_OPTION_INDEX
+"Invalid option index for beautifier: %s1."
+-102310 BEAUTIFIER_BAD_OPTION_TYPE
+"Option %s1 is not a valid %s2. (%s3)"
+-102311 BEAUTIFIER_BAD_CONTROL_ID
+"Beautifier expecting an editor control."
+-102312 BEAUTIFIER_NULL_FILEVIEW
+"Beautifier not expecting a null file view."
+-102313 BEAUTIFIER_NO_SUCH_USER_PROFILE_RC
+"Can't find a user profile named %s1 for language %s2"
+-102314 BEAUTIFIER_CANT_DELETE_PROFILE
+"Failed trying to delete profile %s1 from %s2"
+-102315 BEAUTIFIER_CANT_SHADOW_SYSTEM_PROFILE
+"Can not create a profile with the same name as a system profile."
+-102500 BEAUTIFIER_END_OF_ERRORS
+"End of beautifier errors"
+
+OEM
+// OEM-defined messages
+// >= 500000

@@ -1,0 +1,285 @@
+<?xml encoding='UTF-8'?>
+<!ELEMENT FilePath EMPTY>
+<!ATTLIST FilePath Function CDATA #REQUIRED
+                   Caption CDATA #REQUIRED
+                   DialogHelp CDATA #REQUIRED>
+<!ELEMENT FilePathTemplate EMPTY>
+<!ATTLIST FilePathTemplate Function CDATA #REQUIRED
+                           Name CDATA #REQUIRED
+                           Caption CDATA #REQUIRED
+                           DialogHelp CDATA #REQUIRED>
+<!ELEMENT Options (OptionsTree,DefaultLanguageInfo,DefaultVersionControlInfo,DialogTemplates,PropertyTemplates)>
+<!ATTLIST Options SlickEditVersion CDATA #REQUIRED
+                  Version CDATA #REQUIRED
+                  DefaultWidth CDATA #IMPLIED
+                  DefaultHeight CDATA #IMPLIED>
+<!ELEMENT ChangeEvents (ChangeEvent)+>
+<!ELEMENT ChangeEvent EMPTY>
+<!ATTLIST ChangeEvent Type CDATA #REQUIRED
+                      OptionsTreeType CDATA #IMPLIED>
+<!ELEMENT Dependencies ((Condition|NotCondition|CompoundDependency|Dependencies)+)>
+<!ATTLIST Dependencies Evaluate CDATA #REQUIRED>
+<!ELEMENT Numeric (ChangeEvents?,Dependencies?)>
+<!ATTLIST Numeric Function CDATA #IMPLIED
+                  Caption CDATA #REQUIRED
+                  Variable CDATA #IMPLIED
+                  Min CDATA #REQUIRED
+                  Type CDATA #REQUIRED
+                  Max CDATA #REQUIRED
+                  DefaultOption CDATA #IMPLIED
+                  Exclusions CDATA #IMPLIED
+                  LanguageSetting CDATA #IMPLIED
+                  VersionControlSetting CDATA #IMPLIED
+                  Controls CDATA #IMPLIED
+                  SystemHelp CDATA #IMPLIED
+                  DialogHelp CDATA #IMPLIED
+                  Resolution CDATA #IMPLIED
+                  Events CDATA #IMPLIED>
+<!ELEMENT NumericTemplate (ChangeEvents?,Dependencies?)>
+<!ATTLIST NumericTemplate Function CDATA #IMPLIED
+                          Name CDATA #REQUIRED
+                          Caption CDATA #REQUIRED
+                          Variable CDATA #IMPLIED
+                          Min CDATA #REQUIRED
+                          Type CDATA #REQUIRED
+                          Max CDATA #REQUIRED
+                          DefaultOption CDATA #IMPLIED
+                          Exclusions CDATA #IMPLIED
+                          LanguageSetting CDATA #IMPLIED
+                          VersionControlSetting CDATA #IMPLIED
+                          Controls CDATA #IMPLIED
+                          SystemHelp CDATA #IMPLIED
+                          DialogHelp CDATA #IMPLIED
+                          Resolution CDATA #IMPLIED
+                        Events CDATA #IMPLIED>
+<!ELEMENT DialogTemplate (ChangeEvents?)>
+<!ATTLIST DialogTemplate Width CDATA #IMPLIED
+                         Invisible CDATA #IMPLIED
+                         Name CDATA #REQUIRED
+                         Height CDATA #IMPLIED
+                         Exclusions CDATA #IMPLIED
+                         Controls CDATA #IMPLIED
+                         SystemHelp CDATA #IMPLIED
+                         DialogHelp CDATA #IMPLIED
+                         Tags CDATA #IMPLIED
+                         ManualTags CDATA #IMPLIED
+                         TagComplexControls CDATA #IMPLIED
+                         OptionsTreeExclusions CDATA #IMPLIED
+                         InheritsFromForm CDATA #IMPLIED
+                         Form CDATA #REQUIRED>
+<!ELEMENT Boolean (ChangeEvents?,Dependencies?)>
+<!ATTLIST Boolean Function CDATA #IMPLIED
+                  Caption CDATA #REQUIRED
+                  Variable CDATA #IMPLIED
+                  LanguageSettings CDATA #IMPLIED
+                  BackwardsFlag CDATA #IMPLIED
+                  Flag CDATA #IMPLIED
+                  Type CDATA #IMPLIED
+                  TrueValue CDATA #IMPLIED
+                  FalseValue CDATA #IMPLIED
+                  DefaultOption CDATA #IMPLIED
+                  Exclusions CDATA #IMPLIED
+                  LanguageSetting CDATA #IMPLIED
+                  VersionControlSetting CDATA #IMPLIED
+                  Controls CDATA #IMPLIED
+                  SpellOption CDATA #IMPLIED
+                  SystemHelp CDATA #IMPLIED
+                  DialogHelp CDATA #IMPLIED
+                  Events CDATA #IMPLIED>
+<!ELEMENT BooleanTemplate (ChangeEvents?,Dependencies?)>
+<!ATTLIST BooleanTemplate Function CDATA #IMPLIED
+                          Name CDATA #REQUIRED
+                          Caption CDATA #REQUIRED
+                          Variable CDATA #IMPLIED
+                          BackwardsFlag CDATA #IMPLIED
+                          Flag CDATA #IMPLIED
+                          Type CDATA #IMPLIED
+                          TrueValue CDATA #IMPLIED
+                          FalseValue CDATA #IMPLIED
+                          DefaultOption CDATA #IMPLIED
+                          Exclusions CDATA #IMPLIED
+                          LanguageSetting CDATA #IMPLIED
+                          VersionControlSetting CDATA #IMPLIED
+                          Controls CDATA #IMPLIED
+                          SpellOption CDATA #IMPLIED
+                          SystemHelp CDATA #IMPLIED
+                          DialogHelp CDATA #IMPLIED
+                          Events CDATA #IMPLIED>
+<!ELEMENT Dialog (ChangeEvent?,(Boolean|Numeric|Select|Color|Property|PropertyGroup|DirectoryPath|Text|FilePath)*)>
+<!ATTLIST Dialog Caption CDATA #REQUIRED
+                 Width CDATA #IMPLIED
+                 Shared CDATA #IMPLIED
+                 DialogTemplate CDATA #IMPLIED
+                 InheritsFromForm CDATA #IMPLIED
+                 Height CDATA #IMPLIED
+                 Exclusions CDATA #IMPLIED
+                 Controls CDATA #IMPLIED
+                 Invisible CDATA #IMPLIED
+                 OptionsTreeExclusions CDATA #IMPLIED
+                 SystemHelp CDATA #IMPLIED
+                 DialogHelp CDATA #IMPLIED
+                 Tags CDATA #IMPLIED
+                 ManualTags CDATA #IMPLIED
+                 TagFunction CDATA #IMPLIED
+                 TagComplexControls CDATA #IMPLIED
+                 PositionUnderParent CDATA #IMPLIED
+                 Form CDATA #IMPLIED>
+<!ELEMENT Category ((PropertySheet|Dialog|Category)*)>
+<!ATTLIST Category Caption CDATA #IMPLIED
+                   Language CDATA #IMPLIED
+                   VCProvider CDATA #IMPLIED
+                   OptionsTreeExclusions CDATA #IMPLIED
+                   CategoryTemplate CDATA #IMPLIED
+                   Exclusions CDATA #IMPLIED
+                   SystemHelp CDATA #IMPLIED
+                   DialogHelp CDATA #IMPLIED>
+<!ELEMENT DirectoryPath (ChangeEvents?,Dependencies?)>
+<!ATTLIST DirectoryPath Function CDATA #IMPLIED
+                        Caption CDATA #REQUIRED
+                        Variable CDATA #IMPLIED
+                        SystemHelp CDATA #IMPLIED
+                        DialogHelp CDATA #IMPLIED
+                        EncodeEnvironmentVariables CDATA #IMPLIED
+                        Events CDATA #IMPLIED>
+<!ELEMENT DirectoryPathTemplate (ChangeEvents?,Dependencies?)>
+<!ATTLIST DirectoryPathTemplate Function CDATA #IMPLIED
+                                Name CDATA #REQUIRED
+                                Caption CDATA #REQUIRED
+                                Variable CDATA #IMPLIED
+                                SystemHelp CDATA #IMPLIED
+                                DialogHelp CDATA #IMPLIED
+                                Events CDATA #IMPLIED>
+<!ELEMENT CompoundDependency ((Condition|CompoundDependency)+)>
+<!ATTLIST CompoundDependency Evaluate CDATA #REQUIRED>
+<!ELEMENT Choices (Choice+)>
+<!ELEMENT OptionsTree ((Category|PropertySheet|Dialog)+)>
+<!ELEMENT Condition EMPTY>
+<!ATTLIST Condition Variable CDATA #IMPLIED
+                    Option CDATA #IMPLIED
+                    Function CDATA #IMPLIED
+                    Value CDATA #IMPLIED
+                    VSAPIFlag CDATA #IMPLIED
+                    LangCallback CDATA #IMPLIED
+                    Flag CDATA #IMPLIED>
+<!ELEMENT DefaultLanguageInfo ((Dialog|PropertySheet)+)>
+<!ATTLIST DefaultLanguageInfo SystemHelp CDATA #IMPLIED
+                              DialogHelp CDATA #IMPLIED>
+<!ELEMENT DefaultVersionControlInfo ((Dialog|PropertySheet)+)>
+<!ATTLIST DefaultVersionControlInfo SystemHelp CDATA #IMPLIED
+                                    DialogHelp CDATA #IMPLIED>
+<!ELEMENT Property EMPTY>
+<!ATTLIST Property PropertyTemplate CDATA #REQUIRED
+                   Caption CDATA #IMPLIED>
+<!ELEMENT PropertyGroup ((Boolean|Numeric|Select|Text|Color|Property|DirectoryPath|FilePath)+)>
+<!ATTLIST PropertyGroup Caption CDATA #REQUIRED
+                        Exclusions CDATA #IMPLIED>
+<!ELEMENT Color (ChangeEvents?,Dependencies?)>
+<!ATTLIST Color DefaultColor CDATA #IMPLIED
+                Caption CDATA #REQUIRED
+                Variable CDATA #IMPLIED
+                Exclusions CDATA #IMPLIED
+                LanguageSetting CDATA #IMPLIED
+                VersionControlSetting CDATA #IMPLIED
+                Controls CDATA #IMPLIED
+                SystemHelp CDATA #IMPLIED
+                DialogHelp CDATA #IMPLIED>
+<!ELEMENT ColorTemplate (ChangeEvents?,Dependencies?)>
+<!ATTLIST ColorTemplate DefaultColor CDATA #IMPLIED
+                        Name CDATA #REQUIRED
+                        Caption CDATA #REQUIRED
+                        Variable CDATA #IMPLIED
+                        Exclusions CDATA #IMPLIED
+                        LanguageSetting CDATA #IMPLIED
+                        VersionControlSetting CDATA #IMPLIED
+                        Controls CDATA #IMPLIED
+                        SystemHelp CDATA #IMPLIED
+                        DialogHelp CDATA #IMPLIED>
+<!ELEMENT DialogTemplates (DialogTemplate+)>
+<!ELEMENT PropertyTemplates ((BooleanTemplate|NumericTemplate|SelectTemplate|ColorTemplate|DirectoryPathTemplate|TextTemplate|FilePathTemplate)+)>
+<!ELEMENT PropertySheet (Boolean|Numeric|Select|Color|Property|PropertyGroup|DirectoryPath|Text|FilePath)+>
+<!ATTLIST PropertySheet Caption CDATA #IMPLIED
+                        Exclusions CDATA #IMPLIED
+                        Invisible CDATA #IMPLIED
+                        Events CDATA #IMPLIED
+                        VCProvider CDATA #IMPLIED
+                        SystemHelp CDATA #IMPLIED
+                        DialogHelp CDATA #IMPLIED>
+<!ELEMENT Select (ChangeEvents?,Dependencies?,Choices?)>
+<!ATTLIST Select Function CDATA #IMPLIED
+                 Caption CDATA #REQUIRED
+                 Variable CDATA #IMPLIED
+                 Type CDATA #IMPLIED
+                 DefaultOption CDATA #IMPLIED
+                 Exclusions CDATA #IMPLIED
+                 LanguageSetting CDATA #IMPLIED
+                 VersionControlSetting CDATA #IMPLIED
+                 Controls CDATA #IMPLIED
+                 SystemHelp CDATA #IMPLIED
+                 DialogHelp CDATA #IMPLIED
+                 Choices CDATA #IMPLIED
+                 InsertActualValue CDATA #IMPLIED
+                 Events CDATA #IMPLIED>
+<!ELEMENT SelectTemplate (ChangeEvents?,Dependencies?,Choices?)>
+<!ATTLIST SelectTemplate Function CDATA #IMPLIED
+                         Name CDATA #REQUIRED
+                         Caption CDATA #REQUIRED
+                         Variable CDATA #IMPLIED
+                         Type CDATA #IMPLIED
+                         Flag CDATA #IMPLIED
+                         DefaultOption CDATA #IMPLIED
+                         Exclusions CDATA #IMPLIED
+                         LanguageSetting CDATA #IMPLIED
+                         VersionControlSetting CDATA #IMPLIED
+                         Controls CDATA #IMPLIED
+                         SystemHelp CDATA #IMPLIED
+                         DialogHelp CDATA #IMPLIED
+                         Choices CDATA #IMPLIED
+                         Events CDATA #IMPLIED>
+<!ELEMENT Text (ChangeEvents?,Dependencies?)>
+<!ATTLIST Text Caption CDATA #REQUIRED
+               Variable CDATA #IMPLIED
+               ChangeFunction CDATA #IMPLIED
+               Function CDATA #IMPLIED
+               SpellOption CDATA #IMPLIED
+               Exclusions CDATA #IMPLIED
+               Events CDATA #IMPLIED
+               LanguageSetting CDATA #IMPLIED
+               VersionControlSetting CDATA #IMPLIED
+               Controls CDATA #IMPLIED
+               PreserveSpaces CDATA #IMPLIED
+               SystemHelp CDATA #IMPLIED
+               DialogHelp CDATA #IMPLIED>
+<!ELEMENT TextTemplate (ChangeEvents?,Dependencies?)>
+<!ATTLIST TextTemplate Caption CDATA #REQUIRED
+                       Name CDATA #REQUIRED
+                       Variable CDATA #IMPLIED
+                       ChangeFunction CDATA #IMPLIED
+                       Function CDATA #IMPLIED
+                       SpellOption CDATA #IMPLIED
+                       Exclusions CDATA #IMPLIED
+                       LanguageSetting CDATA #IMPLIED
+                       VersionControlSetting CDATA #IMPLIED
+                       Controls CDATA #IMPLIED
+                       PreserveSpaces CDATA #IMPLIED
+                       SystemHelp CDATA #IMPLIED
+                       DialogHelp CDATA #IMPLIED>
+<!ELEMENT Choice EMPTY>
+<!ATTLIST Choice Caption CDATA #REQUIRED
+                 Conditions CDATA #IMPLIED
+                 CanChoose CDATA #IMPLIED
+                 Default CDATA #IMPLIED
+                 SystemHelp CDATA #IMPLIED
+                 DialogHelp CDATA #IMPLIED
+                 Exclusions CDATA #IMPLIED
+                 Value CDATA #REQUIRED>
+<!ELEMENT NotCondition EMPTY>
+<!ATTLIST NotCondition Option CDATA #IMPLIED
+                       Variable CDATA #IMPLIED
+                       Function CDATA #IMPLIED
+                       Flag CDATA #IMPLIED
+                       Value CDATA #IMPLIED
+                       Function CDATA #IMPLIED
+                       LangCallback CDATA #IMPLIED
+                       LangInheritsFrom CDATA #IMPLIED>
+
+<!ENTITY reg "&#174;">

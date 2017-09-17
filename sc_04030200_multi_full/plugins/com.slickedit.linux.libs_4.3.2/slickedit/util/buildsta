@@ -1,0 +1,101 @@
+#!/bin/sh
+
+# Run this from the root vslick directory (e.g. /usr/lib/vslick).
+# Example:
+#
+# vslick $ util/buildsta
+
+usage()
+{
+   echo
+   echo USAGE:
+   echo
+   echo util/buildsta
+   echo
+   echo FROM THE vslick/ root directory.
+   echo
+   echo Example:
+   echo
+   echo vslick $ util/buildsta
+   echo
+}
+
+# main:
+
+if [ "$1" = "-h" ] || [ "$1" = "-H" ] || [ "$1" = "-help" ] || [ "$1" = "--help" ] || [ "$1" = "-?" ]; then
+   usage
+   exit 0
+fi
+
+# Check to be sure we have DISPLAY set
+if [ "$DISPLAY" = "" ]; then
+   echo No DISPLAY environment variable set!
+   exit 1
+fi
+
+# Check to be sure we are in the root vslick/ directory
+if [ ! -f vslick.vsm ]; then
+   echo ERROR: Not in the vslick/ root directory!
+   usage
+   exit 1
+fi
+
+# Check to be sure we have a cmacros.lst, so we know what macros to compile
+# for shipping product.
+if [ ! -f cmacros.lst ]; then
+   echo ERROR: Missing cmacros.lst!
+   exit 1
+fi
+
+# Delete any config file that could cause a non-default configuration.
+# These files should not exist, so this is just a precaution.
+rm -f vunxdefs.*
+rm -f vunxobjs.*
+rm -f vunxs*.*
+rm -f vrestore.slk
+rm -f filepos.slk
+
+# Delete all macro pcode files to guarantee that all macros are recompiled
+rm -f macros/*.ex
+
+# Make a backup of the state file in case of failure. We do not
+# want to leave this editor in a non-runnable state.
+mv -f vslick.stu vslick.stu.bak
+
+# Clean out the directory we will use to hold new state file
+rm -fr $HOME/.vslick-buildsta
+
+# Compile the bootstrap main.e module
+bin/vst macros/main.e
+
+# Build the Visual SlickEdit state file (vslick/vslick.stu) from scratch
+echo Building state file
+bin/vs +new -sc $HOME/.vslick-buildsta -xmacros/main.ex "-#util/exit"
+
+# Copy the new state file over to the root vslick directory
+cp -f $HOME/.vslick-buildsta/16.0.3/vslick.stu .
+
+# Check that a state file was actually built
+if [ ! -f vslick.stu ]; then
+   # Restore the backup state file we created earlier
+   mv -f vslick.stu.bak vslick.stu
+   echo ERROR: Failed to create a state file! Previous state file restored.
+   exit 1
+fi
+# All is good, so remove the backup state file we created earlier
+rm -f vslick.stu.bak
+
+# Copy vslick.stu to rescue.stu
+cp -f vslick.stu rescue.stu
+
+# Delete all macro pcode files that were compiled as a result of
+# building the state file.
+rm -f macros/*.ex
+
+# Compile all macro files that are supposed to ship with a product
+cat cmacros.lst | xargs -i bin/vst macros/{}
+
+echo
+echo All done!
+echo
+exit 0
