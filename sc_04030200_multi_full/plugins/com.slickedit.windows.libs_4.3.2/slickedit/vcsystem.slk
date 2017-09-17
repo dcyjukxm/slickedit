@@ -1,0 +1,220 @@
+[TLIB For OS/2]
+checkin_new=os2tlib n %f @%c
+checkin=os2tlib u %f @%c
+checkout=os2tlib e %f
+checkin_discard=os2tlib ud %f
+checkout_read_only=os2tlib eb %f
+archive_filespec=*.?$?
+lock=
+remove=
+history=tlib l %f
+difference=
+properties=tlib t %f
+manager=tlib
+styles=comment_file,error_stdout
+vcsproject=dir
+
+[TLIB for DOS]
+checkout_read_only=tlib eb %f
+checkout=tlib e %f
+checkin=tlib u %f @%c
+checkin_discard=tlib ud %f
+checkin_new=tlib n %f @%c
+lock=
+remove=
+history=tlib l %f
+difference=
+properties=tlib t %f
+manager=tlib
+styles=comment_file,error_stdout,dosrc
+
+[Source Safe for Windows]
+checkin_new=sswcl add %n%e -c@%c -o@%t -exitcode
+checkout=sswcl checkout %f -o@%t -exitcode
+checkin=sswcl update %f -c@%c -i- -o@%t -exitcode
+checkin_discard=sswcl uncheckout %f -i- -o@%t -exitcode
+checkout_read_only=sswcl get %f -o@%t -exitcode
+remove=ss delete "%f" -o@%t -exitcode
+history=ss history "%f" -o@%t -exitcode
+difference=ss difference "%f" -o@%t -exitcode
+properties=ss properties "%f" -o@%t -exitcode
+lock=
+archive_filespec=
+archive_filespec=
+styles=comment_file,error_file,sstree,sserror_file_rc,vcp_required
+vcsproject=ssproject,sswcl cd %s -o%t -exitcode
+
+[Source Safe for Windows >=4.0]
+checkin_new=ss add "%n%e" -c@%c -o@%t -exitcode
+checkout=ss checkout %f -o@%t -exitcode
+checkin=ss update %f -c@%c -i- -o@%t -exitcode
+checkin_discard=ss uncheckout %f -i- -o@%t -exitcode
+checkout_read_only=ss get %f -o@%t -exitcode
+remove=ss delete %f -o@%t -exitcode
+history=ss history %f -o@%t -exitcode
+difference=ss difference %f -o@%t -exitcode
+properties=ss properties %f -o@%t -exitcode
+manager=ssexp
+lock=
+archive_filespec=
+styles=comment_file,error_file,sstree,sserror_file_rc,vcp_required
+vcsproject=ssproject,ss cd "%s" -o%t -exitcode
+
+[PVCS for DOS]
+lock=vcs -y -l %f
+remove=
+history=vlog %f
+difference=vdiff -r %f
+properties=vlog -b %f
+checkin_new=put -t@%c %f
+checkout=get -l %f
+checkin=put -m@%c -t@%c %f
+checkin_discard=vcs -u %f
+checkout_read_only=get %f
+archive_filespec=*.??v
+styles=comment_file,error_redir,dosrc,pvcs_wildcards
+
+[PVCS for OS/2]
+lock=vcs -y -l %f
+remove=
+history=vlog %f
+difference=vdiff -r %f
+properties=vlog -b %f
+checkin_new=put -t@%c %f
+checkout=get -l %f
+checkin=put -m@%c -t@%c %f
+checkin_discard=vcs -u %f
+checkout_read_only=get %f
+archive_filespec=*.??v
+styles=comment_file,error_redir,pvcs_wildcards
+
+[GNU RCS]
+checkin_new=ci -i -q "-m<%c" %n%e
+checkout=co -q -l %n%e
+checkin=ci -q "-m<%c" %n%e
+checkout_read_only=co -q %n%e
+checkin_discard=rcs -u -q %L %n%e
+lock=rcs -l %f
+remove=
+history=rlog %f
+difference=rcsdiff -r %f
+properties=rlog -t %f
+archive_filespec=RCS\*.*
+styles=comment_file,dosrc,error_redir
+
+[MKS RCS]
+checkin=ci -q -m@%c %L %n%e
+checkin_new=ci -q -m@%c %L %n%e
+checkin_discard=rcs -u -q %L %n%e
+checkout=co -q -l %L %n%e
+checkout_read_only=co -q %L %n%e
+checkin_discard=rcs -u -q %L %n%e
+history=rlog %f
+difference=rcsdiff -r %f
+properties=rlog -t %f
+lock=rcs -l %f
+archive_filespec=*.*
+styles=comment_file,dosrc,error_redir
+vcsproject=
+
+[MKS RCS for OS/2]
+checkin=ci -q %L %n%e <%c
+checkin_new=ci -q %L %n%e <%c
+checkin_discard=rcs -u -q %L %n%e
+checkout=co -q -l %L %n%e
+checkout_read_only=co -q %L %n%e
+history=rlog %f
+difference=rcsdiff -r %f
+properties=rlog -t %f
+lock=rcs -l %f
+archive_filespec=*.*
+styles=comment_file,dosrc,error_redir
+
+[SCCS]
+checkout_read_only=sccs get %f
+checkout=sccs edit %f
+checkin=sccs deledit %f <%c
+checkin_discard=sccs unedit %f
+checkin_new=sccs -d SCCS create %f
+lock=sccs edit %f
+remove=sccs rmdel %f
+history=sccs print %f
+difference=sccs diffs %f
+properties=sccs sact %f
+manager=
+styles=error_redir,comment_file,always_show_output,cdtofile
+vcsproject=
+
+[ClearCase]
+checkin_new=cleartool makeelement -cq %f <%c
+checkout=cleartool co -nc %f
+checkin=cleartool ci -cq %f <%c
+checkout_read_only=cleartool co -unreserved -nc %f
+;checkin_discard=cleartool unco -keep %f
+checkin_discard=cleartool unreserve -nc %f
+archive_filespec=*.*
+styles=comment_file,error_redir
+[CVS]
+checkin_new=cvs add %n%e
+checkout=cvs checkout %rn
+checkin=cvs commit -m "%c" %n%e
+checkin_discard=cvs release %rn
+checkout_read_only=
+archive_filespec=*.??v
+styles=error_redir,dosrc,always_show_output,cdtofile
+commit=cvs commit
+lock=
+remove=cvs remove %n%e
+history=cvs log %n%e
+difference=cvs diff %n%e
+properties=
+manager=
+vcsproject=
+[Subversion]
+checkin_new=cvs add %n%e
+checkout=cvs checkout %rn
+checkin=cvs commit -m "%c" %n%e
+checkin_discard=cvs release %rn
+checkout_read_only=
+archive_filespec=*.??v
+styles=error_redir,dosrc,always_show_output,cdtofile
+commit=cvs commit
+lock=
+remove=cvs remove %n%e
+history=cvs log %n%e
+difference=cvs diff %n%e
+properties=
+manager=
+vcsproject=
+[Git]
+checkin_new=cvs add %n%e
+checkout=cvs checkout %rn
+checkin=cvs commit -m "%c" %n%e
+checkin_discard=cvs release %rn
+checkout_read_only=
+archive_filespec=*.??v
+styles=error_redir,dosrc,always_show_output,cdtofile
+commit=cvs commit
+lock=
+remove=cvs remove %n%e
+history=cvs log %n%e
+difference=cvs diff %n%e
+properties=
+manager=
+vcsproject=
+[Mercurial]
+checkin_new=hg add %n%e
+checkout=hg checkout %rn
+checkin=hg commit -m "%c" %n%e
+checkin_discard=hg release %rn
+checkout_read_only=
+archive_filespec=*.??v
+styles=error_redir,dosrc,always_show_output,cdtofile
+commit=hg commit
+lock=
+remove=hg remove %n%e
+history=hg log %n%e
+difference=hg diff %n%e
+properties=
+manager=
+vcsproject=

@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!DOCTYPE SETemplate SYSTEM "http://www.slickedit.com/dtd/vse/setemplate/1.0/setemplate.dtd">
+<SETemplate Version="1.0" Type="Item">
+
+  <TemplateDetails>
+    <Name>C# Windows Service</Name>
+    <Description>Provides a skeleton implementation of a Windows Service</Description>
+    <SortOrder>0</SortOrder>
+    <DefaultName>WindowsServiceName</DefaultName>
+  </TemplateDetails>
+  <TemplateContent>
+	<Parameters>
+        <Parameter Name="1servicename" Value="Service name" Prompt="1" PromptString="Service name"/>
+		<Parameter Name="2servicedescription" Value="Service description" Prompt="1" PromptString="Service description"/>
+	</Parameters>
+    <Files>
+      <File>readme.txt</File>
+      <File TargetFilename="$fileinputname$Base.cs" ReplaceParameters="1">WindowsServiceBase.cs</File>
+      <File TargetFilename="$fileinputname$InstallerBase.cs" ReplaceParameters="1">WindowsServiceInstallerBase.cs</File>
+      <File TargetFilename="$fileinputname$Main.cs" ReplaceParameters="1">WindowsServiceMain.cs</File>
+      <File>Service Install.bat</File>
+      <File>Service Uninstall.bat</File>
+    </Files>
+  </TemplateContent>
+
+</SETemplate>

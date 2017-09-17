@@ -1,0 +1,310 @@
+[.GLOBAL]
+version=6.0
+[Tornado for Windows >= 3.0]
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|disablecapoutputcmd: tornadomake -f %rpMakefile -C %rp %b default %n.o
+MAKE=copts: saveworkspacefiles|disablecapoutputcmd: tornadomake -f %rpMakefile -C %rp %b default
+REBUILD=copts: saveworkspacefiles|disablecapoutput|hide|menu: Rebuild:&Rebuildcmd: tornadomake -f %rpMakefile -C %rp %b rclean
+DEBUG=copts: hide|menu: Debug:&Debug
+EXECUTE=copts: hide|menu: Execute:E&xecute
+
+[Tornado for Windows]
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|disablecapoutputcmd: tornadomake -f ..\Makefile %b %n.o
+MAKE=copts: saveworkspacefiles|disablecapoutputcmd: tornadomake -f ..\Makefile %b %bt
+REBUILD=copts: saveworkspacefiles|disablecapoutput|hide|menu: Rebuild:&Rebuildcmd: tornadorebuild
+DEBUG=copts: hide|menu: Debug:&Debug
+EXECUTE=copts: hide|menu: Execute:E&xecute
+
+[Borland C++ for 16 bit Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: make %n.obj
+MAKE=copts: saveworkspacefiles|concur|capturecmd: make
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: make /B
+DEBUG=cmd: tdw "%<e.exe"
+EXECUTE=cmd: "%<e.exe"
+usertool_resource_editor=copts: hide|menu: Resource Editor:Resource Editorcmd: workshop
+
+[Borland C++ for 32 bit Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: make %n.obj
+MAKE=copts: saveworkspacefiles|concur|capturecmd: make
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: make /B
+EXECUTE=cmd: "%<e.exe"
+DEBUG=cmd: td32 "%<e.exe"
+usertool_resource_editor=copts: hide|menu: Resource Editor:Resource Editorcmd: workshop
+
+[Microsoft Visual C++ for 32 bit Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: nmake /F "%rn.mak" %b "%bd%n.obj"
+MAKE=copts: saveworkspacefiles|concur|capturecmd: nmake /F "%rn.mak" %b
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: nmake /A /F "%rn.mak" %b
+DEBUG=cmd: msdev "%bd%<e.exe"
+EXECUTE=cmd:"%bd%<e.exe"
+usertool_resource_editor=copts: hide|menu: Resource Editor:Resource Editorcmd: msdev
+
+[Microsoft Visual C++ for 32 bit Windows >= 6.0]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: nmake /F "%rn.mak" %b "%bd%n.obj"
+MAKE=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn /rebuild
+DEBUG=cmd: msdev "%bd%<e.exe"
+EXECUTE=cmd: "%bd%<e.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: msdev
+
+[Microsoft Visual Studio  >= 7.0 VC++]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: vstudiocompile "%f"otheropts:
+MAKE=copts: saveworkspacefiles|concur|capturecmd: devenv "%w" /build "%b" /project "%rm"
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: devenv "%rm" /rebuild "%b"
+DEBUG=cmd: devenv "%w"
+EXECUTE=cmd: "%bo%<e.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: devenv
+usertool_build_solution=copts: saveworkspacefiles|hide|concur|capturemenu: Build Soluttion:Build Solutioncmd: devenv "%w" /build "%b"
+usertool_clean_solution=copts: concur|capture|savenone|menu: Clean Solution:Clean Solutioncmd: devenv "%w" /clean %botheropts:
+usertool_clean_project=copts: concur|capture|savenone|menu: Clean Project:Clean Projectcmd: devenv "%rp%rn.vcproj" /clean %botheropts:
+
+[Microsoft Visual Studio  >= 7.0 Visual Basic]
+
+INCLUDEDIRS=%(INCLUDE)
+MAKE=copts: saveworkspacefiles|concur|capturecmd: devenv "%w" /build "%b" /project "%rm"
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: devenv "%rm" /rebuild "%b"
+DEBUG=cmd: devenv "%w"
+EXECUTE=cmd: "%bo%<e.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: devenv
+usertool_build_solution=copts: saveworkspacefiles|hide|concur|capturemenu: Build Soluttion:Build Solutioncmd: devenv "%w" /build "%b"
+
+[Microsoft Visual Studio  >= 7.0 C#]
+
+INCLUDEDIRS=%(INCLUDE)
+MAKE=copts: saveworkspacefiles|concur|capturecmd: devenv "%w" /build "%b" /project "%rm"
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: devenv "%rm" /rebuild "%b"
+DEBUG=cmd: devenv "%w"
+EXECUTE=cmd: "%bo%<e.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: devenv
+usertool_build_solution=copts: saveworkspacefiles|hide|concur|capturemenu: Build Soluttion:Build Solutioncmd: devenv "%w" /build "%b"
+
+
+[Microsoft Visual C++ for 16 bit Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: nmake %n.obj
+MAKE=copts: saveworkspacefiles|concur|capturecmd: nmake
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: nmake /A
+DEBUG=cmd: cvw "%<e.exe"
+EXECUTE=cmd: "%<e.exe"
+usertool_resource_editor=copts: hide|menu: Resource Editor:Resource Editorcmd: apstudio
+
+[Borland Delphi for Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: <path to delphi\bin>dcc -$D+ %n
+MAKE=copts: saveworkspacefiles|concur|capturecmd: <path to delphi\bin>dcc [Delphi project name]
+REBUILD=
+DEBUG=cmd: <path to delphi\bin>delphi "%<e.exe"
+EXECUTE=cmd: "%<e.exe"
+
+[Java - Empty Project;.GLOBAL]
+FILTERNAME=Source Files\nBitmaps\nOther Files\n
+FILTERPATTERN=*.java;*.c;*.cpp;*.cxx;*.hxx;*.prg;*.pas;*.dpr;*.asm;*.bas;*.sc;*.e\n*.jpg;*.gif;*.bmp\n*.*\n
+FILTERAPPCOMMAND=\n\n\n
+FILTERASSOCIATEFILETYPES=0 1 0
+macro_switchconfig=_on_switchconfig_java
+app_type_list=application,applet,custom
+packtype=java
+DebugCallbackName=jdwp
+
+[Java - Empty Project;Debug]
+app_type=application
+packver=5
+compile=copts: savecurrent|concur|capture|dialog:_java_options_form:Compiler|readonly|menu: Compile:&Compilecmd: javac -g %jbd %cp "%f"otheropts:
+make=copts: saveworkspacefiles|concur|capture|dialog:_java_options_form:Compiler|readonly|menu: Build:&Buildcmd: javamakeotheropts:
+rebuild=copts: saveworkspacefiles|concur|capture|dialog:_java_options_form:Compiler|readonly|menu: Rebuild:&Rebuildcmd: javarebuildotheropts:
+debug=@
+apptool_debug_application=copts: concur|capture|buildfirst|dialog:_java_options_form:Debugger|readonly|menu: Debug:&Debugcmd: java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 %cp . otheropts:
+apptool_debug_applet=copts: buildfirst|dialog:_java_options_form:Appletviewer|readonlymenu: Debug:&Debugcmd: appletviewer -J-Xdebug -J-Xnoagent -J-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 %hotheropts:
+apptool_debug_custom=copts: buildfirst|menu: Debug:&Debugcmd: jdb %cp %<eotheropts:
+execute=@
+apptool_execute_application=copts: buildfirst|saveworkspacefiles|dialog:_java_options_form:Interpreter|readonly|concur|capture|menu: Execute:E&xecutecmd: java %cpotheropts:
+apptool_execute_applet=copts: buildfirst|saveworkspacefiles|dialog:_java_options_form:Appletviewer|readonly|concur|capture|menu: Execute:E&xecutecmd: appletviewer %hotheropts: appletclass: %<e
+apptool_execute_custom=copts: buildfirst|saveworkspacefiles|concur|capture|menu: Execute:E&xecutecmd: java %cp %<e otheropts:
+usertool_dash=copts: |savenone|menu: dash:-cmd: otheropts:
+usertool_view_javadoc=copts: |hide|savecurrent|readonly|disablecapoutput|dialog:_java_options_form:javadocmenu: view javadoc:&View Javadoccmd: javaviewdocotheropts:
+usertool_javadoc_all=copts: saveworkspacefiles|concur|capture|hide|dialog:_java_options_form:javadoc|readonly|menu: javadoc all:Javadoc Allcmd: javamakedoc javadoc -d docs %cp %{*.java}otheropts:
+usertool_dash2=copts: |savenone|menu: dash2:-cmd: otheropts:
+usertool_make_jar=copts: saveworkspacefiles|concur|capture|readonly|hide|dialog:_java_options_form:jar|menu: make jar:Make &Jarcmd: javamakejar jar cvf "%<e.jar" %{*.*}otheropts:
+usertool_java_options=copts: readonly|hide|savenone|nochangedir|disablecapoutput|menu: java options:Java &Options...cmd: javaoptionsotheropts:
+user1=copts: |hide|menu: User 1:User 1cmd: otheropts:
+user2=copts: |hide|menu: User 2:User 2cmd: otheropts:
+includedirs=
+reffile=
+defaultbuilddir=classes
+
+[Java - Empty Project;Release]
+copy_from=Java - Empty Project;Debug
+compile=copts: savecurrent|concur|capture|dialog:_java_options_form:Compiler|readonly|menu: Compile:&Compilecmd: javac %jbd %cp "%f"otheropts:
+
+[Java - AWT Applet;.GLOBAL]
+copy_from=Java - Empty Project;.GLOBAL
+initmacro=awt_applet_wizard
+
+[Java - AWT Applet;Debug]
+copy_from=Java - Empty Project;Debug
+app_type=applet
+
+[Java - AWT Applet;Release]
+copy_from=Java - Empty Project;Release
+app_type=applet
+
+[Java - With main();.GLOBAL]
+copy_from=Java - Empty Project;.GLOBAL
+initmacro=java_with_main_wizard
+
+[Java - With main();Debug]
+app_type=application
+copy_from=Java - Empty Project;Debug
+
+[Java - With main();Release]
+copy_from=Java - Empty Project;Release
+app_type=application
+
+[Java - JFC Applet;.GLOBAL]
+copy_from=Java - Empty Project;.GLOBAL
+initmacro=jfc_applet_wizard
+
+[Java - JFC Applet;Debug]
+copy_from=Java - Empty Project;Debug
+app_type=applet
+
+[Java - JFC Applet;Release]
+copy_from=Java - Empty Project;Release
+app_type=applet
+
+[Java - AWT Application;.GLOBAL]
+copy_from=Java - Empty Project;.GLOBAL
+initmacro=awt_app_wizard
+
+[Java - AWT Application;Debug]
+copy_from=Java - Empty Project;Debug
+
+[Java - AWT Application;Release]
+copy_from=Java - Empty Project;Release
+
+[Java - JavaBean;.GLOBAL]
+copy_from=Java - Empty Project;.GLOBAL
+initmacro=javabean_wizard
+
+[Java - JavaBean;Debug]
+copy_from=Java - Empty Project;Debug
+
+[Java - JavaBean;Release]
+copy_from=Java - Empty Project;Release
+
+[Java - EJB;.GLOBAL]
+copy_from=Java - Empty Project;.GLOBAL
+initmacro=ejb_wizard
+
+[Java - EJB;Debug]
+copy_from=Java - Empty Project;Debug
+compile=copts: savecurrent|concur|capture|dialog:_java_options_form:Compiler|readonly|menu: Compile:&Compilecmd: javac -g %jbd %cp "%f"otheropts:
+
+[Java - EJB;Release]
+copy_from=Java - Empty Project;Release
+compile=copts: savecurrent|concur|capture|dialog:_java_options_form:Compiler|readonly|menu: Compile:&Compilecmd: javac %jbd %cp "%f"otheropts:
+
+[Java - JFC Application;.GLOBAL]
+copy_from=Java - Empty Project;.GLOBAL
+initmacro=jfc_app_wizard
+
+[Java - JFC Application;Debug]
+copy_from=Java - Empty Project;Debug
+
+[Java - JFC Application;Release]
+copy_from=Java - Empty Project;Release
+
+[Symantec C++ (Win32) for Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: smake %n.obj
+MAKE=copts: saveworkspacefiles|concur|capturecmd: smake
+REBUILD=cmd:
+DEBUG=cmd: scw32 "%<e.exe"
+EXECUTE=cmd: "%<e.exe"
+
+[Symantec C++ (Win16/Dos) for Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: smake %n.obj
+MAKE=copts: saveworkspacefiles|concur|capturecmd: smake
+REBUILD=cmd:
+DEBUG=cmd: scw "%<e.exe"
+EXECUTE=cmd: "%<e.exe"
+
+[Symantec C++ (Win32s) for Windows]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: smake %n.obj
+MAKE=copts: saveworkspacefiles|concur|capturecmd: smake
+REBUILD=cmd:
+DEBUG=cmd: scw32s "%<e.exe"
+EXECUTE=cmd: "%<e.exe"
+
+[(None)]
+
+INCLUDEDIRS=
+COMPILE=copts: savecurrent|concur|capturecmd:
+MAKE=copts: saveworkspacefiles|concur|capturecmd:
+REBUILD=copts: saveworkspacefiles|concur|capturecmd:
+DEBUG=cmd:
+EXECUTE=cmd: "%<e.exe"
+
+[VHDL: Model Technology ModelSim;.GLOBAL]
+FILTERNAME=Source Files\nOther Files\n
+FILTERPATTERN=*.vhd;*.vhdl\n*.*\n
+FILTERAPPCOMMAND=\n\n
+FILTERASSOCIATEFILETYPES=0 0
+
+[VHDL: Model Technology ModelSim;Release]
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: vcom %p%n%e
+MAKE=copts: saveworkspacefiles|concur|capturecmd: nmake
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: nmake /A
+DEBUG=cmd: vsim
+EXECUTE=cmd: vsim
+
+[Microsoft Embedded Tools for 32 bit Windows >= 6.0]
+
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: nmake /F "%rn.mak" %b "%bd%n.obj"
+MAKE=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.vcp" /make %bn
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.vcp" /make %bn /rebuild
+DEBUG=cmd: msdev "%bd%<e.exe"
+EXECUTE=cmd: "%bd%<e.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: msdev
+
+[GNU C/C++ Wizard;.GLOBAL]
+initmacro=gnuc_wizard
+packtype=gnuc
+DebugCallbackName=gdb
+
+[GNU C/C++ Wizard;Debug]
+compile=copts: savecurrent|concur|capture|dialog:_gnuc_options_form:Compilemenu: Compile:&Compilecmd: g++ -c %xup -g -o "%bd%n%oe" %i "%f"otheropts: outputext: .o
+link=copts: savecurrent|concur|nevershow|capture|dialog:_gnuc_options_form:Linkmenu: Link:&Linkcmd: g++ %xup -g -o "%bd%o" %f %libsotheropts:
+make=copts: concur|capture|dialog:_gnuc_options_form:Compile|saveworkspacefiles|menu: Build:&Buildcmd: "%(VSLICKBIN1)vsbuild" make "%w" "%r" -cppmakeotheropts:
+rebuild=copts: concur|capture|dialog:_gnuc_options_form:Compile|saveworkspacefiles|menu: Rebuild:&Rebuildcmd: "%(VSLICKBIN1)vsbuild" rebuild "%w" "%r" -cpprebuildotheropts:
+debug=copts: concur|capture|buildfirst|dialog:_gnuc_options_form:Run/Debug|menu: Debug:&Debugcmd: vsdebugio -prog %bd%ootheropts:
+execute=copts: saveworkspacefiles|concur|capture|buildfirst|dialog:_gnuc_options_form:Run/Debug|menu: Execute:E&xecutecmd: %bd%ootheropts:
+usertool_dash=copts: |savenone|menu: dash:-cmd: otheropts:
+usertool_gnu_c_options=copts: readonly|hide|savenone|nochangedir|disablecapoutput|menu: GNU C Options:GNU C &Options...cmd: gnucoptionsotheropts:
+outputfile=%<e
+
+[GNU C/C++ Wizard;Release]
+copy_from=GNU C/C++ Wizard;Debug
+compile=copts: savecurrent|concur|capture|dialog:_gnuc_options_form:Compilemenu: Compile:&Compilecmd: g++ -c %xup -o "%bd%n%oe" %i "%f"otheropts: outputext: .o
+link=copts: savecurrent|concur|nevershow|capture|dialog:_gnuc_options_form:Linkmenu: Link:&Linkcmd: g++ %xup -o "%bd%o" %f %libsotheropts:
+

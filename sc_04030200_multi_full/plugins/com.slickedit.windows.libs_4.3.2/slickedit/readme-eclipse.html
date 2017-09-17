@@ -1,0 +1,1102 @@
+<html>
+<head>
+  <title>SlickEdit&reg; Core for Eclipse&trade; README</title>
+</head>
+<body>
+<h2><font color="darkblue">Welcome to SlickEdit&reg; Core v4.3 for Eclipse&trade;</font></h2>
+<h3>CONTENTS</h3>
+<p>
+<a href="#contact_info">Contact Information</a><br>
+<a href="#additional_docs">Additional Documentation</a><br>
+<a href="#important_notes">Important Notes</a><br>
+<a href="#enhancements">Product Enhancements</a><br> 
+<a href="#fix_notes5">SlickEdit Core 4.3.2 Fixes</a><br>
+<a href="#fix_notes4">SlickEdit Core 4.3.1 Fixes</a><br>
+<a href="#fix_notes3">SlickEdit 17.0.3 Enhancements and Fixes</a><br>
+<a href="#fix_notes2">SlickEdit 17.0.2 Enhancements and Fixes</a><br>
+<a href="#fix_notes1">SlickEdit 17.0.1 Enhancements and Fixes</a><br>
+<a href="#known_limits">Known Limitations</a><br>
+<a href="#copyrights">Copyrights & Licenses</a>
+</p>
+
+<p>
+Copyright 1988-2014 SlickEdit Inc.
+</p>
+<p>
+SlickEdit, Visual SlickEdit, Clipboard Inheritance, DIFFzilla, SmartPaste, 
+Context Tagging, Slick-C, and Code Quick | Think Slick are registered trademarks 
+of SlickEdit Inc. All other products or company names are used for 
+identification purposes only and may be trademarks of their respective owners. 
+Protected by U.S. Patent 5,710,926.
+</p>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="contact_info">Contact Information</a></font></h3>
+<p>
+SlickEdit Inc.<br>
+3000 Aerial Center Parkway<br>
+Suite 160<br>
+Morrisville, NC  27560<br>
+USA
+</p>
+<p>
+1.919.473.0070<br>
+1.800.934.EDIT (USA)<br>
+1.919.473.0080 fax<br>
+<a href="http://www.slickedit.com/" target="_blank">www.slickedit.com</a>
+</p>
+
+<h4>Product Support</h4>
+<p>
+1.919.473.0100<br>
+<a href="mailto:support@slickedit.com">support@slickedit.com</a><br>
+<a href="http://www.slickedit.com/support" target="_blank">www.slickedit.com/support</a>
+</p>
+
+<h4>Other Resources</h4>
+<p>
+Check out our SlickEdit Community Forums at <a href="http://community.slickedit.com"
+target="_blank">http://community.slickedit.com</a>, and "Hello World" - the 
+SlickEdit Developer Blog at <a href="http://blog.slickedit.com/"
+target="_blank">http://blog.slickedit.com</a>.
+</p>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="additional_docs">Additional Documentation</a></font></h3>
+<p>
+The documentation for SlickEdit Core can be found in Eclipse at 
+<b>Help > Help Contents > SlickEdit Core v4.3 for Eclipse</b>. 
+In addition, the <i>Slick-C Best Practices Guide</i>, and emulation charts are available in PDF 
+format from the <font face="Courier,Courier New">docs</font> directory after the 
+product is installed.
+</p>
+<p>
+PDF files are readable using the Adobe&reg; Acrobat&reg; Reader&reg; or a 
+comparable PDF reader. Download the Adobe Acrobat Reader from <a href="http://www.adobe.com" target="_blank">www.adobe.com</a>.
+</p>
+<hr size="4">
+<h3><font color="darkblue"><a name="important_notes">Important Notes</a></font></h3>
+
+<p>
+<b>1. Java Requirements</b><br>
+SlickEdit Core v4.3 for Eclipse requires Java 5 or later.
+</p>
+
+<p>
+<b>2. Linux Requirements</b><br>
+The Linux version of SlickEdit Core v4.3 for Eclipse requires that libXp is installed.
+</p>
+
+<p>
+<b>3. Source Lookup and GDB</b><br>
+
+Since GDB 6.3, a <b>fullpath</b> attribute has been added which is used by the CDT for 
+source lookup. This may result in a source lookup error when using breakpoints 
+in C/C++ code. In the case of a "Source not found" error when the Eclipse 
+debugger stops at a breakpoint, go to <b>Window &gt; Preferences &gt; C/C++ &gt; 
+Debug &gt; Common Source Lookup Path</b> and create a new Path Mapping from <font face="Courier,Courier New">\cygdrive\c</font> 
+to <font face="Courier,Courier New">c:\</font>.
+</p>
+
+<p>
+<b>4. JDT Real-Time Errors in SlickEdit Core</b><br>
+If a Java file is currently open in the standard Eclipse Java editor, and then explicitly opened  
+again in SlickEdit, the original Eclipse Java editor will be flagged as modified.  This problem is most 
+noticeable on Windows XP.  If <b>Window &gt; Preferences &gt; Java &gt; Editor &gt; Report problems as you type</b> 
+is turned off, this problem will not occur.
+
+</p>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="enhancements">Product Enhancements</a></font></h3>
+This section describes the new features and enhancements in SlickEdit Core v4.3.
+
+
+<ul>
+    <li><b>Linux 64-bit architecture now supported</b></li>
+    <ul>
+        <li>SlickEdit Core for Eclipse is now available in both 32 and 64 bit architectures on both Windows and Linux
+    </ul>
+    <li><b>New User Interface Architecture</b></li>
+    <ul>
+        <li>This release incorporates a reworked user interface architecture into all of our supported platforms
+        <li>While the overall look and feel of SlickEdit is not greatly changed, there are enhancements to many dialogs and controls
+        <li>The open/save file dialogs on Linux systems are greatly improved
+    </ul>
+    <li><b>Beautifier Enhancements</b></li>
+    <ul>
+        <li>SlickEdit now features a new beautifier framework for C/C++ and Objective-C
+        <li>See the "Formatting" section of the C/C++ or Objective-C language options, or you can search for "beautify" in the Options dialog
+        <li>You can use any of the existing profiles, or modify a profile that most closely matches your preferences and save it
+        <li>Java, JavaScript, and other languages will be migrated to use the new beautifier in future releases
+    </ul>
+   <li><b>Expanded Auto-Complete Facility</b></li>
+    <ul>
+        <li>The list members functionality of Context Tagging&reg; has been integrated into Auto-Complete so that there is one consistent symbol completion interface and one set of options for symbol completion</li>
+        <li>Auto-complete will show function prototypes when you narrow the list down to a small set of functions, allowing you to choose which overloaded function you want to call and then go immediately into function argument help for that function</li>
+        <li>The options for syntax expansion and alias expansion have been moved to the language-specific Auto-Complete options page so that all completion options can be configured from one unified location</li>
+    </ul>
+    <li><b>Document Overview Bar</b></li>
+    <ul>
+        <li>When using the SlickEdit Search facility, and choosing the "Highlight all Matches" option, a slim gutter area next to the scrollbar will appear showing the relative location of all matches</li>
+		<li>Clicking on the hotspot links in the overview bar will take you directly to that location in the file.</li>
+    </ul>
+    <li><b>Improved Objective-C language support</b></li>
+    <ul>
+        <li>Auto-completion, context tagging, and formatting of Objective-C has been greatly improved</li>
+        <li>Objective-C has been incorporated into the new Beautifier framework</li>
+    </ul>
+</ul>
+
+<p>
+<hr size="4">
+<h3><font color="darkblue"><a name="fix_notes5">SlickEdit Core 4.3.2 Features and Fixes</a></font></h3>
+<ul>
+    <li><b>General</b></li>
+    <ul>
+        <li>Fix plugin compatibility with Windows XP</li>
+		<li>Fix issues loading files through some 3rd party plugins</li>
+        <li>Fix issues with truncate column with remove trailing whitespace and renumber lines commands</li>
+        <li>Fix ISPF emulation with Right Ctrl ENTER/SEND command options</li>
+        <li>Fix encoding issues loading from Local History</li>
+    </ul>
+</ul>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="fix_notes4">SlickEdit Core 4.3.1 Features and Fixes</a></font></h3>
+<ul>
+    <li><b>General</b></li>
+    <ul>
+		<li>Fixed issues with multiple workbench windows</li>
+        <li>Fixed duplicated menu items in Edit and Navigate menus</li>
+        <li>Fixed plugin compatibility issues with Eclipse 4.4</li>
+        <li>Fixed issue with modal dialogs displaying for Windows 8</li>
+        <li>Fixed Editor focus issues</li>
+        <li>Fixed changing drive FTP client (Windows)</li>
+		<li>Fixed issue with SlickEdit command-line prompting</li>
+    </ul>
+</ul>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="fix_notes3">SlickEdit 17.0.3 Enhancements and Fixes</a></font></h3>
+<ul>
+    <li><b>General</b></li>
+    <ul>
+        <li>Corrected a focus issue on Linux when command line prompting is turned on</li>
+        <li>Performance improvement for UTF8-encoded files when using a fixed font along with soft wrap</li>
+        <li>Fixed a crash when launching DiffZilla from the multi-file search and replace preview window</li>
+        <li>Fixed bug resolving paths containing //../ </li>
+    </ul>
+    <li><b>Language Support</b></li>
+    <ul>
+        <li>Corrected cases where Symbol Coloring was broken in Java</li>
+        <li>Bug fixes for the Verilog and System Verilog parsers</li>
+        <li>Fix for C++ tagging of the STL on some platforms where base class members would not show in autocompletion lists</li>
+        <li>Corrected a potential hang when parsing ASM/390 assembly</li>
+        <li>Fix use cases where the XMLDoc comment editor would be displayed instead of the JavaDoc editor</li>
+        <li>Better handling of beautification of nested C++ classes</li>
+        <li>Various fixes for Ruby parsing</li>
+    </ul>
+</ul>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="fix_notes2">SlickEdit 17.0.2 Enhancements and Fixes</a></font></h3>
+
+<ul>
+    <li><b>Beautifier</b></li>
+    <ul>
+        <li>Several fixes and enhancements for the "Beautify While Typing" feature</li>
+        <li>Added new configuration options for auto-close brace placement</li>
+        <li>Fix for problem where the closing brace of a class wouldn't be terminated with a semicolon.</li>
+    </ul>
+    <li><b>General</b></li>
+    <ul>
+        <li>Fix issue where Find, &lt;All Buffers&gt;, will jump to wrong match in cases where multiple file windows are open.</li>
+        <li>Fixed bug where 'Vim Options &gt; 
+            Enter command mode on ESC during codehelp' was not affecting Auto Close. </li>
+        <li>Fix for List Macros dialog where attempt to run first item in list resulted in "...does not exist" message.</li>
+        <li>Revise Unix launch script to handle symbolic links</li>
+    </ul>
+    <li><b>Editor and Language Support</b></li>
+    <ul>
+        <li>Performance improvement for listing references to local variables
+            and renaming local variables using refactor_quick_rename.</li>
+        <li>Corrected Vim emulation's handling of line endings when performing ex command line substitutions</li>
+        <li>Fix issue with context tagging- not honoring the user's preferences to navigate to the proc or proto.</li>
+        <li>Fix bug evaluating default arguments to template classes in C++.</li>
+        <li>Fix several bugs in tag completion in C#, Java, and C++.</li>
+        <li>Fix issues with completion of symbols in "new" expressions in C#, Java, and C++.</li>
+        <li>Fix Ctrl+Space completion which was not working in many cases.</li>
+        <li>Fix bug in context tagging handling cast expressions with spaces in C/C++.</li>
+        <li>Fix XML tag name completion to also list tags found in the current document.</li>
+        <li>Fixes for correctly handling case-insensitive tag name completion in HTML.</li>
+        <li>Improved error reporting for list-symbols (Alt+Dot) and codehelp-complete (Ctrl+Space)</li>
+        <li>More improvements to make background tagging work more smoothly</li>
+        <li>Fix crash parsing IBM HLASM with macros</li>
+        <li>Fix crash parsing HTML with embedded code</li>
+        <li>Fix Auto-List Members to work even if Auto-Complete is disabled</li>
+        <li>Add more improvements to symbol coloring to time out and double-buffer better</li>
+    </ul>
+</ul>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="fix_notes1">SlickEdit 17.0.1 Enhancements and Fixes</a></font></h3>
+<ul>
+    <li><b>General</b></li>
+    <ul>
+        <li>Improvements to mouse wheel scrolling behavior</li>
+        <li>A cleaner application exit when cancelling incomplete background tagging jobs</li>
+        <li>Fixed a crash in the Unix Open/Save dialog when selecting some alternate encodings</li>
+        <li>Fixed a bug when executing the <b>list-errors</b> command</li>
+        <li>Improved UI responsiveness of Linux/Unix systems when running on a local X server</li>
+        <li>Added safeguards to Unix/Linux startup behavior to avoid problems with some incompatible LD_LIBRARY_PATH settings</li>
+        <li>Fixed issue where SlickEdit's mouse cursor was not visible to Windows Magnifier's 'follow cursor' feature</li>
+    </ul>
+    <li><b>Editor and Language Support</b></li>
+    <ul>
+        <li>Improved performance of tagging for embedded code in HTML and embedded assembly in C code.</li>
+        <li>Added support for block mode paste in the list-clipboards dialog</li>
+        <li>Improvements to PL/I begin/end pair matching</li>
+        <li>Improved autocomplete behavior when "Show Categories" is turned off</li>
+        <li>Corrected a Slick-C stack when starting the XML formatting schemes editor</li>
+        <li>Fixed a case where the Slick-C compiler would always turn on pedantic warnings for class and enum types</li>
+        <li>Corrected behavior of join line (J) in Vim emulation</li>
+        <li>Vim emulation searches now properly support word boundary separators (\< and \>)</li>
+        <li>Corrected behavior of expanding aliases that contain trailing spaces</li>
+        <li>Fixed an error when running the "Comment Block" command on sections containing extended ASCII characters</li>
+    </ul>
+    <li><b>Beautifier</b></li>
+    <ul>
+        <li>"Beautify on Edit" operations are now a separate Undo step</li>
+        <li>Multiple fixes addressing issues with profile editor</li>
+        <li>Implemented new configuration options for newline behavior and for forcing the addition or removal of parens</li>
+        <li>Fixes for beautification operations that trim or create trailing spaces</li>
+        <li>New options for chaining else-if statements</li>
+    </ul>
+</ul>
+
+</p>
+
+
+
+
+<hr size="4">
+<h3><font color="darkblue"><a name="known_limits">Known Limitations</a></font></h3>
+<p>The following is a list of known limitations with existing features:</p>
+
+<h4>XML Outline View</h4>
+    <ul>
+        <li type="square">
+            This view will only work with files that SlickEdit recognizes specifically as XML.  Therefore, 
+            Ant and HTML files will not work with this feature, even though they are technically XML.
+        </li>
+    </ul>
+
+<h4>Linked Files and the Remote Systems Explorer plugin</h4>
+    <ul>
+        <li type="square">SlickEdit Core does not support opening or tagging any files opened from a linked 
+			directory created with the Remote Systems Explorer plugin.
+        </li>
+        <li type="square">Using the <b>Current Project</b> location with SlickEdit Search will not search
+			linked directories which have been added to the project.
+        </li>
+    </ul>
+    
+<h4>Vera Language Support</h4>
+    <ul>
+        <li type="square">
+            Dereferencing and code completion of port members (portname.$member) does not yet understand the $ syntax.
+        </li>
+        <li type="square">
+            Tagging of coverage_group and constraint implicit members is not complete.
+        </li>
+        <li type="square">
+            Code that makes heavy use of the preprocessor (especially preprocessor macros) may not be parsed correctly.
+        </li>
+    </ul>
+
+<h4>System Verilog Language Support</h4>
+    <ul>
+        <li type="square">
+            SystemVerilog tagging does not currently support full preprocessing.  'define macros are not expanded, 
+            some code may not parse correctly.
+        </li>
+        <li type="square">
+            Built-in methods for variable queues or associative arrays (byte Q[$]; byte A[*]) may be 
+            tagged as unknown methods, and you may not get correct auto-completions.
+        </li>
+        <li type="square">
+            Tagging and color-coding for some built-in methods, compiler directives and preprocessing directives 
+            may be incomplete.
+        </li>
+        <li type="square">
+            Additionally, Verilog support updated to IEEE Standard 1364-2005 spec.
+        </li>
+    </ul>
+
+<h4>Source Diff</h4>
+    <ul>
+        <li type="square">This feature was formerly known as "Code Diff". Please 
+            note that the name has been changed in all documentation.
+        </li>
+        <li type="square">As this is a new feature, there may be times where it 
+            fails to handle two files properly. Whenever possible if we can have 
+            copies of these files it will help.
+        </li>
+        <li type="square">When you select Tools > File Difference, you will be 
+            prompted whether you want to use Source Diff or not. You can switch 
+            between Source Diff and regular diff, line-oriented diff using an 
+            icon on the DIFFzilla dialog.
+        </li>
+    </ul>
+
+<h4>Miscellaneous</h4>
+    <ul>
+		<li type="square">
+		  Unattended installation is not supported.
+		</li>
+	    <li type="square">
+	      SlickEdit Core Search/Replace only works correctly when searching a SlickEdit Core buffer.
+	    </li>
+	    <li type="square">
+	      On some Linux distributions, primarily Red Hat Enterprise 4, closing a SlickEdit 
+	      Core window (such as the Calculator or Regex Evaluator) with the "X" in the top 
+	      right-hand corner may result in a crash. This is due to compatibility problems 
+	      with certain versions of GTK+ (namely 2.4.13). It is recommended that you 
+	      upgrade to at least GTK+ 2.8.
+	    </li>
+        <li type="square">
+            X-Server limitations (UNIX platforms): When remotely displaying SlickEdit to a 
+            Microsoft Windows platform, the free Cygwin XFree86&reg; X-Server does not work 
+            well. We recommend using a more robust commercial X-Server, such as Hummingbird&reg; 
+            Exceed&reg; or Reflection&reg; X.
+        </li>
+        <li type="square">
+            Inline DTDs in XML documents are not always tagged properly.
+        </li>
+        <li type="square">
+            JSP&trade; global variables are not picked up by tagging when declared inside <font face="Courier,Courier New">.jsp</font> 
+            files.
+        </li>
+        <li type="square">
+            XML files that use schemas do not have their entities picked up for color coding 
+            when the root tag specifies both <b>xmlns</b> and <b>xsi:schemaLocation</b> 
+            attributes. Also, multiple space-delimited values for <b>xsi:schemaLocation</b> 
+            do not work.
+        </li>
+        <li type="square">
+            If you have a Java class that has two local classes with the same name, you 
+            cannot set debug breakpoints on the second class.
+        </li>
+        <li type="square">
+            For performance reasons, Java Auto Import will only attempt to import class 
+            names that start with a capital letter. This behavior can be changed by setting <b>def_jrefactor_auto_import_lowcase_identifiers</b> 
+            to "1".
+        </li>
+    </ul>
+
+<hr size="4">
+<h3><font color="darkblue"><a name="copyrights">Copyright & Licenses</a></font></h3>
+<p>
+This section lists the copyrights and licenses for third-party tools used in 
+portions of SlickEdit Core.
+</p>
+<hr align="left" width="50%">
+<h4>Use of Bitstream Vera Fonts</h4>
+<p>
+SlickEdit includes Bitstream Vera fonts. The use of these fonts is offered under 
+the following terms and conditions:
+</p>
+<p>
+Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is a 
+trademark of Bitstream, Inc.
+</p>
+<p>
+Permission is hereby granted, free of charge, to any person obtaining a copy of 
+the fonts accompanying this license ("Fonts") and associated documentation files 
+(the "Font Software"), to reproduce and distribute the Font Software, including 
+without limitation the rights to use, copy, merge, publish, distribute, and/or 
+sell copies of the Font Software, and to permit persons to whom the Font 
+Software is furnished to do so, subject to the following conditions:
+</p>
+<p>
+The above copyright and trademark notices and this permission notice shall be 
+included in all copies of one or more of the Font Software typefaces.
+</p>
+<p>
+The Font Software may be modified, altered, or added to, and in particular the 
+designs of glyphs or characters in the Fonts may be modified and additional 
+glyphs or characters may be added to the Fonts, only if the fonts are renamed to 
+names not containing either the words "Bitstream" or the word "Vera".
+</p>
+<p>
+This License becomes null and void to the extent applicable to Fonts or Font 
+Software that has been modified and is distributed under the "Bitstream Vera" 
+names.
+</p>
+<p>
+The Font Software may be sold as part of a larger software package but no copy 
+of one or more of the Font Software typefaces may be sold by itself.
+</p>
+<p>
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS 
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR 
+OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME FOUNDATION BE LIABLE FOR 
+ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, 
+INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR 
+FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+</p>
+<p>
+Except as contained in this notice, the names of Gnome, the Gnome Foundation, 
+and Bitstream Inc., shall not be used in advertising or otherwise to promote the 
+sale, use or other dealings in this Font Software without prior written 
+authorization from the Gnome Foundation or Bitstream Inc., respectively. For 
+further information, contact: fonts at gnome dot org.
+</p>
+<hr align="left" width="50%">
+<h4>Use of the Komodo IDE Perl Remote Debugging Component.</h4>
+<p>The Komodo IDE Perl Remote Debugging Component is covered by the Perl Artistic License:</p>
+<b>Preamble</b>
+<P>
+The intent of this document is to state the conditions under which a
+Package may be copied, such that the Copyright Holder maintains some
+semblance of artistic control over the development of the package,
+while giving the users of the package the right to use and distribute
+the Package in a more-or-less customary fashion, plus the right to make
+reasonable modifications.
+</P>
+<b>Definitions</b>
+<P>
+
+	"Package" refers to the collection of files distributed by the
+	Copyright Holder, and derivatives of that collection of files
+	created through textual modification.
+</P>
+
+<P>
+	"Standard Version" refers to such a Package if it has not been
+	modified, or has been modified in accordance with the wishes
+	of the Copyright Holder as specified below.
+</P>
+
+<P>
+	"Copyright Holder" is whoever is named in the copyright or
+	copyrights for the package.
+</P>
+
+<P>
+	"You" is you, if you're thinking about copying or distributing
+	this Package.
+</P>
+
+<P>
+	"Reasonable copying fee" is whatever you can justify on the
+	basis of media cost, duplication charges, time of people involved,
+	and so on.  (You will not be required to justify it to the
+	Copyright Holder, but only to the computing community at large
+	as a market that must bear the fee.)
+</P>
+
+<P>
+	"Freely Available" means that no fee is charged for the item
+	itself, though there may be fees involved in handling the item.
+	It also means that recipients of the item may redistribute it
+	under the same conditions they received it.
+</P>
+
+<OL>
+    <LI>You may make and give away verbatim copies of the source form of the
+    Standard Version of this Package without restriction, provided that you
+    duplicate all of the original copyright notices and associated disclaimers.</LI>
+    <LI>You may apply bug fixes, portability fixes and other modifications
+    derived from the Public Domain or from the Copyright Holder.  A Package
+    modified in such a way shall still be considered the Standard Version.</LI>
+    <LI>You may otherwise modify your copy of this Package in any way, provided
+    that you insert a prominent notice in each changed file stating how and
+    when you changed that file, and provided that you do at least ONE of the
+    following:</LI>
+<OL TYPE="a">
+
+    <LI>place your modifications in the Public Domain or otherwise make them
+    Freely Available, such as by posting said modifications to Usenet or
+    an equivalent medium, or placing the modifications on a major archive
+    site such as uunet.uu.net, or by allowing the Copyright Holder to include
+    your modifications in the Standard Version of the Package.</LI>
+
+    <LI>use the modified Package only within your corporation or organization.</LI>
+
+    <LI>rename any non-standard executables so the names do not conflict
+    with standard executables, which must also be provided, and provide
+    a separate manual page for each non-standard executable that clearly
+    documents how it differs from the Standard Version.</LI>
+
+    <LI>make other distribution arrangements with the Copyright Holder.</LI>
+
+</OL>
+    <LI>You may distribute the programs of this Package in object code or
+    executable form, provided that you do at least ONE of the following:</LI>
+<OL TYPE="a">
+
+    <LI>distribute a Standard Version of the executables and library files,
+    together with instructions (in the manual page or equivalent) on where
+    to get the Standard Version.</LI>
+
+    <LI>accompany the distribution with the machine-readable source of
+    the Package with your modifications.</LI>
+
+    <LI>give non-standard executables non-standard names, and clearly
+    document the differences in manual pages (or equivalent), together
+    with instructions on where to get the Standard Version.</LI>
+
+    <LI>make other distribution arrangements with the Copyright Holder.</LI>
+
+</OL>
+
+<LI>You may charge a reasonable copying fee for any distribution of this
+Package.  You may charge any fee you choose for support of this
+Package.  You may not charge a fee for this Package itself.  However,
+you may distribute this Package in aggregate with other (possibly
+commercial) programs as part of a larger (possibly commercial) software
+distribution provided that you do not advertise this Package as a
+product of your own.  You may embed this Package's interpreter within
+an executable of yours (by linking); this shall be construed as a mere
+form of aggregation, provided that the complete Standard Version of the
+interpreter is so embedded.</LI>
+
+<LI>The scripts and library files supplied as input to or produced as
+output from the programs of this Package do not automatically fall
+under the copyright of this Package, but belong to whomever generated
+them, and may be sold commercially, and may be aggregated with this
+Package.  If such scripts or library files are aggregated with this
+Package via the so-called "undump" or "unexec" methods of producing a
+binary executable image, then distribution of such an image shall
+neither be construed as a distribution of this Package nor shall it
+fall under the restrictions of Paragraphs 3 and 4, provided that you do
+not represent such an executable image as a Standard Version of this
+Package.</LI>
+
+<LI>C subroutines (or comparably compiled subroutines in other
+languages) supplied by you and linked into this Package in order to
+emulate subroutines and variables of the language defined by this
+Package shall not be considered part of this Package, but are the
+equivalent of input as in Paragraph 6, provided these subroutines do
+not change the language in any way that would cause it to fail the
+regression tests for the language.</LI>
+
+<LI>Aggregation of this Package with a commercial distribution is always
+permitted provided that the use of this Package is embedded; that is,
+when no overt attempt is made to make this Package's interfaces visible
+to the end user of the commercial distribution.  Such use shall not be
+construed as a distribution of this Package.</LI>
+
+<LI>The name of the Copyright Holder may not be used to endorse or promote
+products derived from this software without specific prior written permission.</LI>
+
+<LI> THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.</LI>
+</OL>
+
+<CENTER>
+				The End
+</CENTER>
+<p>
+
+<hr align="left" width="50%">
+<h4>Use of the Komodo IDE Python Remote Debugging Component.</h4>
+<p>The Komodo IDE Python Remote Debugging Component is covered by the MIT license:</p>
+<p>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+<p>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+<hr align="left" width="50%">
+<h4>Use of the Mozilla Browser</h4>
+<p>
+The Mozilla browser is licensed under the Mozilla Public License Version 1.1. 
+Any terms in the SlickEdit Inc. End User License Agreement which differ from the 
+Mozilla Public License are offered by SlickEdit alone, not by any third parties.
+</p>
+<p>The Mozilla browser is provided without modifications. The source can be obtained from the 
+Mozilla website, below.</p>
+<p>
+<a href="http://www.mozilla.org/" target="_blank">http://www.mozilla.org/</a>
+</p>
+<hr align="left" width="50%">
+<h4>Use of PHP Documentation</h4>
+<p>
+The descriptions of built-in constants and functions were extracted from the 
+online PHP Manual found at <a href="http://www.php.net/manual/en/" target="_blank">http://www.php.net/manual/en/</a>. 
+The original PHP documentation is copyrighted by the PHP Documentation Group (Copyright 
+© 1997 - 2006 by the PHP Documentation Group), and it is distributed under the 
+Open Publication License, v 1.0 or later.  The copy of the latest version of the 
+Open Publication License is presently available at <a href="http://www.opencontent.org/openpub/" target="_blank">http://www.opencontent.org/openpub/</a>.
+</p>
+
+<hr align="left" width="50%">
+<h4>Use of Xdebug</h4>
+<p>The use of Xdebug is covered by the Xdebug License:</p>
+<p>                  The Xdebug License, version 1.01</p>
+<p>              (Based on "The PHP License", version 3.0)</p>
+<p>      Copyright (c) 2002 - 2007 Derick Rethans. All rights reserved.</p>
+
+<p>
+Redistribution and use in source and binary forms, with or without
+modification, is permitted provided that the following conditions
+are met:
+</p>
+<ol>
+ <li>Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.</li>
+ 
+ <li>Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the
+     distribution.</li>
+ 
+ <li>The name "Xdebug" must not be used to endorse or promote products
+     derived from this software without prior written permission. For
+     written permission, please contact derick@xdebug.org.</li>
+  
+ <li>Products derived from this software may not be called "Xdebug", nor
+     may "Xdebug" appear in their name, without prior written permission
+     from derick@xdebug.org.</li>
+ 
+ <li>Derick Rethans may publish revised and/or new versions of the
+     license from time to time. Each version will be given a
+     distinguishing version number.  Once covered code has been
+     published under a particular version of the license, you may
+     always continue to use it under the terms of that version. You
+     may also choose to use such covered code under the terms of any
+     subsequent version of the license published by Derick Rethans. No
+     one other than Derick Rethans has the right to modify the terms
+     applicable to covered code created under this License.</li>
+
+ <li>Redistributions of any form whatsoever must retain the following
+     acknowledgment: "This product includes Xdebug, freely available
+     from <a href="http://xdebug.org/">http://xdebug.org/</a>".</li>
+</ol>
+
+<p>
+THIS SOFTWARE IS PROVIDED BY DERICK RETHANS ``AS IS'' AND ANY
+EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE PHP DEVELOPMENT TEAM OR
+ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</p>
+
+<hr align="left" width="50%">
+<h4>Use of Xerces</h4>
+<p>
+This product includes software developed by the Apache Software Foundation (<a href="http://www.apache.org/" target="_blank">http://www.apache.org/</a>), 
+specifically the Xerces XML parser. The software is made available according to 
+the following license:
+</p>
+<p>
+The Apache Software License, Version 1.1
+</p>
+<p>
+Copyright (c) 1999-2000 The Apache Software Foundation.  All rights reserved.
+</p>
+<p>
+Redistribution and use in source and binary forms, with or without modification, 
+are permitted provided that the following conditions are met:
+</p>
+<p>
+1. Redistributions of source code must retain the above copyright notice, this 
+list of conditions and the following disclaimer.
+</p>
+<p>
+2. Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions and the following disclaimer in the documentation and/or 
+other materials provided with the distribution.
+</p>
+<p>
+3. The end-user documentation included with the redistribution, if any, must 
+include the following acknowledgment:<br>
+<br>
+"This product includes software developed by the Apache Software Foundation (<a href="http://www.apache.org/" target="_blank">http://www.apache.org/</a>). 
+"<br>
+<br>
+Alternately, this acknowledgment may appear in the software itself, if and 
+wherever such third-party acknowledgments normally appear.
+</p>
+<p>
+4. The names "Xerces" and "Apache Software Foundation" must not be used to 
+endorse or promote products derived from this software without prior written 
+permission. For written permission, please contact <a href="mailto:apache@apache.org">apache@apache.org</a>.
+</p>
+<p>
+5. Products derived from this software may not be called "Apache", nor may "Apache 
+" appear in their name, without prior written permission of the Apache Software 
+Foundation.
+</p>
+<p>
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND 
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE APACHE 
+SOFTWARE FOUNDATION OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+OF THE POSSIBILITY OF SUCH DAMAGE.
+</p>
+<p>
+This software consists of voluntary contributions made by many individuals on 
+behalf of the Apache Software Foundation and was originally based on software 
+copyright (c) 1999, International Business Machines, Inc., <a href="http://www.ibm.com" target="_blank">http://www.ibm.com</a>. 
+For more information on the Apache Software Foundation, please see <a href="http://www.apache.org/" target="_blank">http://www.apache.org/</a>.
+</p>
+<hr align="left" width="50%">
+<h4>Use of the XPM Format</h4>
+<p>
+XPM is a format used to store and retrieve X pixmaps.  It is governed by the 
+following license:
+</p>
+<p>
+Copyright (C) 1989-95 GROUPE BULL Permission is hereby granted, free of charge, 
+to any person obtaining a copy of this software and associated documentation 
+files (the "Software"), to deal in the Software without restriction, including 
+without limitation the rights to use, copy, modify, merge, publish, distribute, 
+sublicense, and/or sell copies of the Software, and to permit persons to whom 
+the Software is furnished to do so, subject to the following conditions:
+</p>
+<p>
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Software.
+</p>
+<p>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS 
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL GROUPE BULL BE 
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p>
+<p>
+Except as contained in this notice, the name of GROUPE BULL shall not be used in 
+advertising or otherwise to promote the sale, use or other dealings in this 
+Software without prior written authorization from GROUPE BULL.
+</p>
+<hr align="left" width="50%">
+<h4>Use of code from org.eclipse.ui.tests.dnd</h4>
+<p>
+Object code from the <b>org.eclipse.ui.tests.dnd</b> package is used for programatically 
+splitting editor windows in Eclipse.  It is governed by the following license:
+</p>
+
+<p>THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE
+PUBLIC LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR
+DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS
+AGREEMENT.</p>
+
+<p><b>1. DEFINITIONS</b></p>
+
+<p>&quot;Contribution&quot; means:
+<ol type="a">
+  <li>
+    in the case of the initial Contributor, the initial
+    code and documentation distributed under this Agreement, and
+  </li>
+  <li>
+    in the case of each subsequent Contributor:
+  </li>
+</ol>
+<ol type="i">
+  <li>
+    changes to the Program, and
+  </li>
+  <li>
+    additions to the Program;
+    <p>where such changes and/or additions to the Program
+    originate from and are distributed by that particular Contributor. A
+    Contribution 'originates' from a Contributor if it was added to the
+    Program by such Contributor itself or anyone acting on such
+    Contributor's behalf. Contributions do not include additions to the
+    Program which: (i) are separate modules of software distributed in
+    conjunction with the Program under their own license agreement, and (ii)
+    are not derivative works of the Program.</p>
+  </li>
+</ol>
+</p>
+
+<p>&quot;Contributor&quot; means any person or entity that distributes
+the Program.</p>
+
+<p>&quot;Licensed Patents&quot; mean patent claims licensable by a
+Contributor which are necessarily infringed by the use or sale of its
+Contribution alone or when combined with the Program.</p>
+
+<p>&quot;Program&quot; means the Contributions distributed in accordance
+with this Agreement.</p>
+
+&quot;Recipient&quot; means anyone who receives the Program under
+this Agreement, including all Contributors.</p>
+
+<p><b>2. GRANT OF RIGHTS</b></p>
+<ol type="a">
+  <li>
+    Subject to the terms of this Agreement, each
+    Contributor hereby grants Recipient a non-exclusive, worldwide,
+    royalty-free copyright license to reproduce, prepare derivative works
+    of, publicly display, publicly perform, distribute and sublicense the
+    Contribution of such Contributor, if any, and such derivative works, in
+    source code and object code form.
+  </li>
+  <li>
+    Subject to the terms of this Agreement, each
+    Contributor hereby grants Recipient a non-exclusive, worldwide,
+    royalty-free patent license under Licensed Patents to make, use, sell,
+    offer to sell, import and otherwise transfer the Contribution of such
+    Contributor, if any, in source code and object code form. This patent
+    license shall apply to the combination of the Contribution and the
+    Program if, at the time the Contribution is added by the Contributor,
+    such addition of the Contribution causes such combination to be covered
+    by the Licensed Patents. The patent license shall not apply to any other
+    combinations which include the Contribution. No hardware per se is
+    licensed hereunder.
+  </li>
+  <li>
+    Recipient understands that although each Contributor
+    grants the licenses to its Contributions set forth herein, no assurances
+    are provided by any Contributor that the Program does not infringe the
+    patent or other intellectual property rights of any other entity. Each
+    Contributor disclaims any liability to Recipient for claims brought by
+    any other entity based on infringement of intellectual property rights
+    or otherwise. As a condition to exercising the rights and licenses
+    granted hereunder, each Recipient hereby assumes sole responsibility to
+    secure any other intellectual property rights needed, if any. For
+    example, if a third party patent license is required to allow Recipient
+    to distribute the Program, it is Recipient's responsibility to acquire
+    that license before distributing the Program.
+  </li>
+  <li>
+    Each Contributor represents that to its knowledge it
+    has sufficient copyright rights in its Contribution, if any, to grant
+    the copyright license set forth in this Agreement.
+  </li>
+</ol>
+
+<p><b>3. REQUIREMENTS</b></p>
+
+<p>A Contributor may choose to distribute the Program in object code
+form under its own license agreement, provided that:</p>
+
+<ol type="a">
+  <li>
+    it complies with the terms and conditions of this
+    Agreement; and
+  </li>
+  <li>
+    its license agreement:
+  </li>
+</ol>
+<ol type="i">
+  <li>
+    effectively disclaims on behalf of all Contributors
+    all warranties and conditions, express and implied, including warranties
+    or conditions of title and non-infringement, and implied warranties or
+    conditions of merchantability and fitness for a particular purpose;
+  </li>
+  <li>
+    effectively excludes on behalf of all Contributors
+    all liability for damages, including direct, indirect, special,
+    incidental and consequential damages, such as lost profits;
+  </li>
+  <li>
+    states that any provisions which differ from this
+    Agreement are offered by that Contributor alone and not by any other
+    party; and
+  </li>
+  <li>
+    states that source code for the Program is available
+    from such Contributor, and informs licensees how to obtain it in a
+    reasonable manner on or through a medium customarily used for software
+    exchange.
+  </li>
+</ol>
+<p>When the Program is made available in source code form:</p>
+<ol type="a">
+  <li>
+    it must be made available under this Agreement; and
+  </li>
+  <li>
+    a copy of this Agreement must be included with each
+    copy of the Program.
+  </li>
+</ol>
+
+<p>Contributors may not remove or alter any copyright notices contained
+within the Program.</p>
+
+<p>Each Contributor must identify itself as the originator of its
+Contribution, if any, in a manner that reasonably allows subsequent
+Recipients to identify the originator of the Contribution.</p>
+
+<p><b>4. COMMERCIAL DISTRIBUTION</b></p>
+
+<p>Commercial distributors of software may accept certain
+responsibilities with respect to end users, business partners and the
+like. While this license is intended to facilitate the commercial use of
+the Program, the Contributor who includes the Program in a commercial
+product offering should do so in a manner which does not create
+potential liability for other Contributors. Therefore, if a Contributor
+includes the Program in a commercial product offering, such Contributor
+(&quot;Commercial Contributor&quot;) hereby agrees to defend and
+indemnify every other Contributor (&quot;Indemnified Contributor&quot;)
+against any losses, damages and costs (collectively &quot;Losses&quot;)
+arising from claims, lawsuits and other legal actions brought by a third
+party against the Indemnified Contributor to the extent caused by the
+acts or omissions of such Commercial Contributor in connection with its
+distribution of the Program in a commercial product offering. The
+obligations in this section do not apply to any claims or Losses
+relating to any actual or alleged intellectual property infringement. In
+order to qualify, an Indemnified Contributor must: a) promptly notify
+the Commercial Contributor in writing of such claim, and b) allow the
+Commercial Contributor to control, and cooperate with the Commercial
+Contributor in, the defense and any related settlement negotiations. The
+Indemnified Contributor may participate in any such claim at its own
+expense.</p>
+
+<p>For example, a Contributor might include the Program in a commercial
+product offering, Product X. That Contributor is then a Commercial
+Contributor. If that Commercial Contributor then makes performance
+claims, or offers warranties related to Product X, those performance
+claims and warranties are such Commercial Contributor's responsibility
+alone. Under this section, the Commercial Contributor would have to
+defend claims against the other Contributors related to those
+performance claims and warranties, and if a court requires any other
+Contributor to pay any damages as a result, the Commercial Contributor
+must pay those damages.</p>
+
+<p><b>5. NO WARRANTY</b></p>
+
+<p>EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+PROVIDED ON AN &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS
+OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION,
+ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+OR FITNESS FOR A PARTICULAR PURPOSE. Each Recipient is solely
+responsible for determining the appropriateness of using and
+distributing the Program and assumes all risks associated with its
+exercise of rights under this Agreement , including but not limited to
+the risks and costs of program errors, compliance with applicable laws,
+damage to or loss of data, programs or equipment, and unavailability or
+interruption of operations.</p>
+
+<p><b>6. DISCLAIMER OF LIABILITY</b></p>
+
+<p>EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING
+WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OR
+DISTRIBUTION OF THE PROGRAM OR THE EXERCISE OF ANY RIGHTS GRANTED
+HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+
+<p><b>7. GENERAL</b></p>
+
+<p>If any provision of this Agreement is invalid or unenforceable under
+applicable law, it shall not affect the validity or enforceability of
+the remainder of the terms of this Agreement, and without further action
+by the parties hereto, such provision shall be reformed to the minimum
+extent necessary to make such provision valid and enforceable.</p>
+
+<p>If Recipient institutes patent litigation against any entity
+(including a cross-claim or counterclaim in a lawsuit) alleging that the
+Program itself (excluding combinations of the Program with other
+software or hardware) infringes such Recipient's patent(s), then such
+Recipient's rights granted under Section 2(b) shall terminate as of the
+date such litigation is filed.</p>
+
+<p>All Recipient's rights under this Agreement shall terminate if it
+fails to comply with any of the material terms or conditions of this
+Agreement and does not cure such failure in a reasonable period of time
+after becoming aware of such noncompliance. If all Recipient's rights
+under this Agreement terminate, Recipient agrees to cease use and
+distribution of the Program as soon as reasonably practicable. However,
+Recipient's obligations under this Agreement and any licenses granted by
+Recipient relating to the Program shall continue and survive.</p>
+
+<p>Everyone is permitted to copy and distribute copies of this
+Agreement, but in order to avoid inconsistency the Agreement is
+copyrighted and may only be modified in the following manner. The
+Agreement Steward reserves the right to publish new versions (including
+revisions) of this Agreement from time to time. No one other than the
+Agreement Steward has the right to modify this Agreement. The Eclipse
+Foundation is the initial Agreement Steward. The Eclipse Foundation may
+assign the responsibility to serve as the Agreement Steward to a
+suitable separate entity. Each new version of the Agreement will be
+given a distinguishing version number. The Program (including
+Contributions) may always be distributed subject to the version of the
+Agreement under which it was received. In addition, after a new version
+of the Agreement is published, Contributor may elect to distribute the
+Program (including its Contributions) under the new version. Except as
+expressly stated in Sections 2(a) and 2(b) above, Recipient receives no
+rights or licenses to the intellectual property of any Contributor under
+this Agreement, whether expressly, by implication, estoppel or
+otherwise. All rights in the Program not expressly granted under this
+Agreement are reserved.</p>
+
+<p>This Agreement is governed by the laws of the State of New York and
+the intellectual property laws of the United States of America. No party
+to this Agreement will bring a legal action under this Agreement more
+than one year after the cause of action arose. Each party waives its
+rights to a jury trial in any resulting litigation.</p>
+<hr align="left" width="50%">
+<h4>Use of zlib</h4>
+<p>
+zlib.h -- interface of the 'zlib' general purpose compression library
+  version 1.2.5, April 19th, 2010</p>
+<p>
+  Copyright (C) 1995-2010 Jean-loup Gailly and Mark Adler
+</p>
+<p>
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+</p>
+<p>
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+</p>
+<pre>
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+</pre>
+<p>  Jean-loup Gailly<br>
+  Mark Adler</p>
+</p>
+<p>To download zlib or for more information visit <a href="http://www.zlib.net/" target="_blank">http://www.zlib.net/</a>.</p>
+</body>
+</html>

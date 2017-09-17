@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!DOCTYPE SETemplate SYSTEM "http://www.slickedit.com/dtd/vse/setemplate/1.0/setemplate.dtd">
+<SETemplate Version="1.0" Type="Item">
+  <TemplateDetails>
+    <Name>C++ WinMain and WNDCLASS</Name>
+    <Description>Win32 application window class and a WinMain to display it</Description>
+    <DefaultName>MainAppWindowName</DefaultName>
+  </TemplateDetails>
+  <TemplateContent>
+    <Files>
+      <File TargetFilename="$fileinputname$.cpp">WinMain.cpp</File>
+      <File TargetFilename="$fileinputname$_res.h">Resources.h</File>
+      <File TargetFilename="$fileinputname$.rc">Resources.rc</File>
+      <File TargetFilename="$fileinputname$.ico">App.ico</File>
+      <File TargetFilename="$fileinputname$small.ico">Small.ico</File>
+    </Files>
+  </TemplateContent>
+</SETemplate>

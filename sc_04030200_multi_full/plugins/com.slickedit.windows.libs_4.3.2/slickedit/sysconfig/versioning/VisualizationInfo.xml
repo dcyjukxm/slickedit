@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE VisualizationInfo SYSTEM 
+	"http://www.slickedit.com/dtd/vse/versioning/13.0/VisualizationInfo.dtd">
+<VisualizationInfo>
+	<BaseScheme type="FixedDateScheme">
+	</BaseScheme>
+	<BaseScheme type="UserScheme">
+	</BaseScheme>
+	<BaseScheme type="LabelScheme">
+	</BaseScheme>
+	<BaseScheme type="FloatingDateScheme">
+		<SchemeEntries>
+			<FloatingDateScheme name="Default Floating Date Scheme">
+				<Range type="default" description="" fgcolor="0x0" bgcolor="0xFFFF80" />
+				<Range age="3" type="age" description="Less than three days" fgcolor="0x0" bgcolor="0xFF" />
+				<Range age="7" type="age" description="Less than one week" fgcolor="0x0" bgcolor="0xF0" />
+				<Range age="14" type="age" description="One to two weeks" fgcolor="0x0" bgcolor="0xFF00" />
+				<Range age="21" type="age" description="Two to three weeks" fgcolor="0x0" bgcolor="0xFFFF" />
+				<Range age="28" type="age" description="Three to four weeks" fgcolor="0x0" bgcolor="0x8000FF" />
+				<Range age="90" type="age" description="Two to three months" fgcolor="0x0" bgcolor="0x646464" />
+				<Range age="180" type="age" description="Three to six months" fgcolor="0x0" bgcolor="0x818181" />
+				<Range age="270" type="age" description="Six to nine months" fgcolor="0x0" bgcolor="0xA2A2A2" />
+				<Range age="365" type="age" description="Nine to twelve months" fgcolor="0x0" bgcolor="0xC0C0C0" />
+				<Range age="730" type="age" description="One to two years" fgcolor="0x0" bgcolor="0xD4D4D4" />
+			</FloatingDateScheme>
+		</SchemeEntries>
+	</BaseScheme>
+</VisualizationInfo>
