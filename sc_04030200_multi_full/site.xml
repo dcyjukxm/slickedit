@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="SlickEdit Core For Eclipse" url="http://www.slickedit.com/update/secore/kepler">
+      SlickEdit Core For Eclipse
+   </description>
+   <feature url="features/com.slickedit.feature_4.3.2.jar" id="com.slickedit.feature" version="4.3.2">
+      <category name="Code Editing"/>
+   </feature>
+   <category-def name="Code Editing" label="Code Editing"/>
+</site>

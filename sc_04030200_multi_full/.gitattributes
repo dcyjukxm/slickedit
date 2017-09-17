@@ -1,0 +1,10 @@
+plugins/com.slickedit.windows64.libs_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.csup_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.eclipse.plugin_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.help_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.phpsup_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.windows.libs_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.core_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.javasup_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.linux.libs_4.3.2.jar filter=lfs diff=lfs merge=lfs -text
+plugins/com.slickedit.linux64.libs_4.3.2.jar filter=lfs diff=lfs merge=lfs -text

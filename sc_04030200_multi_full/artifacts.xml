@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='file:/C:/UpdateManager/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1494339933838'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='14'>
+    <artifact classifier='org.eclipse.update.feature' id='com.slickedit.javasup.feature' version='4.3.2'>
+      <properties size='4'>
+        <property name='artifact.size' value='12530'/>
+        <property name='download.size' value='12530'/>
+        <property name='download.md5' value='74a98337443639a5bf1de10475f7fe57'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.slickedit.feature' version='4.3.2'>
+      <properties size='4'>
+        <property name='artifact.size' value='12697'/>
+        <property name='download.size' value='12697'/>
+        <property name='download.md5' value='92fcdba263a9e672014cdfa5de9e24f8'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.phpsup' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='16502'/>
+        <property name='download.size' value='16502'/>
+        <property name='download.md5' value='5a2a72a37de06bdedac5a9f40795cdc8'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.csup' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='25995'/>
+        <property name='download.size' value='25995'/>
+        <property name='download.md5' value='8ad57b1148884e0759498358242b28c1'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.core' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='405265'/>
+        <property name='download.size' value='405265'/>
+        <property name='download.md5' value='5058479bd87e90a29bd9f0164075fd3c'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.windows.libs' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='49139004'/>
+        <property name='download.size' value='49139004'/>
+        <property name='download.md5' value='bf3c9c0ea4c63beea8b4788f1d0293ee'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.eclipse.plugin' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='171853'/>
+        <property name='download.size' value='171853'/>
+        <property name='download.md5' value='2c341da0e8987c4f8235c49f44fe84e5'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.windows64.libs' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='52104964'/>
+        <property name='download.size' value='52104964'/>
+        <property name='download.md5' value='d4be86e5ad9e97964f223a07f5ec2a30'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.javasup' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='76833'/>
+        <property name='download.size' value='76833'/>
+        <property name='download.md5' value='ed19e81bba6bbd17558f139e5d4840ca'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.help' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='6657873'/>
+        <property name='download.size' value='6657873'/>
+        <property name='download.md5' value='35001c2a4bc3799d1d520b80dc487b62'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.linux64.libs' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='54022731'/>
+        <property name='download.size' value='54022731'/>
+        <property name='download.md5' value='f6057430fdfb3dce083fdd3457112e27'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.slickedit.phpsup.feature' version='4.3.2'>
+      <properties size='4'>
+        <property name='artifact.size' value='12494'/>
+        <property name='download.size' value='12494'/>
+        <property name='download.md5' value='55ce37c20d056e2a8e733386c5f082bc'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.slickedit.csup.feature' version='4.3.2'>
+      <properties size='4'>
+        <property name='artifact.size' value='12523'/>
+        <property name='download.size' value='12523'/>
+        <property name='download.md5' value='5c11372c04fa01f62140603b1c2769f7'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.slickedit.linux.libs' version='4.3.2'>
+      <properties size='3'>
+        <property name='artifact.size' value='53954237'/>
+        <property name='download.size' value='53954237'/>
+        <property name='download.md5' value='bf855867d08b0a78d05d3bea73434c9c'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>
